@@ -1,2 +1,276 @@
-<h1>Hey there!</h1>
-<p>Have a nice day</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gautier Ben Aïm</title>
+    <meta name=description content="I'm a web developer and an engineering student">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        :root {
+            box-sizing: border-box;
+            height: 100%;
+            font-size: .5em;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 1px;
+            margin: 0;
+            padding: 5rem 0;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            transition: .5s min-height;
+        }
+
+        a {
+            display: inline-block;
+            padding: 1em;
+            transition: .2s background-color, .2s fill;
+        }
+
+        a:hover,
+        a:focus {
+            fill: #fff;
+            background-color: #000;
+            outline: 0;
+        }
+
+        svg {
+            vertical-align: bottom;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .gauben {
+            display: inline-block;
+            margin: 0;
+            color: transparent;
+            font-size: 4em;
+            font-family: inherit;
+            font-weight: 400;
+        }
+
+        .loaded .gauben {
+            color: inherit;
+        }
+
+        .gauben i,
+        .gauben b {
+            display: inline-block;
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .loaded .gauben i {
+            display: none;
+        }
+
+        @media screen and (min-width: 550px) and (prefers-reduced-motion: no-preference) {
+
+            .loaded .gauben b,
+            .loaded .gauben i {
+                display: inline-block;
+                transform: translateX(var(--translateX));
+                transition: none;
+            }
+
+            .loaded .gauben i {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (min-width: 600px) and (prefers-reduced-motion: no-preference) {
+
+            .loaded .gauben b,
+            .loaded .gauben i {
+                display: inline-block;
+                transform: translateX(var(--translateX));
+                transition: .5s opacity, .5s transform;
+            }
+
+            .loaded .gauben i {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (min-width: 650px) and (prefers-reduced-motion: no-preference) {
+
+            body {
+                min-height: 100vh;
+            }
+
+            .loaded .gauben b,
+            .loaded .gauben i {
+                display: inline-block;
+                transform: translateX(0);
+                transition: .5s opacity, .5s transform;
+                opacity: 1;
+            }
+
+            .do-splash .body {
+                animation: 2s splash-body;
+            }
+
+            .do-splash .gauben {
+                animation: 2s splash-h1;
+            }
+
+            .do-splash .gauben b {
+                animation: 2s splash-b;
+            }
+
+            .do-splash .gauben i {
+                animation: 2s splash-i;
+            }
+
+            .loaded .gauben:hover b,
+            .loaded .gauben:hover i {
+                transform: translateX(var(--translateX));
+            }
+
+            .loaded .gauben:hover i {
+                opacity: 0;
+            }
+        }
+
+        @keyframes splash-body {
+
+            0%,
+            80% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes splash-h1 {
+
+            0%,
+            70% {
+                transform: translateY(var(--translateY)) scale(var(--scale));
+            }
+        }
+
+        @keyframes splash-b {
+
+            0%,
+            30% {
+                transform: translateX(var(--translateX));
+            }
+
+            60% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes splash-i {
+
+            0%,
+            30% {
+                opacity: 0;
+                transform: translateX(var(--translateX));
+            }
+
+            60% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            .gauben {
+                color: inherit;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1 class=gauben><b class=a>Gau</b><i class=b>tier&nbsp;</i><b class=c>Ben</b><i class=d>&nbsp;Aïm</i></h1>
+    </header>
+    <main class=body>
+        <p>Web developer and engineering student</p>
+        <!-- Icons by Alexander Kahlkopf https://iconmonstr.com/ -->
+        <p>
+            <a href="mailto:" title="My email" aria-label="My email"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
+                </svg></a>
+            <a href="https://www.linkedin.com/in/gautier-ben-a%C3%AFm-45205a195/" title="My LinkedIn"
+                aria-label="My LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                </svg></a>
+            <a href="https://github.com/GauBen" title="My Github" aria-label="My Github"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg></a>
+        </p>
+    </main>
+    <script>
+        function $(e) { return document.querySelector(e) }
+        function $$(e) { return document.querySelectorAll(e) }
+
+        let $body = document.body;
+        let $h1 = $('h1');
+        let $a = $('.a');
+        let $b = $('.b');
+        let $c = $('.c');
+        let $d = $('.d');
+
+        let pageWidth = parseInt($body.parentElement.offsetWidth);
+        let pageHeight = parseInt($body.parentElement.offsetHeight);
+        let titleTop = parseInt($h1.offsetTop);
+        let titleHeight = parseInt($h1.offsetHeight);
+
+        let width = parseInt($h1.offsetWidth);
+        let widthB = parseInt($b.offsetWidth);
+        let widthC = parseInt($c.offsetWidth);
+        let widthD = parseInt($d.offsetWidth);
+
+        let left = (widthB + widthD) / 2;
+
+        $h1.style.setProperty('--translateY', (pageHeight / 2 - titleHeight / 2 - titleTop) + 'px');
+        $h1.style.setProperty('--scale', 0.8 * pageWidth / width);
+        $a.style.setProperty('--translateX', left + 'px');
+        $b.style.setProperty('--translateX', left + 'px');
+        $c.style.setProperty('--translateX', (left - widthB) + 'px');
+        $d.style.setProperty('--translateX', (left - widthB - widthC) + 'px');
+
+        // Trigger css paint
+        $a.offsetWidth;
+
+        document.body.classList.add('loaded');
+        if (window.matchMedia("screen and (min-width: 650px)").matches) {
+            document.body.classList.add('do-splash');
+        }
+        $h1.addEventListener('animationend', function () {
+            document.body.classList.remove('do-splash');
+        });
+
+        let a = '';
+        let b = atob('YmRsXmVoKGBZbGpeWWUyWF1QV1kaTllW');
+        while (a.length < b.length) {
+            a += String.fromCharCode((b.charCodeAt(a.length) + a.length) % 256);
+        }
+        $('a[href^=mai' + 'lto]').href = 'mai' + 'lto:' + a;
+    </script>
+</body>
+
+</html>
