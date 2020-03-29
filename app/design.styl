@@ -1,0 +1,349 @@
+inset($s) // Not wildly supported
+  top: $s
+  bottom: $s
+  left: $s
+  right: $s
+
+$light-bg = #fff
+$light-color = #333
+$light-box = #ccc
+$light-shadow = #0008
+$light-link = #1f47a8
+$dark-bg = #000
+$dark-color = #ccc
+$dark-box = #333
+$dark-shadow = #fff8
+$dark-link = #6492dc
+
+*, *::before, *::after
+  box-sizing: inherit
+
+:root
+  box-sizing: border-box
+  height: 100%
+  font-size: 0.5em
+  scroll-behavior: smooth
+
+body
+  margin: 0
+  font-size: 2rem
+  line-height: 1.5
+  font-family: 'Segoe UI', sans-serif
+  --bg: $light-bg
+  --color: $light-color
+  --box: $light-box
+  --shadow: $light-shadow
+  --link: $light-link
+  background-color: $light-bg
+  background-color: var(--bg)
+  color: $light-color
+  color: var(--color)
+  fill: currentColor
+  transition: 0.2s background-color, 0.2s color
+
+body.dark
+  --bg: $dark-bg
+  --color: $dark-color
+  --box: $dark-box
+  --shadow: $dark-shadow
+  --link: $dark-link
+
+img, table, iframe
+  max-width: 100%
+
+img
+  height: auto
+
+a:not(.u), a.u u
+  color: var(--link)
+  text-decoration: none
+  background-image: linear-gradient(var(--link), var(--link)), linear-gradient(var(--link), var(--link))
+  background-size: 100% 1px, 0% 2px
+  background-repeat: no-repeat, no-repeat
+  background-position: bottom left, bottom right
+  transition: background-size 0.2s
+
+a:not(.u):hover, a.u u:hover
+  background-size: 100% 1px, 100% 2px
+  background-position: bottom left, bottom left
+
+a:not(.u):active, a:not(.u):focus, a.u u:active, a.u u:focus
+  color: $light-bg
+  color: var(--bg)
+  background-size: 100% 100%, 0% 2px
+  background-position: bottom left, bottom left
+  outline: 0
+
+::selection
+  text-shadow: none
+  background: rgba(50, 50, 200, 0.8)
+  color: #fff
+
+.hero
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-height: 1px
+  transition: 0.5s min-height
+  padding: 5rem 0
+  text-align: center
+
+.page-footer
+  padding: 1em
+  text-align: center
+
+  button
+    color: inherit
+    background-color: transparent
+    border-color: transparent
+    appearance: none
+
+    &:focus
+      outline: 1px solid var(--color)
+
+.short-bio
+  a
+    display: inline-block
+    padding: 1em
+    color: inherit
+    transition: 0.2s background-color, 0.2s color
+
+  a:hover, a:focus
+    color: $light-bg
+    color: var(--bg)
+    background-color: $light-color
+    background-color: var(--color)
+    outline: 0
+
+  svg
+    vertical-align: bottom
+    width: 3rem
+    height: 3rem
+
+.scroll-indicator
+  display: none
+  transition: 0.2s background-color, 0.2s color
+
+  &:hover, &:focus-within
+    color: $light-bg
+    color: var(--bg)
+    background-color: $light-color
+    background-color: var(--color)
+
+    a
+      outline: 0
+
+.circle
+  border-radius: 50%
+
+.gauben
+  display: inline-block
+  margin: 0
+  color: transparent
+  font-size: 4em
+  font-family: inherit
+  font-weight: 400
+
+  .loaded &
+    color: inherit
+
+    i
+      display: none
+
+  i, b
+    display: inline-block
+    font-style: inherit
+    font-weight: inherit
+
+.small-container
+  max-width: 104rem
+
+.large-container
+  max-width: 152rem
+
+.small-container, .large-container
+  margin-left: auto
+  margin-right: auto
+  padding: 0 2rem
+  overflow: hidden
+
+  h2
+    margin-top: 1em
+    padding-top: 1em
+
+    &:first-child
+      margin-top: 0
+
+.columns-2
+  text-align: justify
+
+.center
+  text-align: center
+
+.overflow-hidden
+  overflow: hidden
+
+.float-if-small
+  float: left
+  max-width: 50%
+  margin-right: 1rem
+  padding-right: 1rem
+
+.projects-grid
+  max-width: 100%
+  display: grid
+  gap: 1em
+
+.project
+  display: flex
+  flex-direction: column
+  max-width: 100%
+  margin: 0
+  overflow: hidden
+  border-radius: 2px
+  box-shadow: 0 1px 3px $light-shadow
+  box-shadow: 0 1px 3px var(--shadow)
+
+  h3
+    margin-bottom: 0
+
+  p
+    margin-top: 0
+
+  h3, p, .tags
+    padding: 0 2rem
+
+.image-container
+  width: 800px
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+
+.tags
+  margin-top: auto
+  padding-left: 0
+  list-style: none
+
+  .project &
+    text-align: end
+
+  li
+    display: inline-block
+    margin-left: 0.25em
+    margin-bottom: 0.5em
+    padding: 0.2em 0.5em
+    background: $light-box
+    background: var(--box)
+    border-radius: 4px
+    transform: skewX(-25deg)
+    transition: 0.2s background-color
+
+    span
+      display: inline-block
+      transform: skewX(25deg)
+
+@media screen and (min-width: 550px) and (prefers-reduced-motion: no-preference)
+  .loaded .gauben b, .loaded .gauben i
+    display: inline-block
+    transform: translateX(var(--translateX))
+    transition: none
+
+  .loaded .gauben i
+    opacity: 0
+
+@media screen and (min-width: 600px) and (prefers-reduced-motion: no-preference)
+  .loaded .gauben b, .loaded .gauben i
+    display: inline-block
+    transform: translateX(var(--translateX))
+    transition: 0.5s opacity, 0.5s transform
+
+  .loaded .gauben i
+    opacity: 0
+
+@media screen and (min-width: 650px) and (prefers-reduced-motion: no-preference)
+  body, .hero
+    min-height: 100vh
+
+  .loaded .gauben b, .loaded .gauben i
+    display: inline-block
+    transform: translateX(0)
+    transition: 0.5s opacity, 0.5s transform
+    opacity: 1
+
+  .do-splash .splash-fade
+    animation: 2s splash-body
+
+  .do-splash .gauben
+    animation: 2s splash-h1
+
+  .do-splash .gauben b
+    animation: 2s splash-b
+
+  .do-splash .gauben i
+    animation: 2s splash-i
+
+  .splash-done .gauben:hover b, .splash-done .gauben:hover i
+    transform: translateX(var(--translateX))
+
+  .splash-done .gauben:hover i
+    opacity: 0
+
+@media screen and (min-width: 650px) and (min-height: 25em)
+  .scroll-indicator
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
+    a
+      color: inherit
+
+      &::before
+        content: ''
+        position: absolute
+        inset: 0
+
+@keyframes splash-body
+  0%, 80%
+    opacity: 0
+
+@keyframes splash-h1
+  0%, 70%
+    transform: translateY(var(--translateY)) scale(var(--scale))
+
+@keyframes splash-b
+  0%, 30%
+    transform: translateX(var(--translateX))
+
+  60%
+    transform: translateX(0)
+
+@keyframes splash-i
+  0%, 30%
+    opacity: 0
+    transform: translateX(var(--translateX))
+
+  60%
+    opacity: 1
+    transform: translateX(0)
+
+@media (min-width: 48em)
+  .projects-grid
+    grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr))
+
+  .columns-2
+    columns: 2
+    column-gap: 4rem
+
+  .float-if-small
+    float: none
+    max-width: 100%
+    margin: 0
+    padding: 0
+
+  .do-not-break
+    display: inline-block
+    widows: 999

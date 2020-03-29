@@ -6,18 +6,21 @@
   "author": "Gautier Ben Aïm <benaim.gautier@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel app/*.html --out-dir . --public-url .",
-    "build": "parcel build app/*.html --out-dir . --public-url ."
+    "start": "parcel app/*.html --out-dir . --public-url /",
+    "build": "rm -rf *.{html,js,css,map,jpg,png} assets && parcel build app/*.html --out-dir . --public-url . --no-source-maps --no-content-hash"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "stylus": "^0.54.7",
+    "typescript": "^3.8.3"
   }
 }

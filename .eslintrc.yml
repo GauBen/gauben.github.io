@@ -3,6 +3,7 @@ env:
   es6: true
   node: true
 extends:
+  - eslint:recommended
   - standard
 globals:
   Atomics: readonly
@@ -13,4 +14,5 @@ parserOptions:
   sourceType: module
 plugins:
   - '@typescript-eslint'
+  - html
 rules: {}
