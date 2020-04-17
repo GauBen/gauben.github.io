@@ -1,0 +1,36 @@
+._text-justify
+  text-align justify
+
+._dark
+  --bg $color-dark-theme-bg
+  --color $color-dark-theme-color
+  --box $color-dark-theme-box
+  --shadow $color-dark-theme-shadow
+  --link $color-dark-theme-link
+
+/* stylelint-disable rscss/no-descendant-combinator */
+._beautiful-links a
+a._beautiful-link
+  $line = 1px
+  display inline
+  padding-bottom 2 * $line
+  color $color-light-theme-link
+  color var(--link)
+  text-decoration none
+  background-image linear-gradient(var(--link), var(--link)), linear-gradient(var(--link), var(--link))
+  background-repeat no-repeat, no-repeat
+  background-position bottom left, bottom right
+  background-size 100% $line, 0% (2 * $line)
+  transition $timing-fast color, $timing-fast background-size
+
+  &:hover
+    background-position bottom left, bottom left
+    background-size 100% $line, 100% (2 * $line)
+
+  &:focus
+  &:active
+    color $color-light-theme-bg
+    color var(--bg)
+    background-position bottom left, bottom left
+    background-size 100% 100%, 0% (2 * $line)
+    outline 0

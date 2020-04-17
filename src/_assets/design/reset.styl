@@ -1,0 +1,54 @@
+
+*
+*::before
+*::after
+  box-sizing inherit
+
+html
+  box-sizing border-box
+  min-height 100%
+  font-size 0.5em
+
+  @media screen and (prefers-reduced-motion: no-preference)
+    scroll-behavior smooth
+
+body
+  margin 0
+  color $color-light-theme-color
+  color var(--color)
+  font-size 2rem
+  font-family $sans-serif
+  line-height 1.5
+  background-color $color-light-theme-bg
+  background-color var(--bg)
+  transition $timing-fast background-color, $timing-fast color, $timing-fast fill
+  fill currentColor
+  --bg $color-light-theme-bg
+  --box $color-light-theme-box
+  --color $color-light-theme-color
+  --link $color-light-theme-link
+  --shadow $color-light-theme-shadow
+
+img
+table
+iframe
+  max-width 100%
+
+img
+  height auto
+
+h1
+  margin $gap-large 0
+
+h2
+h3
+h4
+h5
+h6
+p
+  margin $gap-normal 0
+
+::selection
+  color #fff
+  text-shadow none
+  background rgba(50, 50, 200, 0.8)

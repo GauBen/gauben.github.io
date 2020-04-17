@@ -1,0 +1,47 @@
+{% extends 'parts/html.njk' %}
+
+{% block body %}
+<div class="section-container _beautiful-links _text-justify">
+  <h1>{{ title }}</h1>
+  <div class="illustrated-text">
+    <img src="{{ (assetsRoot + '/me.jpg') | url }}" width=960 height=960 alt="{{ alt }}" class="illustration">
+    {%- for p in description %}
+    <p>{{ p }}</p>
+    {%- endfor -%}
+    {%- for p in resume %}
+    <p>{{ p[0] }} <a href="{{ (assetsRoot + '/' + p[1]) | url }}">{{ p[2] }}</a></p>
+    {%- endfor -%}
+  </div>
+  <h2>{{ skills.title }}</h2>
+  <p>{{ skills.description }}</p>
+  <ul class="tag-list">
+    {%- for skill in skills.list -%}
+    <li class="tag"><span class="span">{{ skill }}</span></li>
+    {%- endfor %}
+  </ul>
+  <h2>{{ civicEngagement.title }}</h2>
+  <p>
+    {{ civicEngagement.description }}
+  </p>
+  <div>
+    <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/gQpLG40HVQc"
+      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
+      title="net7 - Civic engagement">
+    </iframe>
+  </div>
+  <p><a href="{{ (assetsRoot + '/poster.png') | url }}">{{ civicEngagement.poster }}</a> – <a href="{{ (assetsRoot + '/SWOT.pdf') | url }}">{{ civicEngagement.swot }}</a></p>
+  <h2>{{ spanish.title }}</h2>
+  <p>{{ spanish.description }}</p>
+  <div>
+    <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/RFF_OPBY5FU"
+      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
+      title="Gautier Ben Aïm – Currículum en español">
+    </iframe>
+  </div>
+  <h2>{{ sports.title }}</h2>
+  <p>
+    {{ sports.description }}
+  </p>
+  <p><a href="{{ '/' | localizeurl | url }}">{{ 'Back to home page' | translate }}</a></p>
+</div>
+{% endblock %}

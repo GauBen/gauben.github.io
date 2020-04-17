@@ -1,0 +1,7 @@
+.project-grid
+  display grid
+  gap $gap-normal
+  max-width 100%
+
+  @media (min-width: unit(($min-width-project-card / 2), em))
+    grid-template-columns repeat(auto-fit, minmax($min-width-project-card, 1fr))

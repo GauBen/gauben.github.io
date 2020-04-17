@@ -1,0 +1,20 @@
+.square-icon-link
+  $icon-size = 3 * $gap-small
+  display inline-block
+  margin 0 ($gap-small / 2)
+  padding $gap-normal
+  color inherit
+  transition $timing-fast background-color, $timing-fast color
+
+  &:hover
+  &:focus
+    color $color-light-theme-bg
+    color var(--bg)
+    background-color $color-light-theme-color
+    background-color var(--color)
+    outline transparent
+
+  > .icon
+    width $icon-size
+    height $icon-size
+    vertical-align bottom

@@ -1,0 +1,35 @@
+.project-card
+  display flex
+  flex-direction column
+  max-width 100%
+  margin 0
+  overflow hidden
+  border-radius $radius-small
+  box-shadow $shadow-small $color-light-theme-shadow
+  box-shadow $shadow-small var(--shadow)
+
+  > .image
+    position relative
+    left 50%
+    display block
+    width 2 * $min-width-project-card + $gap-normal
+    max-width none
+    height $height-project-card-image
+    text-align center
+    transform translateX(-50%)
+
+  > .title
+  > .description
+    padding 0 $gap-normal
+
+  > .title
+    margin-bottom 0
+
+  > .description
+    margin 0 0 $gap-normal
+    text-align justify
+
+  > .tag-list
+    margin 0 0 $gap-small
+    padding 0 $gap-normal
+    text-align end

@@ -1,0 +1,80 @@
+.hero-title
+  margin 0
+  font-weight normal
+  font-size $hero-font-size
+  font-family inherit
+  white-space nowrap
+
+  > .tier
+  > .aim
+    opacity 0
+
+  > .gau
+  > .tier
+  > .ben
+  > .aim
+    display inline-block
+    transform translateX(var(--translateX))
+
+    @media screen and (min-width: $hero-min-width)
+      transform translateX(0)
+      opacity 1
+
+/* stylelint-disable rscss/no-descendant-combinator */
+._js-splash-done .hero-title
+  > .gau
+  > .tier
+  > .ben
+  > .aim
+    @media screen and (prefers-reduced-motion: no-preference)
+      transition $timing-normal opacity, $timing-normal transform
+
+@media screen and (min-width: $hero-min-width) and (prefers-reduced-motion: no-preference)
+  ._js-do-splash
+    .hero-title
+      animation $hero-duration splash-title
+
+      > .gau
+      > .ben
+        animation $hero-duration splash-gauben
+
+      > .tier
+      > .aim
+        animation $hero-duration splash-tieraim
+
+  ._js-splash-done
+    .hero-title:hover
+    .hero-title:focus
+    .hero-title:active
+      > .gau
+      > .tier
+      > .ben
+      > .aim
+        transform translateX(var(--translateX))
+
+      > .tier
+      > .aim
+        opacity 0
+
+@keyframes splash-title
+  0%
+  70%
+    transform translateY(var(--translateY)) scale(var(--scale))
+
+@keyframes splash-gauben
+  0%
+  30%
+    transform translateX(var(--translateX))
+
+  60%
+    transform translateX(0)
+
+@keyframes splash-tieraim
+  0%
+  30%
+    transform translateX(var(--translateX))
+    opacity 0
+
+  60%
+    transform translateX(0)
+    opacity 1
