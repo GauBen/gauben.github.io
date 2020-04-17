@@ -14,9 +14,9 @@
   dependencies:
     prismjs "^1.17.1"
 
-"@11ty/eleventy@11ty/eleventy#master":
+"@11ty/eleventy@11ty/eleventy#b8144add8a5ecd7d41fb3c602237189e67ffb252":
   version "0.11.0-beta.3"
-  resolved "https://codeload.github.com/11ty/eleventy/tar.gz/9109e76f1fccc98d1809613c61b2a441152a7f13"
+  resolved "https://codeload.github.com/11ty/eleventy/tar.gz/b8144add8a5ecd7d41fb3c602237189e67ffb252"
   dependencies:
     "@11ty/dependency-tree" "^1.0.0"
     browser-sync "^2.26.7"
