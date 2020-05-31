@@ -47,4 +47,6 @@ sports:
     Enfin j'espère… Cela fait maintenant 8 ans que je fais de l'escalade, autant à l'intérieur
     qu'à l'extérieur, et c'est probablement le meilleur sport pour développer de l'assurance.
     Et j'étais plutôt bon au tennis de table au lycée.
+option:
+  title: "Choix de filière : Logiciel"
 ---

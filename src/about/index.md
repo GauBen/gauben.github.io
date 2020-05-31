@@ -45,4 +45,6 @@ sports:
   description: >
     At least, I hope so. I've been climbing for about 8 years by now, both indoors and outdoors, and it's probably the
     best sport when it comes to trusting yourself. And I was quite good at table tennis in high school.
+option:
+  title: "Option choice: Software"
 ---
