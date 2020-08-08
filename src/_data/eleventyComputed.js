@@ -2,7 +2,7 @@ const path = require('path')
 
 const eleventyComputed = {
   locale: data => {
-    if ('locale' in data) {
+    if ('locale' in data && typeof data.locale === 'string' && data.locale.length > 0) {
       if (data.locale in data.locales) {
         return data.locale
       }
@@ -15,7 +15,7 @@ const eleventyComputed = {
     return data.locales.index
   },
   permalink: data => {
-    if ('permalink' in data) {
+    if ('permalink' in data && typeof data.permalink === 'string' && data.locale.permalink > 0) {
       return data.permalink
     }
     // Put the language code at the beginning
