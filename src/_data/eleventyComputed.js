@@ -15,7 +15,7 @@ const eleventyComputed = {
     return data.locales.index
   },
   permalink: data => {
-    if ('permalink' in data && typeof data.permalink === 'string' && data.locale.permalink > 0) {
+    if ('permalink' in data && typeof data.permalink === 'string' && data.permalink.length > 0) {
       return data.permalink
     }
     // Put the language code at the beginning
