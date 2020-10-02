@@ -29,6 +29,10 @@ skills:
   description: Here are the technologies I work with.
   list: [PHP, Composer, PHPUnit, MySQL, JavaScript, TypeScript, Node.js, Express,
     Hogan.js, WebSocket, Vue.js, CSS, Stylus, Python, Numpy, Java, JUnit, LibGDX, OCaml, Git, Docker]
+internshipReport:
+  title: Internship report
+  description: Read my summer 2020 internship report and other documents in my shared folder.
+  label: My online briefcase
 civicEngagement:
   title: Civic engagement
   description: >

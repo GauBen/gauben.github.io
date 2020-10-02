@@ -30,6 +30,10 @@ skills:
   description: Voici les technologies avec lesquelles je travaille.
   list: [PHP, Composer, PHPUnit, MySQL, JavaScript, TypeScript, Node.js, Express,
     Hogan.js, WebSocket, Vue.js, CSS, Stylus, Python, Numpy, Java, JUnit, LibGDX, OCaml, Git, Docker]
+internshipReport:
+  title: Rapport de stage
+  description: Consultez mon rapport de stage de l'été 2020 ainsi que d'autres documents sur mon porte-document en ligne.
+  label: Mon porte-document en ligne
 civicEngagement:
   title: Engagement civique
   description: >
