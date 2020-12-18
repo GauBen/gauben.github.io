@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-  eleventyConfig.addPassthroughCopy('src/**/*.{png,jpg,pdf,webp}')
+  eleventyConfig.addPassthroughCopy('pages/**/*.{png,jpg,pdf,webp,ico}')
   eleventyConfig.setDataDeepMerge(true)
 
   // Filter that keeps items that have the same `data.locale` as
@@ -38,11 +38,9 @@ module.exports = (eleventyConfig) => {
     locale = locale || this.ctx.locale || locales.index
     const pathInfo = path.parse(url)
     // (/fr)? + /path/to + (/non-locale-file-name)? + /
-    return `${
-      locale === locales.index ? '' : `/${locale}`
-    }${pathInfo.dir}${
-      pathInfo.base in locales ? '' : `/${pathInfo.base}`
-    }/`
+    return `${locale === locales.index ? '' : `/${locale}`
+      }${pathInfo.dir}${pathInfo.base in locales ? '' : `/${pathInfo.base}`
+      }/`
   })
 
   // Sort locales in alphabetical order
@@ -61,12 +59,21 @@ module.exports = (eleventyConfig) => {
     const locales = this.ctx.locales
     locale = locale || this.ctx.locale || locales.index
     return locale in this.ctx.translations && str in this.ctx.translations[locale]
-      ? this.ctx.translations[locale][str] : str
+      ? this.ctx.translations[locale][str]
+      : str
+  })
+
+  eleventyConfig.setBrowserSyncConfig({
+    ui: false,
+    server: {
+      baseDir: '_dist'
+    }
   })
 
   return {
     dir: {
-      input: 'src'
-    }
+      input: 'pages'
+    },
+    markdownTemplateEngine: 'njk'
   }
 }

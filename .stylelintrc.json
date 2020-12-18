@@ -2,7 +2,6 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-rscss/config",
-    "stylelint-8-point-grid",
     "stylelint-config-rational-order",
     "stylelint-plugin-stylus/standard"
   ],
