@@ -19,7 +19,7 @@ if ($h1) {
   const left = (widthB + widthD) / 2
 
   $h1.style.setProperty('--translateY', (pageHeight / 2 - titleHeight / 2 - titleTop) + 'px')
-  $h1.style.setProperty('--scale', 0.8 * pageWidth / width)
+  $h1.style.setProperty('--scale', 0.6 * pageWidth / width)
   $a.style.setProperty('--translateX', left + 'px')
   $b.style.setProperty('--translateX', left + 'px')
   $c.style.setProperty('--translateX', (left - widthB) + 'px')

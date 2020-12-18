@@ -4,7 +4,7 @@
   <div class="section-container _beautiful-links _text-justify">
     <h1>{{ title }}</h1>
     <div class="illustrated-text">
-      <img src="{{ (assetsRoot + '/me.jpg') | url }}" width=960 height=960 alt="{{ alt }}" class="illustration">
+      <img src="url:{{ (assetsRoot + '/me.jpg') | url }}" width="960" height="960" alt="{{ alt }}" class="illustration">
       {%- for p in description %}
         <p>{{ p }}</p>
       {%- endfor -%}

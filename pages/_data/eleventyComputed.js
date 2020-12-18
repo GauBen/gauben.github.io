@@ -23,13 +23,11 @@ const eleventyComputed = {
     const pathInfo = path.parse(stem)
     const locale = eleventyComputed.locale(data)
     // (/fr)? + /path/to + (/non-locale-file-name)? + /
-    return `${
-      locale === data.locales.index ? '' : `/${locale}`
-    }${pathInfo.dir}${
-      pathInfo.base in data.locales ? '' : `/${pathInfo.base}`
-    }/`
+    return `${locale === data.locales.index ? '' : `/${locale}`
+      }${pathInfo.dir}${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`
+      }/`
   },
-  assetsRoot: data => path.parse(data.page.filePathStem).dir
+  assetsRoot: data => '/_pre-dist' + path.parse(data.page.filePathStem).dir
 }
 
 module.exports = eleventyComputed
