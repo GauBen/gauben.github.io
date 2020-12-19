@@ -25,41 +25,13 @@
     <h2>{{ internshipReport.title }}</h2>
     <p>{{ internshipReport.description }}</p>
     <p>
-      <strong>→ <a href="https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf?usp=sharing">{{ internshipReport.label }}</a>
+      <strong>→ <a href="https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf">{{ internshipReport.label }}</a>
       </strong>
     </p>
     <h2>{{ civicEngagement.title }}</h2>
     <p>
-      {{ civicEngagement.description }}
+      {{ civicEngagement.description }} → <a href="https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf">{{ internshipReport.label }}</a>
     </p>
-    <div>
-      <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/gQpLG40HVQc"
-      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
-      title="net7 - Civic engagement"></iframe>
-    </div>
-    {# <p>
-      <a href="url:{{ (assetsRoot + '/poster.png') | url }}">{{ civicEngagement.poster }}</a> – <a href="{{ (assetsRoot + '/SWOT.pdf') | url }}">{{ civicEngagement.swot }}</a>
-    </p> #}
-    <h2>{{ spanish.title }}</h2>
-    <p>{{ spanish.description }}</p>
-    <div>
-      <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/5RDkUf2Tnos"
-      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
-      title="Gautier Ben Aïm – Resumen del año"></iframe>
-      <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/RFF_OPBY5FU"
-      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
-      title="Gautier Ben Aïm – Currículum en español"></iframe>
-    </div>
-    <h2>{{ sports.title }}</h2>
-    <p>
-      {{ sports.description }}
-    </p>
-    <h2>{{ option.title }}</h2>
-    <div>
-      <iframe width="640" height="360" style="background:#888;" src="https://www.youtube-nocookie.com/embed/Yva3rjvCfMw"
-      frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
-      title="Option choice pitch"></iframe>
-    </div>
     <p>
       <a href="{{ '/' | localizeurl | url }}">{{ 'Back to home page' | translate }}</a>
     </p>
