@@ -17,19 +17,39 @@ description:
     d'autres contributeurs. Mes amis disent que je suis spontané, ambitieux et sérieux. J'apprécie travailler en
     équipe, découvrir de nouvelles technologies et garder un œil sur les tendances en programmation.
 resume:
-  -
-    - Si vous souhaitez en savoir plus sur mes études et mes compétences,
-    - Curriculum Vitae - Gautier Ben Aim.pdf
+  - - Si vous souhaitez en savoir plus sur mes études et mes compétences,
+    - fr
     - vous pouvez consulter mon CV.
-  -
-    - And if you speak English,
-    - Resume - Gautier Ben Aim.pdf
+  - - And if you speak English,
+    - en
     - here's my English resume.
 skills:
   title: Compétences
   description: Voici les technologies avec lesquelles je travaille.
-  list: [PHP, Composer, PHPUnit, MySQL, JavaScript, TypeScript, Node.js, Express,
-    Hogan.js, WebSocket, Vue.js, CSS, Stylus, Python, Numpy, Java, JUnit, LibGDX, OCaml, Git, Docker]
+  list:
+    [
+      PHP,
+      Composer,
+      PHPUnit,
+      MySQL,
+      JavaScript,
+      TypeScript,
+      Node.js,
+      Express,
+      Hogan.js,
+      WebSocket,
+      Vue.js,
+      CSS,
+      Stylus,
+      Python,
+      Numpy,
+      Java,
+      JUnit,
+      LibGDX,
+      OCaml,
+      Git,
+      Docker,
+    ]
 internshipReport:
   title: Rapport de stage
   description: Consultez mon rapport de stage de l'été 2020 ainsi que d'autres documents sur mon porte-document en ligne.

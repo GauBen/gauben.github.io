@@ -16,19 +16,39 @@ description:
     spontaneous, ambitious and reliable. I enjoy teamwork, learning new technologies and keeping an eye on
     programming trends.
 resume:
-  -
-    - If you want a deeper insight into my skills and education,
-    - Resume - Gautier Ben Aim.pdf
+  - - If you want a deeper insight into my skills and education,
+    - en
     - have a look at my resume.
-  -
-    - And if you speak French,
-    - Curriculum Vitae - Gautier Ben Aim.pdf
+  - - And if you speak French,
+    - fr
     - here's my French resume.
 skills:
   title: Skills
   description: Here are the technologies I work with.
-  list: [PHP, Composer, PHPUnit, MySQL, JavaScript, TypeScript, Node.js, Express,
-    Hogan.js, WebSocket, Vue.js, CSS, Stylus, Python, Numpy, Java, JUnit, LibGDX, OCaml, Git, Docker]
+  list:
+    [
+      PHP,
+      Composer,
+      PHPUnit,
+      MySQL,
+      JavaScript,
+      TypeScript,
+      Node.js,
+      Express,
+      Hogan.js,
+      WebSocket,
+      Vue.js,
+      CSS,
+      Stylus,
+      Python,
+      Numpy,
+      Java,
+      JUnit,
+      LibGDX,
+      OCaml,
+      Git,
+      Docker,
+    ]
 internshipReport:
   title: Internship report
   description: Read my summer 2020 internship report and other documents in my shared folder.

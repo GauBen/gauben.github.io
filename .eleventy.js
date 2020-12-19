@@ -2,7 +2,6 @@ const path = require('path')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-  eleventyConfig.addPassthroughCopy('pages/**/*.{png,jpg,pdf,webp,ico}')
   eleventyConfig.setDataDeepMerge(true)
 
   // Filter that keeps items that have the same `data.locale` as

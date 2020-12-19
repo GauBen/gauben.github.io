@@ -4,13 +4,13 @@
   <div class="section-container _beautiful-links _text-justify">
     <h1>{{ title }}</h1>
     <div class="illustrated-text">
-      <img src="url:{{ (assetsRoot + '/me.jpg') | url }}" width="960" height="960" alt="{{ alt }}" class="illustration">
+      <img src="url:~/static/me.jpg?as=webp" width="960" height="960" alt="{{ alt }}" class="illustration">
       {%- for p in description %}
         <p>{{ p }}</p>
       {%- endfor -%}
       {%- for p in resume %}
         <p>{{ p[0] }}
-          <a href="{{ (assetsRoot + '/' + p[1]) | url }}">{{ p[2] }}</a>
+          <a href="{{ '/about/resume/' | localizeurl(p[1]) | url }}">{{ p[2] }}</a>
         </p>
       {%- endfor -%}
     </div>
@@ -37,9 +37,9 @@
       frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
       title="net7 - Civic engagement"></iframe>
     </div>
-    <p>
-      <a href="{{ (assetsRoot + '/poster.png') | url }}">{{ civicEngagement.poster }}</a> – <a href="{{ (assetsRoot + '/SWOT.pdf') | url }}">{{ civicEngagement.swot }}</a>
-    </p>
+    {# <p>
+      <a href="url:{{ (assetsRoot + '/poster.png') | url }}">{{ civicEngagement.poster }}</a> – <a href="{{ (assetsRoot + '/SWOT.pdf') | url }}">{{ civicEngagement.swot }}</a>
+    </p> #}
     <h2>{{ spanish.title }}</h2>
     <p>{{ spanish.description }}</p>
     <div>
