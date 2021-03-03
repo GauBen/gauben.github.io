@@ -49,7 +49,7 @@
     <div class="project-grid">
       {%- for project in collections.project | samelocale | reverse %}
         <article class="project-card">
-          <img src="url:{{ (project.data.assetsRoot + '/banner.png') | url }}?as=webp&width=784" width="784" height="200" alt="{{ projects.alt }}" class="image">
+          <img src="url:{{ (project.data.assetsRoot + '/banner.png')  }}?as=webp&width=784" width="784" height="200" alt="{{ projects.alt }}" class="image">
           <h3 class="title">{{ project.data.title }} ({{ project.data.date.getFullYear() }})</h3>
           <p class="description">{{ project.data.description }}</p>
           <ul class="tag-list">
@@ -61,28 +61,18 @@
         </article>
       {%- endfor %}
       <article class="project-card">
-        <img src="url:{{ (assetsRoot + '/projects/other-things.png') | url }}?as=webp&width=784" width="784" height="180" alt="{{ projects.other.alt }}" class="image">
+        <img src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784" width="784" height="180" alt="{{ projects.other.alt }}" class="image">
         <h3 class="title">{{ projects.other.title }}</h3>
         <p class="description">{{ projects.other.description }}</p>
       </article>
     </div>
   </div>
   <article class="section-container -large _beautiful-links _text-justify">
-    <h2>{{ about.title }}</h2>
-    <p>
-      {{ about.description }}
-      <a href="{{ '/about/' | localizeurl | url }}">{{ about.link }}</a>
-    </p>
-    <p>
-      {{ contact[0] }}
-      <a href="mailto:">{{ contact[1] }}</a>
-      {{ contact[2] }}
-      <a href="https://www.linkedin.com/in/gautier-ben-aim/">{{ contact[3] }}</a>{{ contact[4] }}
-    </p>
+    {{ content | safe}}
   </article>
 {% endblock %}
 
 {% block footer %}
   {{ super() }}
-  <script src="{{ '/assets/main.ts' | url }}"></script>
+  <script src="{{ '~/assets/main.ts' }}"></script>
 {% endblock %}

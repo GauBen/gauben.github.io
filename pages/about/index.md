@@ -59,16 +59,4 @@ civicEngagement:
     I'm the current president of net7, an association whose tagline is
     “A bunch of geeks building services for 6,000+ students.” If you want to hear more about it, here's a
     video made by 5 current members of the association.
-  poster: The poster of net7
-  swot: SWOT analysis
-spanish:
-  title: ¡Hablo español!
-  description: If you speak Spanish too, please have a look at my two-minute resume.
-sports:
-  title: I'm not bad at sports too
-  description: >
-    At least, I hope so. I've been climbing for about 8 years by now, both indoors and outdoors, and it's probably the
-    best sport when it comes to trusting yourself. And I was quite good at table tennis in high school.
-option:
-  title: "Option choice: Software"
 ---

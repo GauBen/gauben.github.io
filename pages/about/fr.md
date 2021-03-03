@@ -59,18 +59,5 @@ civicEngagement:
   description: >
     Je suis le président actuel de net7, un association dont le slogan est
     « Quelques geeks qui développent des services pour plus de 6 000 étudiants ».
-    Si vous voulez en savoir plus, voici une vidée faite par 5 membres actuels de l'association.
-  poster: Le poster de net7
-  swot: Analyse SWOT
-spanish:
-  title: ¡Hablo español!
-  description: Si vous aussi vous parlez espagnol, je vous invite à voir mon CV vidéo de 2 minutes.
-sports:
-  title: Je suis pas mauvais en sport
-  description: >
-    Enfin j'espère… Cela fait maintenant 8 ans que je fais de l'escalade, autant à l'intérieur
-    qu'à l'extérieur, et c'est probablement le meilleur sport pour développer de l'assurance.
-    Et j'étais plutôt bon au tennis de table au lycée.
-option:
-  title: "Choix de filière : Logiciel"
+    Si vous voulez en savoir plus, voici une vidéo faite par 5 membres actuels de l'association.
 ---
