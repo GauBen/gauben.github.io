@@ -49,7 +49,7 @@
     <div class="project-grid">
       {%- for project in collections.project | samelocale | reverse %}
         <article class="project-card">
-          <img src="url:{{ (project.data.assetsRoot + '/banner.png')  }}?as=webp&width=784" width="784" height="200" alt="{{ projects.alt }}" class="image">
+          <img src="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=784" width="784" height="200" alt="{{ projects.alt }}" class="image" loading="lazy">
           <h3 class="title">{{ project.data.title }} ({{ project.data.date.getFullYear() }})</h3>
           <p class="description">{{ project.data.description }}</p>
           <ul class="tag-list">
@@ -61,7 +61,7 @@
         </article>
       {%- endfor %}
       <article class="project-card">
-        <img src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784" width="784" height="180" alt="{{ projects.other.alt }}" class="image">
+        <img src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784" width="784" height="180" alt="{{ projects.other.alt }}" class="image" loading="lazy">
         <h3 class="title">{{ projects.other.title }}</h3>
         <p class="description">{{ projects.other.description }}</p>
       </article>
