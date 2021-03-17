@@ -5,4 +5,5 @@ date: 2020-09-01
 tags:
   - project/Eleventy
   - project/Stylus
+  - project/TypeScript
 ---
