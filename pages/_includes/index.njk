@@ -49,9 +49,19 @@
     <div class="project-grid">
       {%- for project in collections.project | samelocale | reverse %}
         <article class="project-card">
-          <img src="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=784" width="784" height="200" alt="{{ projects.alt }}" class="image" loading="lazy">
-          <h3 class="title">{{ project.data.title }} ({{ project.data.date.getFullYear() }})</h3>
-          <p class="description">{{ project.data.description }}</p>
+          <img src="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=784&quality=95" width="784" height="200" alt="{{ projects.alt }}" class="image" loading="lazy">
+          <h3 class="title">
+            {% if project.data.link %}
+              <a href="{{ project.data.link }}" class="link">
+              {% endif %}
+              {{ project.data.title }} ({{ project.data.date.getFullYear() }})
+              {% if project.data.link %}
+              </a>
+            {% endif %}
+          </h3>
+          <p class="description">
+            {{ project.data.description }}
+          </p>
           <ul class="tag-list">
             {%- for tag in project.data.tags | subtags('project') -%}
               <li class="tag">
@@ -61,8 +71,10 @@
         </article>
       {%- endfor %}
       <article class="project-card">
-        <img src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784" width="784" height="180" alt="{{ projects.other.alt }}" class="image" loading="lazy">
-        <h3 class="title">{{ projects.other.title }}</h3>
+        <img src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784&quality=95" width="784" height="180" alt="{{ projects.other.alt }}" class="image" loading="lazy">
+        <h3 class="title">
+          <a href="https://github.com/GauBen/" class="link">{{ projects.other.title }}</a>
+        </h3>
         <p class="description">{{ projects.other.description }}</p>
       </article>
     </div>

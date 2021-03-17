@@ -7,7 +7,7 @@ projects:
   alt: A banner showcasing the project
   other:
     title: Among other things…
-    description: Have a look at my GitHub, I might be building something new!
+    description: Have a look at my GitHub, I might be working on something new!
     alt: Me working at my computer
 ---
 
