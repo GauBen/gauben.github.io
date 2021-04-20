@@ -2,22 +2,22 @@
 <html lang="{{ locale }}">
 
   <head>
-    {% block head %}
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>{{ title + ' – ' if title }}Gautier Ben Aïm</title>
-      <meta name="description" content="{{ description }}">
-      <link rel="stylesheet" href="~/assets/design.styl">
-      <link rel="shortcut icon" href="~/static/favicon.ico" type="image/x-icon">
-      <link rel="manifest" href="~/assets/app.webmanifest">
-    {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title + ' – ' if title }}Gautier Ben Aïm</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="~/assets/design.styl">
+    <link rel="shortcut icon" href="~/static/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="~/assets/app.webmanifest">
   </head>
 
   <body>
-    {% block body %}{% endblock %}
-    {% block footer %}{% include './footer.njk' %}
-    {% endblock %}
+    {{ content | safe}}
+    {% include './footer.njk' %}
+    {% for script in scripts %}
+      <script src="{{ script }}" async defer></script>
+    {% endfor %}
   </body>
 
 </html>

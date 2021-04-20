@@ -1,39 +1,7 @@
-{% extends 'parts/html.njk' %}
-
-{% block body %}
-  <div class="section-container _beautiful-links _text-justify">
-    <h1>{{ title }}</h1>
-    <div class="illustrated-text">
-      <img src="url:~/resources/me.jpg?as=webp" width="960" height="960" alt="{{ alt }}" class="illustration">
-      {%- for p in description %}
-        <p>{{ p }}</p>
-      {%- endfor -%}
-      {%- for p in resume %}
-        <p>{{ p[0] }}
-          <a href="{{ '/about/resume/' | localizeurl(p[1]) | url }}">{{ p[2] }}</a>
-        </p>
-      {%- endfor -%}
-    </div>
-    <h2>{{ skills.title }}</h2>
-    <p>{{ skills.description }}</p>
-    <ul class="tag-list">
-      {%- for skill in skills.list -%}
-        <li class="tag">
-          <span class="span">{{ skill }}</span></li>
-      {%- endfor %}
-    </ul>
-    <h2>{{ internshipReport.title }}</h2>
-    <p>{{ internshipReport.description }}</p>
-    <p>
-      <strong>→ <a href="https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf">{{ internshipReport.label }}</a>
-      </strong>
-    </p>
-    <h2>{{ civicEngagement.title }}</h2>
-    <p>
-      {{ civicEngagement.description }} → <a href="https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf">{{ internshipReport.label }}</a>
-    </p>
-    <p>
-      <a href="{{ '/' | localizeurl | url }}">{{ 'Back to home page' | translate }}</a>
-    </p>
-  </div>
-{% endblock %}
+---
+layout: parts/html.njk
+---
+<div class="section-container _beautiful-links _text-justify">
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+</div>

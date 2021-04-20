@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@11ty/dependency-tree@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-1.0.0.tgz#b1fa53da49aafe0ab3fe38bc6b6058b704aa59a1"
-  integrity sha512-2FWYlkphQ/83MG7b9qqBJfJJ0K9zupNz/6n4EdDuNLw6hQHGp4Sp4UMDRyBvA/xCTYDBaPSuSjHuu45tSujegg==
+"@11ty/dependency-tree@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-2.0.0.tgz#16143ce261c5dd00b3822374125745aaddd4d593"
+  integrity sha512-tYrGX3Tvccufy2jaYDkYpjBmVP1LeQq6b/d0r4GYThTXL4f3ZR7yMAl/0r8h9xvnsP+gkO53wfnV7s8cXcCtEg==
 
 "@11ty/eleventy-plugin-syntaxhighlight@^3.0.1":
   version "3.0.6"
@@ -16,10 +16,10 @@
     prismjs "^1.23.0"
 
 "@11ty/eleventy@gauben/eleventy":
-  version "1.0.0-canary.10"
-  resolved "https://codeload.github.com/gauben/eleventy/tar.gz/e187ec356d8fb28a29874d3f61da4613d39b4b88"
+  version "1.0.0-canary.14"
+  resolved "https://codeload.github.com/gauben/eleventy/tar.gz/e4976bfea65826d982429226f54a0118c6e0ba3a"
   dependencies:
-    "@11ty/dependency-tree" "^1.0.0"
+    "@11ty/dependency-tree" "^2.0.0"
     browser-sync "^2.26.14"
     chalk "^4.1.0"
     chokidar "^3.5.1"
