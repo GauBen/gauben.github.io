@@ -78,7 +78,6 @@ module.exports = (eleventyConfig) => {
   })
 
   eleventyConfig.setBrowserSyncConfig({
-    ui: false,
     server: {
       baseDir: '_dist'
     }
