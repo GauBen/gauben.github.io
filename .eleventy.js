@@ -86,7 +86,8 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: 'pages'
+      input: 'pages',
+      output: '_pre-dist'
     },
     markdownTemplateEngine: 'njk'
   }
