@@ -1,10 +1,10 @@
-const $h1 = document.querySelector('.hero-title')
+const $h1: HTMLElement = document.querySelector('.hero-title')
 
 if ($h1) {
-  const $a = document.querySelector('.gau')
-  const $b = document.querySelector('.tier')
-  const $c = document.querySelector('.ben')
-  const $d = document.querySelector('.aim')
+  const $a: HTMLElement = document.querySelector('.gau')
+  const $b: HTMLElement = document.querySelector('.tier')
+  const $c: HTMLElement = document.querySelector('.ben')
+  const $d: HTMLElement = document.querySelector('.aim')
 
   const pageWidth = window.innerWidth
   const pageHeight = window.innerHeight
@@ -18,12 +18,15 @@ if ($h1) {
 
   const left = (widthB + widthD) / 2
 
-  $h1.style.setProperty('--translateY', (pageHeight / 2 - titleHeight / 2 - titleTop) + 'px')
-  $h1.style.setProperty('--scale', 0.6 * pageWidth / width)
+  $h1.style.setProperty(
+    '--translateY',
+    pageHeight / 2 - titleHeight / 2 - titleTop + 'px'
+  )
+  $h1.style.setProperty('--scale', ((0.6 * pageWidth) / width).toString())
   $a.style.setProperty('--translateX', left + 'px')
   $b.style.setProperty('--translateX', left + 'px')
-  $c.style.setProperty('--translateX', (left - widthB) + 'px')
-  $d.style.setProperty('--translateX', (left - widthB - widthC) + 'px')
+  $c.style.setProperty('--translateX', left - widthB + 'px')
+  $d.style.setProperty('--translateX', left - widthB - widthC + 'px')
 
   // Trigger css paint
   // eslint-disable-next-line no-unused-expressions
@@ -34,7 +37,8 @@ if ($h1) {
   } else {
     document.body.classList.add('_js-splash-done')
   }
-  $h1.addEventListener('animationend', function () {
+
+  $h1.addEventListener('animationend', () => {
     document.body.classList.remove('_js-do-splash')
     document.body.classList.add('_js-splash-done')
   })
@@ -45,4 +49,8 @@ const b = atob('YmRsXmVoKGBZbGpeWWUyWF1QV1kaTllW')
 while (a.length < b.length) {
   a += String.fromCharCode((b.charCodeAt(a.length) + a.length) % 256)
 }
-document.querySelectorAll('a[href="mailto:"]').forEach(e => { e.href = 'mailto:' + a })
+for (const link of document.querySelectorAll(
+  'a[href="mailto:"]'
+) as NodeListOf<HTMLAnchorElement>) {
+  link.href = 'mailto:' + a
+}

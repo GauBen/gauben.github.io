@@ -55,39 +55,39 @@ module.exports = (eleventyConfig) => {
 
   // Sort locales in alphabetical order
   eleventyConfig.addFilter('sortbylocale', function (collection) {
-    return collection
-      .slice()
-      .sort((a, b) => a.data.locale.localeCompare(b.data.locale))
+    return [...collection].sort((a, b) =>
+      a.data.locale.localeCompare(b.data.locale)
+    )
   })
 
   // Cut slash-separated tags
   eleventyConfig.addFilter('subtags', function (tags, category) {
-    const len = category.length + 1
+    const length = category.length + 1
     return tags
       .filter((tag) => tag.startsWith(category + '/', 0))
-      .map((tag) => tag.substring(len))
+      .map((tag) => tag.slice(Math.max(0, length)))
   })
 
   // Translate the string given with translations found in `_data/translations`
-  eleventyConfig.addFilter('translate', function (str, locale) {
+  eleventyConfig.addFilter('translate', function (string, locale) {
     locale = locale || this.ctx.locale || locales.index
     return locale in this.ctx.translations &&
-      str in this.ctx.translations[locale]
-      ? this.ctx.translations[locale][str]
-      : str
+      string in this.ctx.translations[locale]
+      ? this.ctx.translations[locale][string]
+      : string
   })
 
   eleventyConfig.setBrowserSyncConfig({
     server: {
-      baseDir: '.dist'
-    }
+      baseDir: '.dist',
+    },
   })
 
   return {
     dir: {
       input: 'pages',
-      output: '.pre-dist'
+      output: '.pre-dist',
     },
-    markdownTemplateEngine: 'njk'
+    markdownTemplateEngine: 'njk',
   }
 }

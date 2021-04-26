@@ -1,16 +1,18 @@
 {% block footer %}
-<footer class="page-footer _beautiful-links">
-  <p>{{ 'This page is available in:' | translate }}
-  {% for page in collections.all | samepage | sortbylocale %}
-    {%- if page.data.locale === locale -%}
-      <strong>{{ locales[locale] }}</strong>
-    {%- else -%}
-      <a href="{{ page.url | url }}">{{ locales[page.data.locale] }}</a>
-    {%- endif -%}
-    {{- ' – ' if not loop.last -}}
-  {% endfor %}.</p>
-  <p>2020 – Gautier Ben Aïm – CC BY 4.0</p>
-  <p>{{ 'I love minimalism.' | translate }}</p>
-  <p><button id="dark-toggle" class="ghost-button" onclick="this.innerText = document.body.classList.toggle('_dark') ? '🌞' : '🌙'">🌙</button></p>
-</footer>
+  <footer class="page-footer _beautiful-links">
+    <p>{{ 'This page is available in:' | translate }}
+      {% for page in collections.all | samepage | sortbylocale %}
+        {%- if page.data.locale === locale -%}
+          <strong>{{ locales[locale] }}</strong>
+        {%- else -%}
+          <a href="{{ page.url | url }}">{{ locales[page.data.locale] }}</a>
+        {%- endif -%}
+        {{- ' – ' if not loop.last -}}
+      {% endfor %}.</p>
+    <p>2020 – Gautier Ben Aïm – CC BY 4.0</p>
+    <p>{{ 'I love minimalism.' | translate }}</p>
+    <p>
+      <button id="dark-toggle" class="ghost-button" onclick="this.innerText = document.body.classList.toggle('_dark') ? '🌞' : '🌙'">🌙</button>
+    </p>
+  </footer>
 {% endblock %}
