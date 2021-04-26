@@ -79,14 +79,14 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.setBrowserSyncConfig({
     server: {
-      baseDir: '_dist'
+      baseDir: '.dist'
     }
   })
 
   return {
     dir: {
       input: 'pages',
-      output: '_pre-dist'
+      output: '.pre-dist'
     },
     markdownTemplateEngine: 'njk'
   }
