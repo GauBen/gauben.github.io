@@ -40,10 +40,10 @@ y en la escuela de ingeniería aprendo la teoría de la programación.
 
 He tenido la oportunidad de trabajar en muchos proyectos de diferente envergadura, desde algunos que he conocido físicamente hasta pequeños
 se reunió físicamente para realizar pequeñas contribuciones en proyectos internacionales con cientos de otros colaboradores.
-Mis amigos dicen que soy espontánea, ambiciosa y seria. Me gusta trabajar en equipo,
+Mis amigos dicen que soy espontáneo, ambicioso y serio. Me gusta trabajar en equipo,
 descubrir nuevas tecnologías y estar atento a las tendencias de programación.
 
-Si quieres saber más sobre mi formación y habilidades, [puede consultar mi CV (en inglés)](<{{'/about/resume/'|localizeurl('en')}}>), o ver mi video currículum:
+Si quiere saber más sobre mi formación y habilidades, [puede consultar mi CV (en inglés)](<{{'/about/resume/'|localizeurl('en')}}>), o ver mi video currículum:
 
 </div>
 
