@@ -24,9 +24,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@11ty/eleventy":
-  version: 1.0.0-canary.15
-  resolution: "@11ty/eleventy@https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"
+"@11ty/eleventy@npm:v1.0.0-canary.20":
+  version: 1.0.0-canary.20
+  resolution: "@11ty/eleventy@npm:1.0.0-canary.20"
   dependencies:
     "@11ty/dependency-tree": ^2.0.0
     browser-sync: ^2.26.14
@@ -62,8 +62,8 @@ __metadata:
     time-require: ^0.1.2
     valid-url: ^1.0.9
   bin:
-    eleventy: ./cmd.js
-  checksum: 6c65a9b23419c88d93933ad5081f70d045e9e9313f67de34ec76653d1b4614f6e244232e36767006f9a660d50e1b32b8dad6d1e925d733238e40c1bd131662f5
+    eleventy: cmd.js
+  checksum: 0c6316bdbda75ec238c143c9142edd12c4570c029ce1c7d4ff1e46e4f9b3f9464c072c1ea87e1bcb3acc14953a9ce4f10c6a206acd31796fc47778aac89dabf5
   languageName: node
   linkType: hard
 
@@ -6048,7 +6048,7 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "gauben.github.io@workspace:."
   dependencies:
-    "@11ty/eleventy": 11ty/eleventy
+    "@11ty/eleventy": v1.0.0-canary.20
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.1.0
     "@parcel/config-default": 2.0.0-nightly.645
     "@parcel/packager-raw-url": 2.0.0-nightly.2267

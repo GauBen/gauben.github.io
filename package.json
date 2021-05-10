@@ -18,7 +18,7 @@
     "test:ts": "eslint './assets/**/*.ts' --fix"
   },
   "devDependencies": {
-    "@11ty/eleventy": "11ty/eleventy",
+    "@11ty/eleventy": "v1.0.0-canary.20",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "@parcel/config-default": "2.0.0-nightly.645",
     "@parcel/packager-raw-url": "2.0.0-nightly.2267",

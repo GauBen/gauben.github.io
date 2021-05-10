@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@11ty/eleventy",
-        "https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"
+        "npm:1.0.0-canary.20"
       ],
       [
         "@11ty/eleventy-plugin-syntaxhighlight",
@@ -3150,7 +3150,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "nunjucks",
-        "virtual:9cb40e3f92a164e227cefb8f34dec2de586e01485f2e5d3374af64c1052c610d8612dcdfb809c7c1a8b59d19ef85a4512d18ac32db5ef98a8911b68bcea613fa#npm:3.2.3"
+        "virtual:710e0714c160f51e77a58a20f6208275d8f535d7d836df5d2fd0717dc882a31b48c893689953130cb18da3086b5edf600f930412c462c7d21d2715a4a0da66f8#npm:3.2.3"
       ],
       [
         "nwsapi",
@@ -4796,7 +4796,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@11ty/eleventy", "https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],
             ["@parcel/packager-raw-url", "npm:2.0.0-nightly.2267"],
@@ -4835,10 +4835,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@11ty/eleventy", [
-        ["https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2", {
-          "packageLocation": "./.yarn/cache/@11ty-eleventy-https-9cb40e3f92-6c65a9b234.zip/node_modules/@11ty/eleventy/",
+        ["npm:1.0.0-canary.20", {
+          "packageLocation": "./.yarn/cache/@11ty-eleventy-npm-1.0.0-canary.20-710e0714c1-0c6316bdbd.zip/node_modules/@11ty/eleventy/",
           "packageDependencies": [
-            ["@11ty/eleventy", "https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
             ["@11ty/dependency-tree", "npm:2.0.0"],
             ["browser-sync", "npm:2.26.14"],
             ["chalk", "npm:4.1.1"],
@@ -4861,7 +4861,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["multimatch", "npm:5.0.0"],
             ["mustache", "npm:4.2.0"],
             ["normalize-path", "npm:3.0.0"],
-            ["nunjucks", "virtual:9cb40e3f92a164e227cefb8f34dec2de586e01485f2e5d3374af64c1052c610d8612dcdfb809c7c1a8b59d19ef85a4512d18ac32db5ef98a8911b68bcea613fa#npm:3.2.3"],
+            ["nunjucks", "virtual:710e0714c160f51e77a58a20f6208275d8f535d7d836df5d2fd0717dc882a31b48c893689953130cb18da3086b5edf600f930412c462c7d21d2715a4a0da66f8#npm:3.2.3"],
             ["parse-filepath", "npm:1.0.2"],
             ["please-upgrade-node", "npm:3.2.0"],
             ["pretty", "npm:2.0.0"],
@@ -4888,7 +4888,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/@11ty-eleventy-plugin-syntaxhighlight-virtual-cf823c34af/0/cache/@11ty-eleventy-plugin-syntaxhighlight-npm-3.1.0-18ed80ea91-0080e4e0aa.zip/node_modules/@11ty/eleventy-plugin-syntaxhighlight/",
           "packageDependencies": [
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
-            ["@11ty/eleventy", "https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
             ["@types/11ty__eleventy", null],
             ["linkedom", "npm:0.5.6"],
             ["prismjs", "npm:1.23.0"]
@@ -12722,7 +12722,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["gauben.github.io", "workspace:."],
-            ["@11ty/eleventy", "https://github.com/11ty/eleventy.git#commit=f8553a070324bebd8818829f5223af4d09217ab2"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],
             ["@parcel/packager-raw-url", "npm:2.0.0-nightly.2267"],
@@ -16091,10 +16091,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:9cb40e3f92a164e227cefb8f34dec2de586e01485f2e5d3374af64c1052c610d8612dcdfb809c7c1a8b59d19ef85a4512d18ac32db5ef98a8911b68bcea613fa#npm:3.2.3", {
-          "packageLocation": "./.yarn/$$virtual/nunjucks-virtual-7495c652a6/0/cache/nunjucks-npm-3.2.3-ae8b5fd14c-5cf89eb605.zip/node_modules/nunjucks/",
+        ["virtual:710e0714c160f51e77a58a20f6208275d8f535d7d836df5d2fd0717dc882a31b48c893689953130cb18da3086b5edf600f930412c462c7d21d2715a4a0da66f8#npm:3.2.3", {
+          "packageLocation": "./.yarn/$$virtual/nunjucks-virtual-ad39ae4013/0/cache/nunjucks-npm-3.2.3-ae8b5fd14c-5cf89eb605.zip/node_modules/nunjucks/",
           "packageDependencies": [
-            ["nunjucks", "virtual:9cb40e3f92a164e227cefb8f34dec2de586e01485f2e5d3374af64c1052c610d8612dcdfb809c7c1a8b59d19ef85a4512d18ac32db5ef98a8911b68bcea613fa#npm:3.2.3"],
+            ["nunjucks", "virtual:710e0714c160f51e77a58a20f6208275d8f535d7d836df5d2fd0717dc882a31b48c893689953130cb18da3086b5edf600f930412c462c7d21d2715a4a0da66f8#npm:3.2.3"],
             ["@types/chokidar", null],
             ["a-sync-waterfall", "npm:1.0.1"],
             ["asap", "npm:2.0.6"],
