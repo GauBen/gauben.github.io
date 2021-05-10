@@ -8,11 +8,11 @@
   "scripts": {
     "start": "yarn build && npm-run-all --parallel 'watch:*'",
     "watch:eleventy": "eleventy --serve",
-    "watch:parcel": "PARCEL_WORKERS=0 parcel '.pre-dist/**/*.html' --dist-dir .dist",
+    "watch:parcel": "PARCEL_WORKERS=0 parcel watch '.pre-dist/**/*.html' --dist-dir .dist",
     "clean": "rimraf ./.dist ./.pre-dist",
     "build": "yarn clean && yarn build:eleventy && yarn build:parcel",
     "build:eleventy": "eleventy",
-    "build:parcel": "PARCEL_WORKERS=0 parcel build '.pre-dist/**/*.html' --dist-dir .dist",
+    "build:parcel": "PARCEL_WORKERS=0 parcel build '.pre-dist/**/*.html' --dist-dir .dist --detailed-report",
     "test": "yarn test:styl && yarn test:ts && echo ':)'",
     "test:styl": "stylelint './assets/**/*.styl' --custom-syntax stylelint-plugin-stylus/custom-syntax --fix",
     "test:ts": "eslint './assets/**/*.ts' --fix"
