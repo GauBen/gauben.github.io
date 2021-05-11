@@ -5,21 +5,6 @@
   "repository": "git@github.com:GauBen/gauben.github.io.git",
   "author": "Gautier Ben Aïm <benaim.gautier@gmail.com>",
   "license": "MIT",
-  "pwaManifest": {
-    "name": "My Awesome PWA",
-    "shortName": "My PWA",
-    "startURL": "/",
-    "theme": "#add8e6",
-    "generateIconOptions": {
-      "baseIcon": "./resources/favicon.svg",
-      "sizes": [
-        192,
-        384,
-        512
-      ],
-      "genFavicons": true
-    }
-  },
   "scripts": {
     "start": "yarn build && npm-run-all --parallel 'watch:*'",
     "watch:eleventy": "eleventy --serve",
@@ -49,7 +34,6 @@
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "parcel": "2.0.0-nightly.643",
-    "parcel-config-pwa-manifest": "^0.0.9",
     "parcel-reporter-static-files-copy": "^1.3.0",
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
