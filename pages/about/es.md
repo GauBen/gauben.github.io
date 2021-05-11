@@ -38,7 +38,7 @@ Descubrí la programación hace más de diez años, y desde entonces no he dejad
 Aprendí desarrollo web front y back end en paralelo a mis estudios,
 y en la escuela de ingeniería aprendo la teoría de la programación.
 
-He tenido la oportunidad de trabajar en muchos proyectos de diferente envergadura, desde algunos que he conocido físicamente hasta pequeños
+He tenido la oportunidad de trabajar en muchos proyectos de diferente envergadura. Desde algunos que he conocido físicamente hasta pequeños
 se reunió físicamente para realizar pequeñas contribuciones en proyectos internacionales con cientos de otros colaboradores.
 Mis amigos dicen que soy espontáneo, ambicioso y serio. Me gusta trabajar en equipo,
 descubrir nuevas tecnologías y estar atento a las tendencias de programación.
