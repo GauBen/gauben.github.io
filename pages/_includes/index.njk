@@ -53,8 +53,9 @@ scripts:
     {%- for project in collections.project | samelocale | reverse %}
       <article class="project-card">
         <img
-            src="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=784&quality=95"
-            srcset="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=1568&quality=95 2x"
+            src="url:{{ (project.data.assetsRoot + '/banner.png') }}?width=784"
+            srcset="url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=784&quality=95 1x,
+                    url:{{ (project.data.assetsRoot + '/banner.png') }}?as=webp&width=1568&quality=95 2x"
             width="784" height="200" alt="{{ projects.alt }}" class="image" loading="lazy">
         <h3 class="title">
           {% if project.data.link %}
@@ -78,8 +79,9 @@ scripts:
     {%- endfor %}
     <article class="project-card">
       <img
-          src="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784&quality=95"
-          srcset="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=1568&quality=95 2x"
+          src="url:{{ (assetsRoot + '/projects/other-things.png') }}?width=784"
+          srcset="url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=784&quality=95 1x,
+                  url:{{ (assetsRoot + '/projects/other-things.png') }}?as=webp&width=1568&quality=95 2x"
           width="784" height="180" alt="{{ projects.other.alt }}" class="image" loading="lazy">
       <h3 class="title">
         <a href="https://github.com/GauBen/" class="link">{{ projects.other.title }}</a>
