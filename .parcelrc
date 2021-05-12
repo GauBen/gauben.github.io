@@ -5,5 +5,10 @@
   "reporters": [
     "...",
     "parcel-reporter-static-files-copy"
-  ]
+  ],
+  "transformers": {
+    "*.xml": [
+      "@parcel/transformer-raw"
+    ]
+  }
 }
