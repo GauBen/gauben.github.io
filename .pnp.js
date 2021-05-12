@@ -2865,6 +2865,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:12.0.6"
       ],
       [
+        "markdown-it-footnote",
+        "npm:3.0.2"
+      ],
+      [
         "markdown-table",
         "npm:1.1.3"
       ],
@@ -3627,6 +3631,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "pretty-ms",
         "npm:0.2.2"
+      ],
+      [
+        "prism-themes",
+        "npm:1.7.0"
       ],
       [
         "prismjs",
@@ -4809,11 +4817,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
             ["eslint-plugin-unicorn", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:32.0.1"],
+            ["markdown-it-footnote", "npm:3.0.2"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["parcel", "npm:2.0.0-nightly.643"],
             ["parcel-reporter-static-files-copy", "npm:1.3.0"],
             ["prettier", "npm:2.3.0"],
+            ["prism-themes", "npm:1.7.0"],
             ["rimraf", "npm:3.0.2"],
             ["stylelint", "npm:13.13.1"],
             ["stylelint-config-rational-order", "npm:0.1.2"],
@@ -12734,11 +12744,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
             ["eslint-plugin-unicorn", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:32.0.1"],
+            ["markdown-it-footnote", "npm:3.0.2"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
             ["parcel", "npm:2.0.0-nightly.643"],
             ["parcel-reporter-static-files-copy", "npm:1.3.0"],
             ["prettier", "npm:2.3.0"],
+            ["prism-themes", "npm:1.7.0"],
             ["rimraf", "npm:3.0.2"],
             ["stylelint", "npm:13.13.1"],
             ["stylelint-config-rational-order", "npm:0.1.2"],
@@ -15222,6 +15234,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["linkify-it", "npm:3.0.2"],
             ["mdurl", "npm:1.0.1"],
             ["uc.micro", "npm:1.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["markdown-it-footnote", [
+        ["npm:3.0.2", {
+          "packageLocation": "./.yarn/cache/markdown-it-footnote-npm-3.0.2-626a0445c1-dab9173ddc.zip/node_modules/markdown-it-footnote/",
+          "packageDependencies": [
+            ["markdown-it-footnote", "npm:3.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -17777,6 +17798,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["pretty-ms", "npm:0.2.2"],
             ["parse-ms", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prism-themes", [
+        ["npm:1.7.0", {
+          "packageLocation": "./.yarn/cache/prism-themes-npm-1.7.0-7f6604150c-e843eaaae1.zip/node_modules/prism-themes/",
+          "packageDependencies": [
+            ["prism-themes", "npm:1.7.0"]
           ],
           "linkType": "HARD",
         }]

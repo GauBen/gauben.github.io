@@ -1,5 +1,8 @@
 const fs = require('fs')
 const path = require('path')
+const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const markdownIt = require('markdown-it')
+const footnote = require('markdown-it-footnote')
 
 module.exports = (eleventyConfig) => {
   /** @type Object<string, string> */
@@ -9,7 +12,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addGlobalData('locales', locales)
 
   // Add syntax highlighting in markdown
-  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
+  eleventyConfig.addPlugin(highlight)
+
+  let options = eleventyConfig.setLibrary(
+    'md',
+    markdownIt({ html: true, linkify: true, typographer: true }).use(footnote)
+  )
 
   // Filter that keeps items that have the same `data.locale` as
   // `locale`. If `locale` is falsy, it is fetched in the current context.
