@@ -1,6 +1,5 @@
 ---
 title: async et await
-layout: blog.njk
 ---
 
 ## Les bases
