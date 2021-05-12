@@ -11,9 +11,6 @@ module.exports = (eleventyConfig) => {
   // Add syntax highlighting in markdown
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
 
-  // Deep merge data objects
-  eleventyConfig.setDataDeepMerge(true)
-
   // Filter that keeps items that have the same `data.locale` as
   // `locale`. If `locale` is falsy, it is fetched in the current context.
   eleventyConfig.addFilter('samelocale', function (collection, locale) {
