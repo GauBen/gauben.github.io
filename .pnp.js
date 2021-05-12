@@ -37,6 +37,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.0-canary.20"
       ],
       [
+        "@11ty/eleventy-plugin-rss",
+        "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"
+      ],
+      [
         "@11ty/eleventy-plugin-syntaxhighlight",
         "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"
       ],
@@ -867,6 +871,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "ansi-styles",
         "npm:4.3.0"
+      ],
+      [
+        "any-promise",
+        "npm:0.1.0"
       ],
       [
         "anymatch",
@@ -2269,6 +2277,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:4.1.0"
       ],
       [
+        "http-equiv-refresh",
+        "npm:1.0.0"
+      ],
+      [
         "http-errors",
         "npm:1.6.3"
       ],
@@ -2751,6 +2763,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "liquidjs",
         "npm:9.23.4"
+      ],
+      [
+        "list-to-array",
+        "npm:1.1.0"
       ],
       [
         "load-json-file",
@@ -3293,6 +3309,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.1.2"
       ],
       [
+        "parse-srcset",
+        "npm:1.0.2"
+      ],
+      [
         "parse5",
         "npm:5.1.0"
       ],
@@ -3609,6 +3629,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.4.0"
       ],
       [
+        "posthtml-urls",
+        "npm:1.0.0"
+      ],
+      [
         "prebuild-install",
         "npm:6.1.2"
       ],
@@ -3655,6 +3679,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "promise",
         "npm:7.3.1"
+      ],
+      [
+        "promise-each",
+        "npm:2.2.0"
       ],
       [
         "promise-inflight",
@@ -4805,6 +4833,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@11ty/eleventy-plugin-rss", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],
             ["@parcel/packager-raw-url", "npm:2.0.0-nightly.2267"],
@@ -4882,6 +4911,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["split", "npm:1.0.1"],
             ["time-require", "npm:0.1.2"],
             ["valid-url", "npm:1.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@11ty/eleventy-plugin-rss", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/@11ty-eleventy-plugin-rss-npm-1.1.1-3deae4d69a-d02a2283a9.zip/node_modules/@11ty/eleventy-plugin-rss/",
+          "packageDependencies": [
+            ["@11ty/eleventy-plugin-rss", "npm:1.1.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1", {
+          "packageLocation": "./.yarn/$$virtual/@11ty-eleventy-plugin-rss-virtual-854928588b/0/cache/@11ty-eleventy-plugin-rss-npm-1.1.1-3deae4d69a-d02a2283a9.zip/node_modules/@11ty/eleventy-plugin-rss/",
+          "packageDependencies": [
+            ["@11ty/eleventy-plugin-rss", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@types/11ty__eleventy", null],
+            ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.2"],
+            ["posthtml", "npm:0.15.2"],
+            ["posthtml-urls", "npm:1.0.0"]
+          ],
+          "packagePeers": [
+            "@11ty/eleventy",
+            "@types/11ty__eleventy"
           ],
           "linkType": "HARD",
         }]
@@ -8830,6 +8884,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["any-promise", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/any-promise-npm-0.1.0-1e4527fbed-01e35a0913.zip/node_modules/any-promise/",
+          "packageDependencies": [
+            ["any-promise", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["anymatch", [
         ["npm:3.1.2", {
           "packageLocation": "./.yarn/cache/anymatch-npm-3.1.2-1d5471acfa-cd6c08eb8d.zip/node_modules/anymatch/",
@@ -12732,6 +12795,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["gauben.github.io", "workspace:."],
             ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@11ty/eleventy-plugin-rss", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],
             ["@parcel/packager-raw-url", "npm:2.0.0-nightly.2267"],
@@ -13436,6 +13500,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/http-cache-semantics-npm-4.1.0-860520a31f-451df9784a.zip/node_modules/http-cache-semantics/",
           "packageDependencies": [
             ["http-cache-semantics", "npm:4.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["http-equiv-refresh", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/http-equiv-refresh-npm-1.0.0-3f9c3bfc5b-7e1b82fee7.zip/node_modules/http-equiv-refresh/",
+          "packageDependencies": [
+            ["http-equiv-refresh", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -14902,6 +14975,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/liquidjs-npm-9.23.4-ece875d2d8-375efac0ff.zip/node_modules/liquidjs/",
           "packageDependencies": [
             ["liquidjs", "npm:9.23.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["list-to-array", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/list-to-array-npm-1.1.0-0978a9c53f-9413613806.zip/node_modules/list-to-array/",
+          "packageDependencies": [
+            ["list-to-array", "npm:1.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -16568,6 +16650,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["parse-srcset", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/parse-srcset-npm-1.0.2-8acc142245-f79a26845a.zip/node_modules/parse-srcset/",
+          "packageDependencies": [
+            ["parse-srcset", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["parse5", [
         ["npm:5.1.0", {
           "packageLocation": "./.yarn/cache/parse5-npm-5.1.0-b9c35ee7fa-f82ab25810.zip/node_modules/parse5/",
@@ -17722,6 +17813,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["posthtml-urls", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/posthtml-urls-npm-1.0.0-008d5e9821-f3b487511e.zip/node_modules/posthtml-urls/",
+          "packageDependencies": [
+            ["posthtml-urls", "npm:1.0.0"],
+            ["http-equiv-refresh", "npm:1.0.0"],
+            ["list-to-array", "npm:1.1.0"],
+            ["parse-srcset", "npm:1.0.2"],
+            ["promise-each", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["prebuild-install", [
         ["npm:6.1.2", {
           "packageLocation": "./.yarn/cache/prebuild-install-npm-6.1.2-5d6abe684c-680fe93dc9.zip/node_modules/prebuild-install/",
@@ -17854,6 +17958,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["promise", "npm:7.3.1"],
             ["asap", "npm:2.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["promise-each", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/promise-each-npm-2.2.0-7bb6b75ba9-de38101fa7.zip/node_modules/promise-each/",
+          "packageDependencies": [
+            ["promise-each", "npm:2.2.0"],
+            ["any-promise", "npm:0.1.0"]
           ],
           "linkType": "HARD",
         }]

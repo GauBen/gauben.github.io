@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const rss = require('@11ty/eleventy-plugin-rss')
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
 
@@ -11,10 +12,11 @@ module.exports = (eleventyConfig) => {
   // Register locales
   eleventyConfig.addGlobalData('locales', locales)
 
-  // Add syntax highlighting in markdown
+  // Add eleventy plugins
   eleventyConfig.addPlugin(highlight)
+  eleventyConfig.addPlugin(rss)
 
-  let options = eleventyConfig.setLibrary(
+  eleventyConfig.setLibrary(
     'md',
     markdownIt({ html: true, linkify: true, typographer: true }).use(footnote)
   )

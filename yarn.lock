@@ -12,6 +12,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-plugin-rss@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@11ty/eleventy-plugin-rss@npm:1.1.1"
+  dependencies:
+    debug: ^4.3.1
+    posthtml: ^0.15.1
+    posthtml-urls: 1.0.0
+  peerDependencies:
+    "@11ty/eleventy": ">=0.11.0"
+  checksum: d02a2283a9b0d6d13257ce2a384400531c81f1b4de3326df57d57f63ab9296d9ae6cd2bdaab88d493e255e82b9fa75f7e1fead2f3a4e32ba28730ff2590fd0e6
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-plugin-syntaxhighlight@npm:^3.1.0":
   version: 3.1.0
   resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:3.1.0"
@@ -2649,6 +2662,13 @@ __metadata:
   version: 1.0.0
   resolution: "ansi-styles@npm:1.0.0"
   checksum: ae73b4e77dc35d47bf2c2eaf023c2a935a5bca01fe11eecaea307ee70ffb9d531db36e2cfc4cc0448e26cc40986b55a708a64c6f3e8589ec5d3cd44d2934b471
+  languageName: node
+  linkType: hard
+
+"any-promise@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "any-promise@npm:0.1.0"
+  checksum: 01e35a09137bf1f577a58aa962df057dd720d9f565392a5bd2e63335cdbf064132569997f4f41999463fefa57f4c5e401aad9b14af653a2bbb190fe3a67a2b5b
   languageName: node
   linkType: hard
 
@@ -6048,6 +6068,7 @@ fsevents@~2.3.1:
   resolution: "gauben.github.io@workspace:."
   dependencies:
     "@11ty/eleventy": v1.0.0-canary.20
+    "@11ty/eleventy-plugin-rss": ^1.1.1
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.1.0
     "@parcel/config-default": 2.0.0-nightly.645
     "@parcel/packager-raw-url": 2.0.0-nightly.2267
@@ -6689,6 +6710,13 @@ fsevents@~2.3.1:
   version: 4.1.0
   resolution: "http-cache-semantics@npm:4.1.0"
   checksum: 451df9784af2acbe0cc1fd70291285c08ca4a8966ab5ee4d3975e003d1ad4d74c81473086d628f31296b31221966fda8bc5ea1e29dd8f1f33f9fc2b0fdca65ca
+  languageName: node
+  linkType: hard
+
+"http-equiv-refresh@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "http-equiv-refresh@npm:1.0.0"
+  checksum: 7e1b82fee758197d0a31548a0bbad8b382c1e881afa4658f46ccba9032bc5846ae7c702e520cbf5cc126978bc7f9ea9e9aa720874d240f42ea02d5ebb3a984e9
   languageName: node
   linkType: hard
 
@@ -8003,6 +8031,13 @@ fsevents@~2.3.1:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
   checksum: 375efac0ff0b0f46168598605615acc39c31c2de95d218ca7dcb434f8598e9df17132d585d5e79984171aa1009e99670b61a16b31e361939a865c92b61599a4a
+  languageName: node
+  linkType: hard
+
+"list-to-array@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "list-to-array@npm:1.1.0"
+  checksum: 9413613806da0f4658ef5d694d968c09d83af44186b9f03d3d8cc92e6ca9803c550398761252be8944573c77492c0f1bd23d83778fd611ead98431ee24a6fa27
   languageName: node
   linkType: hard
 
@@ -9508,6 +9543,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"parse-srcset@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "parse-srcset@npm:1.0.2"
+  checksum: f79a26845a6ec70c5b97713798cc8492854ac246e5979cd081db68fa811a96a90399bfea7691edf516491c79e8450ed2cfacdcd2c75ff18250c4847dd552dbc4
+  languageName: node
+  linkType: hard
+
 "parse5@npm:5.1.0":
   version: 5.1.0
   resolution: "parse5@npm:5.1.0"
@@ -10434,6 +10476,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"posthtml-urls@npm:1.0.0":
+  version: 1.0.0
+  resolution: "posthtml-urls@npm:1.0.0"
+  dependencies:
+    http-equiv-refresh: ^1.0.0
+    list-to-array: ^1.1.0
+    parse-srcset: ^1.0.2
+    promise-each: ^2.2.0
+  checksum: f3b487511ee707e07bd0b7420085bb23cbcc77a03db0ce558445064799ba16a7e36b7272465632114a6e0458897d304d4b3e13b0c956f88c073e57dad0f043fd
+  languageName: node
+  linkType: hard
+
 "posthtml@npm:^0.15.1":
   version: 0.15.2
   resolution: "posthtml@npm:0.15.2"
@@ -10559,6 +10613,15 @@ fsevents@~2.3.1:
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
   checksum: c46ef5a1de4d527dfd32fe56a7df0c1c8b420a4c02617196813bf7f10ac7c2a929afc265d44fdd68f5c439a7e7cb3d70d569716c82d6b4148ec72089860a1312
+  languageName: node
+  linkType: hard
+
+"promise-each@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "promise-each@npm:2.2.0"
+  dependencies:
+    any-promise: ^0.1.0
+  checksum: de38101fa7c19029a7f7c0ce87c5a20ec6e471271430df8e024c4369e8f858f7bebeb9a856037c7735926ed12d7341c6fd16e29dd184141649a0bab181d2dee3
   languageName: node
   linkType: hard
 
