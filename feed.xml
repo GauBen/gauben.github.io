@@ -1,11 +1,10 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>My Blog about Boats</title>
   <subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
   <link href="https://ben-aim.fr/feed.xml" rel="self"/>
   <link href="https://ben-aim.fr/"/>
-  <updated>2021-05-12T16:42:22Z</updated>
+  <updated>2021-05-12T16:44:18Z</updated>
   <id>https://ben-aim.fr/</id>
   <author>
     <name>Boaty McBoatFace</name>
@@ -15,7 +14,7 @@
     <entry>
       <title>async et await</title>
       <link href="https://ben-aim.fr/fr/blog/2021/async-js/"/>
-      <updated>2021-05-12T16:42:22Z</updated>
+      <updated>2021-05-12T16:44:18Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021/async-js/</id>
       <content type="html">&lt;h2&gt;Les bases&lt;/h2&gt;
 &lt;p&gt;Commençons par définir une fonction des plus simples : une somme entre deux entiers.&lt;/p&gt;
@@ -272,7 +271,7 @@ main(toTooShort())
     <entry>
       <title>Bijection entre langages</title>
       <link href="https://ben-aim.fr/fr/blog/2021/bijection-entre-langages/"/>
-      <updated>2021-05-12T16:42:22Z</updated>
+      <updated>2021-05-12T16:44:18Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021/bijection-entre-langages/</id>
       <content type="html">&lt;p&gt;pip &amp;lt;-&amp;gt; npm/yarn
 mypy &amp;lt;-&amp;gt; typescript
