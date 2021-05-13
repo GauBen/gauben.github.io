@@ -1,5 +1,7 @@
 ---
 title: Bijection entre langages
+styles:
+  - ~/assets/styles/katex.styl
 ---
 
 pip <-> npm/yarn

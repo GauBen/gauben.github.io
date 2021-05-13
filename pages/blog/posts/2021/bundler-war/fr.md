@@ -1,9 +1,14 @@
 ---
 title: Bundler War
+styles:
+  - ~/assets/styles/katex.styl
+  - ~/assets/styles/highlight.styl
+scripts:
+  - ~/assets/scripts/mermaid.ts
 ---
 
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph E ["Eleventy (static site generator)"]
       .md & .njk --> A[.html]
     end
@@ -12,10 +17,24 @@ flowchart TD
         .ts --> .js
     end
     subgraph P ["Parcel (bundler)"]
-        /_pre-dist/assets -->|input| C -->|linked| B[.html]
-        /_pre-dist/static -->|linked| B
+        /assets -->|input| C -->|linked| B[.html]
     end
-    /pages -->|input| E -->|output| /_pre-dist
-    /assets & /static -->|copied| /_pre-dist
-    /_pre-dist -->|input| P -->|output| /_dist
+    /pages -->|input| E -->|output| /.pre-dist
+    /static -->|copied| /.dist
+    /.pre-dist -->|input| P -->|output| /.dist
 ```
+
+```js
+let a = ''
+const b = atob('YmRsXmVoKGBZbGpeWWUyWF1QV1kaTllW')
+while (a.length < b.length) {
+  a += String.fromCharCode((b.charCodeAt(a.length) + a.length) % 256)
+}
+for (const link of document.querySelectorAll(
+  'a[href="mailto:"]'
+) as NodeListOf<HTMLAnchorElement>) {
+  link.href = 'mailto:' + a
+}
+```
+
+$$\forall n \in \N \text{ tel que } n \ge 3 \text{ et } n \text{ impair,}\\ \forall p \in \N \text{ tel que } 2 \le p \lt n,\\ n \not\equiv 0 \pmod p$$

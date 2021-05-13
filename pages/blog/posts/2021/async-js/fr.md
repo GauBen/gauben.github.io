@@ -1,6 +1,8 @@
 ---
 title: async et await
 date: 2021-05-12
+styles:
+  - ~/assets/styles/highlight.styl
 ---
 
 [toc]

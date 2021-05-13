@@ -1,7 +1,8 @@
-const fs = require('fs')
 const path = require('path')
+
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
+
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
 const taskLists = require('markdown-it-task-lists')
@@ -12,10 +13,9 @@ const multimdTable = require('markdown-it-multimd-table')
 const anchor = require('markdown-it-anchor')
 const tocDoneRight = require('markdown-it-toc-done-right')
 
-module.exports = (eleventyConfig) => {
-  /** @type Object<string, string> */
-  const locales = JSON.parse(fs.readFileSync('./locales.json').toString())
+const locales = require('./locales.json')
 
+module.exports = (eleventyConfig) => {
   // Register locales
   eleventyConfig.addGlobalData('locales', locales)
 
@@ -23,6 +23,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(highlight)
   eleventyConfig.addPlugin(rss)
 
+  // Add many libraries to markdown-it
   eleventyConfig.setLibrary(
     'md',
     markdownIt({ html: true, linkify: true, typographer: true })
@@ -45,12 +46,12 @@ module.exports = (eleventyConfig) => {
       .use(tocDoneRight)
       .use((md) => {
         const origin = md.renderer.rules.fence.bind(md.renderer.rules)
-        md.renderer.rules.fence = (tokens, idx, options, ...resParams) => {
+        md.renderer.rules.fence = (tokens, idx, ...args) => {
           const token = tokens[idx]
           if (token.info === 'mermaid') {
             return `<pre class="mermaid">${token.content.trim()}</pre>`
           }
-          return origin(tokens, idx, options, ...resParams)
+          return origin(tokens, idx, ...args)
         }
       })
   )
@@ -119,9 +120,8 @@ module.exports = (eleventyConfig) => {
   })
 
   eleventyConfig.setBrowserSyncConfig({
-    server: {
-      baseDir: '.dist',
-    },
+    watch: true,
+    server: '.dist',
   })
 
   return {
