@@ -4,6 +4,9 @@ const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
+const taskLists = require('markdown-it-task-lists')
+// const mermaid = require('@liradb2000/markdown-it-mermaid')
+const multimdTable = require('markdown-it-multimd-table')
 
 module.exports = (eleventyConfig) => {
   /** @type Object<string, string> */
@@ -18,7 +21,25 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.setLibrary(
     'md',
-    markdownIt({ html: true, linkify: true, typographer: true }).use(footnote)
+    markdownIt({ html: true, linkify: true, typographer: true })
+      .use(footnote)
+      .use(taskLists)
+      .use(multimdTable, {
+        multiline: true,
+        rowspan: true,
+        headerless: true,
+      })
+      .use(require('markdown-it-implicit-figures'))
+      .use(require('@traptitech/markdown-it-katex'), { throwOnError: true })
+      .use(require('markdown-it-image-lazy-loading'))
+      .use(require('markdown-it-anchor'), {
+        level: 2,
+        permalink: true,
+        permalinkBefore: true,
+        permalinkSymbol: '#',
+      })
+      .use(require('markdown-it-toc-done-right'))
+      // .use(mermaid)
   )
 
   // Filter that keeps items that have the same `data.locale` as

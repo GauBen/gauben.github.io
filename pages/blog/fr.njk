@@ -1,0 +1,15 @@
+---
+layout: blog.njk
+title: My Posts
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+---
+<ol>
+  {% for post in posts | samelocale %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+</ol>
