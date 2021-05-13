@@ -4,7 +4,7 @@
   <subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
   <link href="https://ben-aim.fr/feed.xml" rel="self"/>
   <link href="https://ben-aim.fr/"/>
-  <updated>2021-05-13T13:52:09Z</updated>
+  <updated>2021-05-13T14:16:25Z</updated>
   <id>https://ben-aim.fr/</id>
   <author>
     <name>Boaty McBoatFace</name>
@@ -271,7 +271,7 @@ main(toTooShort())
     <entry>
       <title>Bijection entre langages</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-13-bijection-entre-langages/"/>
-      <updated>2021-05-13T13:52:09Z</updated>
+      <updated>2021-05-13T14:16:25Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-13-bijection-entre-langages/</id>
       <content type="html">&lt;p&gt;pip &amp;lt;-&amp;gt; npm/yarn
 mypy &amp;lt;-&amp;gt; typescript
@@ -463,9 +463,9 @@ black &amp;lt;-&amp;gt; PHP-CS-Fixer&lt;/p&gt;
     <entry>
       <title>Bundler War</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-13-bundler-war/"/>
-      <updated>2021-05-13T13:52:09Z</updated>
+      <updated>2021-05-13T14:16:25Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-13-bundler-war/</id>
-      <content type="html">&lt;div class=&quot;mermaid&quot;&gt;flowchart LR
+      <content type="html">&lt;pre class=&quot;mermaid&quot;&gt;flowchart TD
     subgraph E [&quot;Eleventy (static site generator)&quot;]
       .md &amp; .njk --&gt; A[.html]
     end
@@ -479,6 +479,6 @@ black &amp;lt;-&amp;gt; PHP-CS-Fixer&lt;/p&gt;
     end
     /pages --&gt;|input| E --&gt;|output| /_pre-dist
     /assets &amp; /static --&gt;|copied| /_pre-dist
-    /_pre-dist --&gt;|input| P --&gt;|output| /_dist&lt;/div&gt;</content>
+    /_pre-dist --&gt;|input| P --&gt;|output| /_dist&lt;/pre&gt;</content>
     </entry>
 </feed>

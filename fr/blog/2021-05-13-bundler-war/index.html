@@ -1,1 +1,15 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bundler War – Gautier Ben Aïm</title><meta name="description" content=""><link rel="stylesheet" href="/index.1fb585d2.css"><link rel="icon shortcut" href="/favicon.5a116284.ico" type="image/x-icon"><link rel="manifest" href="/__/assets/app.webmanifest"><meta property="og:image" content="/portfolio.7b1b742e.png"></head><body> <div class="_beautiful-links _text-justify markdown-body section-container"> <h1>Bundler War</h1> <div class="mermaid">flowchart LR subgraph E ["Eleventy (static site generator)"] .md & .njk --> A[.html] end subgraph C ["Compilation"] .styl --> .css .ts --> .js end subgraph P ["Parcel (bundler)"] /_pre-dist/assets -->|input| C -->|linked| B[.html] /_pre-dist/static -->|linked| B end /pages -->|input| E -->|output| /_pre-dist /assets & /static -->|copied| /_pre-dist /_pre-dist -->|input| P -->|output| /_dist</div> </div> <script src="https://utteranc.es/client.js" repo="GauBen/gauben.github.io" issue-term="pathname" label="comment thread" theme="github-light" crossorigin async></script> <script src="/fr/blog/2021-05-12-async-et-await/index.1eca1f1a.js"></script> <footer class="_beautiful-links page-footer"> <p>Cette page est disponible en : <strong>Français</strong>.</p> <p>2020 – Gautier Ben Aïm – CC BY 4.0</p> <p>J&#39;aime le minimalisme.</p> <p> <button id="dark-toggle" class="ghost-button" onclick="this.innerText = document.body.classList.toggle('_dark') ? '🌞' : '🌙'"> 🌙 </button> </p> </footer> </body></html>
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bundler War – Gautier Ben Aïm</title><meta name="description" content=""><link rel="stylesheet" href="/index.1fb585d2.css"><link rel="icon shortcut" href="/favicon.5a116284.ico" type="image/x-icon"><link rel="manifest" href="/__/assets/app.webmanifest"><meta property="og:image" content="/portfolio.7b1b742e.png"></head><body> <div class="_beautiful-links _text-justify markdown-body section-container"> <h1>Bundler War</h1> <pre class="mermaid">flowchart TD
+    subgraph E ["Eleventy (static site generator)"]
+      .md & .njk --> A[.html]
+    end
+    subgraph C ["Compilation"]
+        .styl --> .css
+        .ts --> .js
+    end
+    subgraph P ["Parcel (bundler)"]
+        /_pre-dist/assets -->|input| C -->|linked| B[.html]
+        /_pre-dist/static -->|linked| B
+    end
+    /pages -->|input| E -->|output| /_pre-dist
+    /assets & /static -->|copied| /_pre-dist
+    /_pre-dist -->|input| P -->|output| /_dist</pre> </div> <script src="https://utteranc.es/client.js" repo="GauBen/gauben.github.io" issue-term="pathname" label="comment thread" theme="github-light" crossorigin async></script> <script src="/fr/blog/2021-05-12-async-et-await/index.1eca1f1a.js"></script> <footer class="_beautiful-links page-footer"> <p>Cette page est disponible en : <strong>Français</strong>.</p> <p>2020 – Gautier Ben Aïm – CC BY 4.0</p> <p>J&#39;aime le minimalisme.</p> <p> <button id="dark-toggle" class="ghost-button" onclick="this.innerText = document.body.classList.toggle('_dark') ? '🌞' : '🌙'"> 🌙 </button> </p> </footer> </body></html>
