@@ -5,7 +5,6 @@ const rss = require('@11ty/eleventy-plugin-rss')
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
 const taskLists = require('markdown-it-task-lists')
-const mermaid = require('md-it-mermaid')
 const implicitFigures = require('markdown-it-implicit-figures')
 const katex = require('@traptitech/markdown-it-katex')
 const imageLazyLoading = require('markdown-it-image-lazy-loading')
@@ -44,7 +43,16 @@ module.exports = (eleventyConfig) => {
         permalinkSymbol: '#',
       })
       .use(tocDoneRight)
-      .use(mermaid)
+      .use((md) => {
+        const origin = md.renderer.rules.fence.bind(md.renderer.rules)
+        md.renderer.rules.fence = (tokens, idx, options, ...resParams) => {
+          const token = tokens[idx]
+          if (token.info === 'mermaid') {
+            return `<pre class="mermaid">${token.content.trim()}</pre>`
+          }
+          return origin(tokens, idx, options, ...resParams)
+        }
+      })
   )
 
   // Filter that keeps items that have the same `data.locale` as

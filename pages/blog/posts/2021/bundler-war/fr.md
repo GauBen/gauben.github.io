@@ -3,7 +3,7 @@ title: Bundler War
 ---
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph E ["Eleventy (static site generator)"]
       .md & .njk --> A[.html]
     end
