@@ -5,8 +5,13 @@ const rss = require('@11ty/eleventy-plugin-rss')
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
 const taskLists = require('markdown-it-task-lists')
-// const mermaid = require('@liradb2000/markdown-it-mermaid')
+const mermaid = require('md-it-mermaid')
+const implicitFigures = require('markdown-it-implicit-figures')
+const katex = require('@traptitech/markdown-it-katex')
+const imageLazyLoading = require('markdown-it-image-lazy-loading')
 const multimdTable = require('markdown-it-multimd-table')
+const anchor = require('markdown-it-anchor')
+const tocDoneRight = require('markdown-it-toc-done-right')
 
 module.exports = (eleventyConfig) => {
   /** @type Object<string, string> */
@@ -29,17 +34,17 @@ module.exports = (eleventyConfig) => {
         rowspan: true,
         headerless: true,
       })
-      .use(require('markdown-it-implicit-figures'))
-      .use(require('@traptitech/markdown-it-katex'), { throwOnError: true })
-      .use(require('markdown-it-image-lazy-loading'))
-      .use(require('markdown-it-anchor'), {
+      .use(implicitFigures)
+      .use(katex, { throwOnError: true })
+      .use(imageLazyLoading)
+      .use(anchor, {
         level: 2,
         permalink: true,
         permalinkBefore: true,
         permalinkSymbol: '#',
       })
-      .use(require('markdown-it-toc-done-right'))
-      // .use(mermaid)
+      .use(tocDoneRight)
+      .use(mermaid)
   )
 
   // Filter that keeps items that have the same `data.locale` as

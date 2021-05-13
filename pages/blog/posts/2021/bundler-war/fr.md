@@ -2,10 +2,10 @@
 title: Bundler War
 ---
 
-```
-flowchart TD
+```mermaid
+flowchart LR
     subgraph E ["Eleventy (static site generator)"]
-	    .md & .njk --> A[.html]
+      .md & .njk --> A[.html]
     end
     subgraph C ["Compilation"]
         .styl --> .css
