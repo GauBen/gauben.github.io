@@ -39,7 +39,7 @@ const eleventyComputed = {
       pathInfo.dir
     }${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`}/`
   },
-  dir: (data) => '~/pages' + path.parse(data.page.inputPath).dir,
+  dir: (data) => '~/' + path.normalize(path.parse(data.page.inputPath).dir),
 }
 
 module.exports = eleventyComputed
