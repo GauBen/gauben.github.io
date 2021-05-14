@@ -1,5 +1,11 @@
 @require 'normalize.css/normalize.css'
 
+@font-face
+  font-weight normal
+  font-family 'alata'
+  font-style normal
+  src url('~/assets/fonts/alata.woff2') format('woff2'), url('~/assets/fonts/alata.ttf') format('ttf')
+
 *
 *::before
 *::after
@@ -37,6 +43,15 @@ iframe
 
 img
   height auto
+
+h1
+h2
+h3
+h4
+h5
+h6
+  font-weight normal
+  font-family alata, $sans-serif
 
 h1
   margin $gap-large 0

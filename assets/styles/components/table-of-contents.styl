@@ -1,4 +1,9 @@
 .table-of-contents
+  @media screen and (prefers-reduced-motion no-preference)
+    > ol
+      z-index 10
+      transition $timing-fast
+
   @media (min-width $max-width-container * 2.5)
     position absolute
     top 0
