@@ -4,7 +4,7 @@
   <subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
   <link href="https://ben-aim.fr/feed.xml" rel="self"/>
   <link href="https://ben-aim.fr/"/>
-  <updated>2021-05-14T07:07:01Z</updated>
+  <updated>2021-05-14T08:30:53Z</updated>
   <id>https://ben-aim.fr/</id>
   <author>
     <name>Boaty McBoatFace</name>
@@ -23,7 +23,7 @@
 &lt;p&gt;Et si, sans rien changer d’autre, on rajoute le mot-clé &lt;code&gt;async&lt;/code&gt; à notre fonction ?&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;// Promise { &amp;lt;state&gt;: &quot;fulfilled&quot;, &amp;lt;value&gt;: 3 }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Cette fois-ci, la fonction ne renvoie pas 3 directement, mais un object bizarre nommé &lt;code&gt;Promise&lt;/code&gt; qui semble contenir la valeur 3. &lt;strong&gt;Une promesse est un objet qui enveloppe un résultat qui sera renvoyé dans le futur.&lt;/strong&gt; Lorsque vous recevez un objet &lt;code&gt;Promise&lt;/code&gt;, le résultat peut déjà être disponible (c’est le cas pour notre fonction &lt;code&gt;sum&lt;/code&gt;), ou bientôt disponible (on y vient).&lt;/p&gt;
-&lt;h3 id=&quot;comment-acc%C3%A9der-%C3%A0-un-r%C3%A9sultat-envelopp%C3%A9-par-une-promesse-%3F&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#comment-acc%C3%A9der-%C3%A0-un-r%C3%A9sultat-envelopp%C3%A9-par-une-promesse-%3F&quot;&gt;#&lt;/a&gt; Comment accéder à un résultat enveloppé par une promesse ?&lt;/h3&gt;
+&lt;h3 id=&quot;comment-acceder-a-un-resultat-enveloppe-par-une-promesse&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#comment-acceder-a-un-resultat-enveloppe-par-une-promesse&quot;&gt;#&lt;/a&gt; Comment accéder à un résultat enveloppé par une promesse ?&lt;/h3&gt;
 &lt;p&gt;Le moyen le plus simple est de définir une fonction de rappel (&lt;em&gt;callback&lt;/em&gt;) à appeler quand le résultat est disponible. On donne la fonction de rappel à la méthode &lt;code&gt;then&lt;/code&gt; :&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;// 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ainsi, notre &lt;code&gt;console.log&lt;/code&gt; est appelé dès que le résultat est disponible, de façon &lt;em&gt;asynchrone&lt;/em&gt; (on n’attend pas explicitement le résultat).&lt;/p&gt;
@@ -39,14 +39,14 @@
 &lt;p&gt;On peut remplacer la fonction de rappel par une attente explicite du résultat :&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;N’est-ce pas merveilleux ? &lt;strong&gt;Le mot-clé &lt;code&gt;await&lt;/code&gt; permet d’extraire la valeur d’une promesse&lt;/strong&gt;, que cette valeur soit disponible ou non, quitte à suspendre temporairement l’exécution en attendant la valeur.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Remarque : on ne peut pas encore utiliser &lt;code&gt;await&lt;/code&gt; ailleurs que dans une fonction asynchrone, &lt;a href=&quot;https://caniuse.com/mdn-javascript_operators_await_top_level&quot;&gt;mais ça devrait arriver&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;bon-ok%2C-mais-ensuite-%3F&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#bon-ok%2C-mais-ensuite-%3F&quot;&gt;#&lt;/a&gt; Bon ok, mais ensuite ?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Remarque : on ne peut pas encore utiliser &lt;code&gt;await&lt;/code&gt; ailleurs que dans une fonction asynchrone, &lt;a href=&quot;https://caniuse.com/mdn-javascript_operators_await_top_level&quot;&gt;mais ça devrait arriver&lt;/a&gt;&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;bon-ok-mais-ensuite&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#bon-ok-mais-ensuite&quot;&gt;#&lt;/a&gt; Bon ok, mais ensuite ?&lt;/h2&gt;
 &lt;p&gt;Pour l’instant on n’a vu que des trucs qu’on peut faire de façon synchrone.&lt;/p&gt;
 &lt;p&gt;Cependant, &lt;strong&gt;il existe de nombreuses choses qui ne peuvent pas être faites de façon synchrone&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Attendre un délai&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Attendre un délai&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn3&quot; id=&quot;fnref3&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;Répondre à un évènement utilisateur&lt;/li&gt;
-&lt;li&gt;Faire une requête au serveur&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn3&quot; id=&quot;fnref3&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Faire une requête au serveur&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn4&quot; id=&quot;fnref4&quot;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Ces trois exemples sont toujours codés avec une fonction de rappel. Voilà l’exemple dont je parlais il y a quelques lignes :&lt;/p&gt;
@@ -65,7 +65,7 @@
 &lt;li&gt;Avant : on envoie une requête à chaque modification du champ &lt;code&gt;$input&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Après : on n’envoie une requête que si la requête précédente est terminée et qu’il y a eu une modification du champ &lt;code&gt;$input&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Si vous faites du TypeScript, vous serez intéressés par la même fonction avec des annotations de type.&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn4&quot; id=&quot;fnref4&quot;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Si vous faites du TypeScript, vous serez intéressés par la même fonction avec des annotations de type.&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn5&quot; id=&quot;fnref5&quot;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;transformer-settimeout-en-fonction-await-able&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#transformer-settimeout-en-fonction-await-able&quot;&gt;#&lt;/a&gt; Transformer &lt;code&gt;setTimeout&lt;/code&gt; en fonction &lt;code&gt;await&lt;/code&gt;-able&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Comment transformer n’importe quelle fonction qui prend une fonction de rappel en fonction asynchrone ?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Prenons l’exemple de &lt;code&gt;setTimeout&lt;/code&gt; :&lt;/p&gt;
@@ -75,11 +75,11 @@
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;saveToast&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token function&quot;&gt;displayMessage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Préférénces enregistrées&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wait&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token function&quot;&gt;hideMessage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;C’est possible en utilisant les promesses explicites. &lt;strong&gt;En effet, on peut appeler &lt;code&gt;resolve&lt;/code&gt; dans la fonction de rappel de &lt;code&gt;setTimeout&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;…&lt;/p&gt;
-&lt;p&gt;…&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn5&quot; id=&quot;fnref5&quot;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;…&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fn6&quot; id=&quot;fnref6&quot;&gt;[6]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;…&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;wait&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ms&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Et hop, on peut attendre de façon explicite ! (Et sans bloquer le thread…)&lt;/p&gt;
-&lt;h2 id=&quot;un-automate-%C3%A0-%C3%A9tat&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#un-automate-%C3%A0-%C3%A9tat&quot;&gt;#&lt;/a&gt; Un automate à état&lt;/h2&gt;
+&lt;h2 id=&quot;un-automate-a-etat&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#un-automate-a-etat&quot;&gt;#&lt;/a&gt; Un automate à état&lt;/h2&gt;
 &lt;p&gt;Toutes ces explications ne sont en fait qu’un prétexte pour arriver au point culminant de cet article : &lt;strong&gt;on peut créer un automate à état en JavaScript grâce à &lt;code&gt;async&lt;/code&gt; et &lt;code&gt;await&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Commençons par créer les types &lt;code&gt;state&lt;/code&gt; et &lt;code&gt;transition&lt;/code&gt;. C’est la seule fois qu’on utilisera du TypeScript, tout le reste sera écrit en JavaScript pur.&lt;/p&gt;
 &lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;transition&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; state&lt;/code&gt;&lt;/pre&gt;
@@ -95,141 +95,135 @@
 &lt;p&gt;On constate que l’on peut remplacer cette chaîne par une boucle et on obtient :&lt;/p&gt;
 &lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initialState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; initialState&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; transition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; state&lt;br /&gt;    state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;initialTransition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Et si vous voulez tester, il vous reste à cliquer juste là :&lt;/p&gt;
-&lt;p id=&quot;example&quot; style=&quot;display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset&quot;&gt;&lt;button id=&quot;button&quot; style=&quot;padding:1em&quot;&gt;JavaScript désactivé&lt;/button&gt;&lt;/p&gt;
-&lt;script&gt;
-const listen = (element, eventName) =&gt;
-  new Promise((resolve) =&gt; {
-    element.addEventListener(
-      eventName,
-      () =&gt; {
-        resolve()
-      },
-      { once: true }
-    )
+&lt;p id=&quot;example&quot; style=&quot;display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset&quot;&gt;
+  &lt;button id=&quot;button&quot; style=&quot;padding:1em&quot;&gt;JavaScript désactivé&lt;/button&gt;
+&lt;/p&gt;
+&lt;script type=&quot;module&quot;&gt;
+  const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
+    element.addEventListener(eventName, () =&gt; {
+      resolve()
+    }, {once: true})
   })
-const main = async (initialState) =&gt; {
-  let state = initialState
-  while (true) {
-    const transition = await state
-    state = transition()
+  const main = async (initialState) =&gt; {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
+    }
   }
-}
-const $button = document.querySelector(&#39;#button&#39;);
-const $div = document.querySelector(&#39;#example&#39;);
-const gold = () =&gt; {
-  $div.style.backgroundColor = &#39;gold&#39;
-  $button.innerHTML = &#39;Magic ✨&#39;
-}
-const red = () =&gt; {
-  $div.style.backgroundColor = &#39;firebrick&#39;
-  $button.innerHTML = &#39;Magic 🚒&#39;
-}
-const blue = () =&gt; {
-  $div.style.backgroundColor = &#39;navy&#39;
-  $button.innerHTML = &#39;Magic 🚓&#39;
-}
-const initialTransition = async () =&gt; {
-  // On met l&#39;application dans l&#39;état initial
-  gold()
-  // On attend un clic sur le bouton
-  await listen($button, &#39;click&#39;)
-  // On renvoie une transition vers red
-  return toRed
-}
-const toRed = async () =&gt; {
-  red()
-  await listen($button, &#39;click&#39;)
-  return toBlue // &lt;- ... vers blue
-}
-const toBlue = async () =&gt; {
-  blue()
-  await listen($button, &#39;click&#39;)
-  return toRed // &lt;- ... vers red
-}
-main(initialTransition())
+  const $button = document.querySelector(&#39;#button&#39;);
+  const $div = document.querySelector(&#39;#example&#39;);
+  const gold = () =&gt; {
+    $div.style.backgroundColor = &#39;gold&#39;
+    $button.innerHTML = &#39;Magic ✨&#39;
+  }
+  const red = () =&gt; {
+    $div.style.backgroundColor = &#39;firebrick&#39;
+    $button.innerHTML = &#39;Magic 🚒&#39;
+  }
+  const blue = () =&gt; {
+    $div.style.backgroundColor = &#39;navy&#39;
+    $button.innerHTML = &#39;Magic 🚓&#39;
+  }
+  const initialTransition = async () =&gt; {
+    // On met l&#39;application dans l&#39;état initial
+    gold()
+    // On attend un clic sur le bouton
+    await listen($button, &#39;click&#39;)
+    // On renvoie une transition vers red
+    return toRed
+  }
+  const toRed = async () =&gt; {
+    red()
+    await listen($button, &#39;click&#39;)
+    return toBlue // &lt;- ... vers blue
+  }
+  const toBlue = async () =&gt; {
+    blue()
+    await listen($button, &#39;click&#39;)
+    return toRed // &lt;- ... vers red
+  }
+  main(initialTransition())
 &lt;/script&gt;
 &lt;p&gt;Pour pouvoir faire de vrais automates, &lt;strong&gt;il manque la possibilité d’avoir plusieurs transitions&lt;/strong&gt;, empruntées lors d’évènements différents…&lt;/p&gt;
 &lt;h2 id=&quot;encore-plus-loin&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#encore-plus-loin&quot;&gt;#&lt;/a&gt; Encore plus loin&lt;/h2&gt;
 &lt;p&gt;Commençons par la fin, voici ce que l’on cherche à construire :&lt;/p&gt;
 &lt;div id=&quot;example&quot; style=&quot;padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em 0&quot;&gt;
   &lt;h3&gt;Changer votre mot de passe&lt;/h3&gt;
-  &lt;p&gt;&lt;label for=&quot;password&quot;&gt;&lt;span style=&quot;display:inline-block&quot;&gt;Nouveau mot de passe :&lt;/span&gt;
-  &lt;input type=&quot;password&quot; id=&quot;password&quot; /&gt;&lt;/label&gt;
-  &lt;button id=&quot;submit&quot;&gt;Envoyer&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;password&quot;&gt;
+      &lt;span style=&quot;display:inline-block&quot;&gt;Nouveau mot de passe :&lt;/span&gt;
+      &lt;input type=&quot;password&quot; id=&quot;password&quot; /&gt;&lt;/label&gt;
+    &lt;button id=&quot;submit&quot;&gt;Envoyer&lt;/button&gt;
+  &lt;/p&gt;
   &lt;p id=&quot;notice&quot; style=&quot;border:1px solid #888;padding:0.5em 1em&quot;&gt;JavaScript désactivé&lt;/p&gt;
 &lt;/div&gt;
-&lt;script&gt;
-const listen = (element, eventName) =&gt;
-new Promise((resolve) =&gt; {
-  element.addEventListener(
-    eventName,
-    () =&gt; {
+&lt;script type=&quot;module&quot;&gt;
+  const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
+    element.addEventListener(eventName, () =&gt; {
       resolve()
-    },
-    { once: true }
-  )
-})
-const main = async (initialState) =&gt; {
-  let state = initialState
-  while (true) {
-    const transition = await state
-    state = transition()
+    }, {once: true})
+  })
+  const main = async (initialState) =&gt; {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
+    }
   }
-}
-const wait = (ms) =&gt;
-  new Promise((resolve) =&gt; {
+  const wait = (ms) =&gt; new Promise((resolve) =&gt; {
     setTimeout(() =&gt; {
       resolve()
     }, ms)
   })
-const $password = document.querySelector(&#39;#password&#39;)
-const $submit = document.querySelector(&#39;#submit&#39;)
-const $notice = document.querySelector(&#39;#notice&#39;)
-const tooShort = () =&gt; {
-  $notice.hidden = false
-  $notice.innerHTML = &quot;Entrez un nouveau mot de passe de plus de 8 caractères.&quot;
-  $notice.style.borderColor = &quot;#889&quot;
-  $notice.style.backgroundColor = &quot;#EEE&quot;
-}
-const changeSuccessful = () =&gt; {
-  $password.value = &#39;&#39;
-  $notice.hidden = false
-  $notice.innerHTML = &quot;Mot de passe passe modifié !&quot;
-  $notice.style.borderColor = &quot;#4D4&quot;
-  $notice.style.backgroundColor = &quot;#EFE&quot;
-}
-const toTooShort = async () =&gt; {
-  tooShort()
-  await listen($password, &#39;input&#39;)
-  if ($password.value.length &lt; 8)
+  const $password = document.querySelector(&#39;#password&#39;)
+  const $submit = document.querySelector(&#39;#submit&#39;)
+  const $notice = document.querySelector(&#39;#notice&#39;)
+  const tooShort = () =&gt; {
+    $notice.hidden = false
+    $notice.innerHTML = &quot;Entrez un nouveau mot de passe de plus de 8 caractères.&quot;
+    $notice.style.borderColor = &quot;#889&quot;
+    $notice.style.backgroundColor = &quot;#EEE&quot;
+  }
+  const changeSuccessful = () =&gt; {
+    $password.value = &#39;&#39;
+    $notice.hidden = false
+    $notice.innerHTML = &quot;Mot de passe passe modifié !&quot;
+    $notice.style.borderColor = &quot;#4D4&quot;
+    $notice.style.backgroundColor = &quot;#EFE&quot;
+  }
+  const toTooShort = async () =&gt; {
+    tooShort()
+    await listen($password, &#39;input&#39;)
+    if ($password.value.length &lt; 8)
+      return toTooShort
+    return toLongEnough
+  }
+  const toLongEnough = async () =&gt; {
+    $notice.hidden = true
+    return Promise.race([
+      (async () =&gt; {
+        await listen($password, &#39;input&#39;)
+        if ($password.value.length &lt; 8)
+          return toTooShort
+        return toLongEnough
+      })(),
+      (async () =&gt; {
+        await listen($submit, &#39;click&#39;)
+        return sendNewPassword
+      })()
+    ])
+  }
+  const sendNewPassword = async () =&gt; {
+    await wait(500) // await fetch(...)
+    return toChangeSuccessful
+  }
+  const toChangeSuccessful = async () =&gt; {
+    changeSuccessful()
+    await wait(3000)
     return toTooShort
-  return toLongEnough
-}
-const toLongEnough = async () =&gt; {
-  $notice.hidden = true
-  return Promise.race([
-    (async () =&gt; {
-      await listen($password, &#39;input&#39;)
-      if ($password.value.length &lt; 8)
-        return toTooShort
-      return toLongEnough
-    })(),
-    (async () =&gt; {
-      await listen($submit, &#39;click&#39;)
-      return sendNewPassword
-    })()
-  ])
-}
-const sendNewPassword = async () =&gt; {
-  await wait(500) // await fetch(...)
-  return toChangeSuccessful
-}
-const toChangeSuccessful = async () =&gt; {
-  changeSuccessful()
-  await wait(3000)
-  return toTooShort
-}
-main(toTooShort())
+  }
+  main(toTooShort())
 &lt;/script&gt;
 &lt;p&gt;Cet exemple obéit à l’automate suivant :&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/~/pages/blog/posts/2021/async-js/state-machine2.png&quot; alt=&quot;Automate à quatre états&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
@@ -253,15 +247,18 @@ main(toTooShort())
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token comment&quot;&gt;/* Si la fonction de rappel renvoie une promesse... */&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token comment&quot;&gt;/* ... alors on peut chaîner les `then` */&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;On retrouve le chaînage dans l’exemple avec &lt;code&gt;fetch&lt;/code&gt;. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&quot;fn2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;On peut faire une boucle infinie pour attendre une date donnée, mais ce n’est ni élégant, ni performant. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&quot;fn2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Alors on pourra écrire :&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;module&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+ &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;On peut faire une boucle infinie pour attendre une date donnée, mais ce n’est ni élégant, ni performant. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&quot;fn3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;On peut avec &lt;code&gt;XMLHttpRequest&lt;/code&gt;, mais c’est pas aussi agréable à utiliser que &lt;code&gt;fetch&lt;/code&gt;. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&quot;fn4&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;On peut avec &lt;code&gt;XMLHttpRequest&lt;/code&gt;, mais c’est pas aussi agréable à utiliser que &lt;code&gt;fetch&lt;/code&gt;. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref4&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&quot;fn4&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;La même fonction, mais typée correctement :&lt;/p&gt;
+&lt;li id=&quot;fn5&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;La même fonction, mais typée correctement :&lt;/p&gt;
 &lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; listen &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;keyof&lt;/span&gt; HTMLElementEventMap&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br /&gt;  element&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; HTMLElement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;  eventName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;K&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token builtin&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;HTMLElementEventMap&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resolve&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    element&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br /&gt;      eventName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; once&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Notez par ailleurs que, même si la fonction renvoie explicitement un objet &lt;code&gt;Promise&lt;/code&gt;, elle est déclarée asynchrone. Ceci n’est pas une erreur, mais une recommandation donnée par &lt;code&gt;@typescript-eslint/promise-function-async&lt;/code&gt;. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref4&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notez par ailleurs que, même si la fonction renvoie explicitement un objet &lt;code&gt;Promise&lt;/code&gt;, elle est déclarée asynchrone. Ceci n’est pas une erreur, mais une recommandation donnée par &lt;code&gt;@typescript-eslint/promise-function-async&lt;/code&gt;. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref5&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&quot;fn5&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Je laisse un petit temps pour ne pas &lt;em&gt;spoiler&lt;/em&gt; la solution. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref5&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&quot;fn6&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Je laisse un petit temps pour ne pas &lt;em&gt;spoiler&lt;/em&gt; la solution. &lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#fnref6&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -271,7 +268,7 @@ main(toTooShort())
     <entry>
       <title>Bijection entre langages</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-14-bijection-entre-langages/"/>
-      <updated>2021-05-14T07:07:01Z</updated>
+      <updated>2021-05-14T08:30:53Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-14-bijection-entre-langages/</id>
       <content type="html">&lt;p&gt;pip &amp;lt;-&amp;gt; npm/yarn
 mypy &amp;lt;-&amp;gt; typescript
@@ -463,7 +460,7 @@ black &amp;lt;-&amp;gt; PHP-CS-Fixer&lt;/p&gt;
     <entry>
       <title>Bundler War</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-14-bundler-war/"/>
-      <updated>2021-05-14T07:07:01Z</updated>
+      <updated>2021-05-14T08:30:53Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-14-bundler-war/</id>
       <content type="html">&lt;pre class=&quot;mermaid&quot;&gt;flowchart LR
     subgraph E [&quot;Eleventy (static site generator)&quot;]
