@@ -6838,7 +6838,6 @@ fsevents@~2.3.1:
     markdown-it-multimd-table: ^4.1.0
     markdown-it-task-lists: ^2.1.1
     markdown-it-toc-done-right: ^4.2.0
-    md-it-mermaid: ^1.0.0
     mermaid: ^8.10.1
     normalize.css: ^8.0.1
     npm-run-all: ^4.1.5
@@ -9352,13 +9351,6 @@ fsevents@~2.3.1:
     arrify: ^1.0.0
     minimatch: ^3.0.0
   checksum: 7f70678feecf851f1499e0fd2d98a2d6d3796d8bcae1e9b74b2bda280823b29bad61fdf2b3f88f11ffb2700b8cf9587c687654cbf8f67be2e3d4d9f1f4cc699b
-  languageName: node
-  linkType: hard
-
-"md-it-mermaid@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "md-it-mermaid@npm:1.0.0"
-  checksum: e6a65c8a9e930b076916a8d93c7768d5bff8a8cac26e221efc8ef2bd9e7bb14d8b2ee5863324e4a3bffd7342f20ae6fb12079906be7f66a7b67debce45a6c099
   languageName: node
   linkType: hard
 

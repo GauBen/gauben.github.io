@@ -3249,10 +3249,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.1.0"
       ],
       [
-        "md-it-mermaid",
-        "npm:1.0.0"
-      ],
-      [
         "md5.js",
         "npm:1.3.5"
       ],
@@ -5312,7 +5308,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-multimd-table", "npm:4.1.0"],
             ["markdown-it-task-lists", "npm:2.1.1"],
             ["markdown-it-toc-done-right", "npm:4.2.0"],
-            ["md-it-mermaid", "npm:1.0.0"],
             ["mermaid", "npm:8.10.1"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
@@ -14122,7 +14117,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-multimd-table", "npm:4.1.0"],
             ["markdown-it-task-lists", "npm:2.1.1"],
             ["markdown-it-toc-done-right", "npm:4.2.0"],
-            ["md-it-mermaid", "npm:1.0.0"],
             ["mermaid", "npm:8.10.1"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
@@ -16935,15 +16929,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["array-union", "npm:1.0.2"],
             ["arrify", "npm:1.0.1"],
             ["minimatch", "npm:3.0.4"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["md-it-mermaid", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/md-it-mermaid-npm-1.0.0-4139ec9b76-e6a65c8a9e.zip/node_modules/md-it-mermaid/",
-          "packageDependencies": [
-            ["md-it-mermaid", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
