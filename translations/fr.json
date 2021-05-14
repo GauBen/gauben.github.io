@@ -1,0 +1,12 @@
+{
+  "motto": "J'aime le minimalisme.",
+  "translations": {
+    "available": "Cette page est disponible en :"
+  },
+  "home": {
+    "back": "Retourner à l'accueil"
+  },
+  "email": "Mon e-mail",
+  "linkedin": "Mon LinkedIn",
+  "github": "Mon GitHub"
+}

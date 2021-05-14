@@ -64,4 +64,4 @@ Consultez mon rapport de stage de l'été 2020 ainsi que d'autres documents sur 
 
 **→ [Mon porte-document en ligne de SHS](https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf)**
 
-<a href="{{ '/' | localizeurl }}">{{ 'Back to home page' | translate }}</a>
+<a href="{{ '/' | localizeurl }}">{{ 'home.back' | t }}</a>

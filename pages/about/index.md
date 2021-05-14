@@ -63,4 +63,4 @@ Read my summer 2020 internship report and other documents in my shared folder.
 
 **→ [My SHS online briefcase](https://drive.google.com/drive/folders/14SpPdu_O9YwVsRh2v4MxDKo7od1oXLzf)**
 
-<a href="{{ '/' | localizeurl }}">{{ 'Back to home page' | translate }}</a>
+<a href="{{ '/' | localizeurl }}">{{ 'home.back' | t }}</a>

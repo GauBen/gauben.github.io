@@ -1,8 +1,8 @@
+const fs = require('fs')
 const path = require('path')
 
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
-const slugify = require('slugify')
 
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
@@ -16,9 +16,35 @@ const tocDoneRight = require('markdown-it-toc-done-right')
 
 const locales = require('./locales.json')
 
+const flattenObject = (obj, out = new Map(), prefix = '') => {
+  for (const [key, value] of Object.entries(obj)) {
+    if (value instanceof Object) {
+      flattenObject(value, out, `${prefix}${key}.`)
+    } else {
+      out.set(`${prefix}${key}`, value)
+    }
+  }
+  return out
+}
+
 module.exports = (eleventyConfig) => {
   // Register locales
   eleventyConfig.addGlobalData('locales', locales)
+
+  // Find translations
+  const translations = new Map()
+  for (const locale of Object.keys(locales)) {
+    if (locale === 'index') continue
+    const strings = JSON.parse(
+      fs.readFileSync(`./translations/${locale}.json`).toString()
+    )
+    translations.set(locale, flattenObject(strings))
+  }
+  if (!translations.has(locales.index)) {
+    throw new Error(
+      `Main locale "${locales.index}" not found (./translations/${locales.index}.json)`
+    )
+  }
 
   // Add eleventy plugins
   eleventyConfig.addPlugin(highlight)
@@ -112,24 +138,34 @@ module.exports = (eleventyConfig) => {
   })
 
   // Translate the string given with translations found in `_data/translations`
-  eleventyConfig.addFilter('translate', function (string, locale) {
+  eleventyConfig.addFilter('t', function (string, locale) {
     locale = locale || this.ctx.locale || locales.index
-    return locale in this.ctx.translations &&
-      string in this.ctx.translations[locale]
-      ? this.ctx.translations[locale][string]
-      : string
+    if (!translations.has(locale)) {
+      throw new Error(`Unknown locale "${locale}"`)
+    }
+    const strings = translations.get(locale)
+    if (strings.has(string)) {
+      return strings.get(string)
+    }
+    const fallbackStrings = translations.get(locales.index)
+    if (fallbackStrings.has(string)) {
+      return fallbackStrings.get(string)
+    }
+    throw new Error(
+      `Cannot find a suitable transation for the string "${string}" for locale "${locale}"`
+    )
   })
 
   // Articles in a given language
-  Object.keys(locales).forEach((locale) => {
-    if (locale === 'index') return
+  for (const locale of Object.keys(locales)) {
+    if (locale === 'index') continue
     eleventyConfig.addCollection(`post/${locale}`, function (collectionApi) {
       return eleventyConfig.getFilter('samelocale')(
         collectionApi.getFilteredByTag('post').reverse(),
         locale
       )
     })
-  })
+  }
 
   eleventyConfig.setBrowserSyncConfig({
     watch: true,
