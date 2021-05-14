@@ -9,6 +9,9 @@ module.exports = {
   eleventyComputed: {
     ...eleventyComputed,
     permalink: (data) => {
+      if (!('title' in data) || !data.title) {
+        return ''
+      }
       const locale = eleventyComputed.locale(data)
       const slug = slugify(data.title, { lower: true, locale })
       const date = DateTime.fromJSDate(data.page.date)
@@ -19,6 +22,9 @@ module.exports = {
       }/blog/${date.toFormat('yyyy-LL-dd')}-${slug}${
         pathInfo.base in data.locales ? '' : `/${pathInfo.base}`
       }/`
+    },
+    eleventyExcludeFromCollections: (data) => {
+      return !('title' in data) || !data.title
     },
   },
 }

@@ -2,6 +2,7 @@ const path = require('path')
 
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
+const slugify = require('slugify')
 
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
@@ -39,9 +40,10 @@ module.exports = (eleventyConfig) => {
       .use(imageLazyLoading)
       .use(anchor, {
         level: 2,
+        slugify: (s) => slugify(s, { lower: true }),
         permalink: true,
-        permalinkBefore: true,
         permalinkSymbol: '#',
+        permalinkBefore: true,
       })
       .use(tocDoneRight)
       .use((md) => {

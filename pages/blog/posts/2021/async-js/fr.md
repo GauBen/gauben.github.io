@@ -91,7 +91,7 @@ main()
 
 N'est-ce pas merveilleux ? **Le mot-clé `await` permet d'extraire la valeur d'une promesse**, que cette valeur soit disponible ou non, quitte à suspendre temporairement l'exécution en attendant la valeur.
 
-_Remarque : on ne peut pas encore utiliser `await` ailleurs que dans une fonction asynchrone, [mais ça devrait arriver](https://caniuse.com/mdn-javascript_operators_await_top_level)._
+_Remarque : on ne peut pas encore utiliser `await` ailleurs que dans une fonction asynchrone, [mais ça devrait arriver](https://caniuse.com/mdn-javascript_operators_await_top_level)[^module]._
 
 ## Bon ok, mais ensuite ?
 
@@ -317,59 +317,7 @@ main(initialTransition())
 
 Et si vous voulez tester, il vous reste à cliquer juste là :
 
-<p id="example" style="display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset"><button id="button" style="padding:1em">JavaScript désactivé</button></p>
-<script>
-const listen = (element, eventName) =>
-  new Promise((resolve) => {
-    element.addEventListener(
-      eventName,
-      () => {
-        resolve()
-      },
-      { once: true }
-    )
-  })
-const main = async (initialState) => {
-  let state = initialState
-  while (true) {
-    const transition = await state
-    state = transition()
-  }
-}
-const $button = document.querySelector('#button');
-const $div = document.querySelector('#example');
-const gold = () => {
-  $div.style.backgroundColor = 'gold'
-  $button.innerHTML = 'Magic ✨'
-}
-const red = () => {
-  $div.style.backgroundColor = 'firebrick'
-  $button.innerHTML = 'Magic 🚒'
-}
-const blue = () => {
-  $div.style.backgroundColor = 'navy'
-  $button.innerHTML = 'Magic 🚓'
-}
-const initialTransition = async () => {
-  // On met l'application dans l'état initial
-  gold()
-  // On attend un clic sur le bouton
-  await listen($button, 'click')
-  // On renvoie une transition vers red
-  return toRed
-}
-const toRed = async () => {
-  red()
-  await listen($button, 'click')
-  return toBlue // <- ... vers blue
-}
-const toBlue = async () => {
-  blue()
-  await listen($button, 'click')
-  return toRed // <- ... vers red
-}
-main(initialTransition())
-</script>
+{% include './example1.njk' %}
 
 Pour pouvoir faire de vrais automates, **il manque la possibilité d'avoir plusieurs transitions**, empruntées lors d'évènements différents...
 
@@ -377,86 +325,7 @@ Pour pouvoir faire de vrais automates, **il manque la possibilité d'avoir plusi
 
 Commençons par la fin, voici ce que l'on cherche à construire :
 
-<div id="example" style="padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em 0">
-  <h3>Changer votre mot de passe</h3>
-  <p><label for="password"><span style="display:inline-block">Nouveau mot de passe :</span>
-  <input type="password" id="password"></label>
-  <button id="submit">Envoyer</button></p>
-  <p id="notice" style="border:1px solid #888;padding:0.5em 1em">JavaScript désactivé</p>
-</div>
-<script>
-const listen = (element, eventName) =>
-new Promise((resolve) => {
-  element.addEventListener(
-    eventName,
-    () => {
-      resolve()
-    },
-    { once: true }
-  )
-})
-const main = async (initialState) => {
-  let state = initialState
-  while (true) {
-    const transition = await state
-    state = transition()
-  }
-}
-const wait = (ms) =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve()
-    }, ms)
-  })
-const $password = document.querySelector('#password')
-const $submit = document.querySelector('#submit')
-const $notice = document.querySelector('#notice')
-const tooShort = () => {
-  $notice.hidden = false
-  $notice.innerHTML = "Entrez un nouveau mot de passe de plus de 8 caractères."
-  $notice.style.borderColor = "#889"
-  $notice.style.backgroundColor = "#EEE"
-}
-const changeSuccessful = () => {
-  $password.value = ''
-  $notice.hidden = false
-  $notice.innerHTML = "Mot de passe passe modifié !"
-  $notice.style.borderColor = "#4D4"
-  $notice.style.backgroundColor = "#EFE"
-}
-const toTooShort = async () => {
-  tooShort()
-  await listen($password, 'input')
-  if ($password.value.length < 8)
-    return toTooShort
-  return toLongEnough
-}
-const toLongEnough = async () => {
-  $notice.hidden = true
-  return Promise.race([
-    (async () => {
-      await listen($password, 'input')
-      if ($password.value.length < 8)
-        return toTooShort
-      return toLongEnough
-    })(),
-    (async () => {
-      await listen($submit, 'click')
-      return sendNewPassword
-    })()
-  ])
-}
-const sendNewPassword = async () => {
-  await wait(500) // await fetch(...)
-  return toChangeSuccessful
-}
-const toChangeSuccessful = async () => {
-  changeSuccessful()
-  await wait(3000)
-  return toTooShort
-}
-main(toTooShort())
-</script>
+{% include './example2.njk' %}
 
 Cet exemple obéit à l'automate suivant :
 
@@ -549,3 +418,15 @@ Si vous êtes curieux de voir une application qui utilise un automate de ce type
 [^spoiler]: Je laisse un petit temps pour ne pas _spoiler_ la solution.
 [^xmlhttprequest]: On peut avec `XMLHttpRequest`, mais c'est pas aussi agréable à utiliser que `fetch`.
 [^boucle]: On peut faire une boucle infinie pour attendre une date donnée, mais ce n'est ni élégant, ni performant.
+[^module]: Alors on pourra écrire :
+
+    ```html
+    <script type="module">
+      const sum = async (a, b) => {
+        return a + b
+      }
+      let x = await sum(1, 2)
+      let y = await sum(x, 3)
+      console.log(y)
+    </script>
+    ```

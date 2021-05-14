@@ -1,0 +1,50 @@
+<p id="example" style="display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset">
+  <button id="button" style="padding:1em">JavaScript désactivé</button>
+</p>
+<script type="module">
+  const listen = (element, eventName) => new Promise((resolve) => {
+    element.addEventListener(eventName, () => {
+      resolve()
+    }, {once: true})
+  })
+  const main = async (initialState) => {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
+    }
+  }
+  const $button = document.querySelector('#button');
+  const $div = document.querySelector('#example');
+  const gold = () => {
+    $div.style.backgroundColor = 'gold'
+    $button.innerHTML = 'Magic ✨'
+  }
+  const red = () => {
+    $div.style.backgroundColor = 'firebrick'
+    $button.innerHTML = 'Magic 🚒'
+  }
+  const blue = () => {
+    $div.style.backgroundColor = 'navy'
+    $button.innerHTML = 'Magic 🚓'
+  }
+  const initialTransition = async () => {
+    // On met l'application dans l'état initial
+    gold()
+    // On attend un clic sur le bouton
+    await listen($button, 'click')
+    // On renvoie une transition vers red
+    return toRed
+  }
+  const toRed = async () => {
+    red()
+    await listen($button, 'click')
+    return toBlue // <- ... vers blue
+  }
+  const toBlue = async () => {
+    blue()
+    await listen($button, 'click')
+    return toRed // <- ... vers red
+  }
+  main(initialTransition())
+</script>
