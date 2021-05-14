@@ -40,7 +40,6 @@ module.exports = (eleventyConfig) => {
       .use(imageLazyLoading)
       .use(anchor, {
         level: 2,
-        slugify: (s) => slugify(s, { lower: true }),
         permalink: true,
         permalinkSymbol: '#',
         permalinkBefore: true,
