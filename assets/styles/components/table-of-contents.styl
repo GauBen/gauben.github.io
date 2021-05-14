@@ -1,0 +1,11 @@
+.table-of-contents
+  @media (min-width $max-width-container * 2.5)
+    position absolute
+    top 0
+    bottom 0
+
+    > ol
+      position sticky
+      top $gap-large
+      width 0.667 * $max-width-container
+      transform translateX($max-width-container)

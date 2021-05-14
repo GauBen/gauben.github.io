@@ -7,6 +7,10 @@ scripts:
   - ~/assets/scripts/mermaid.ts
 ---
 
+[toc]
+
+## Mermaid
+
 ```mermaid
 flowchart LR
     subgraph E ["Eleventy (static site generator)"]
@@ -24,6 +28,8 @@ flowchart LR
     /.pre-dist -->|input| P -->|output| /.dist
 ```
 
+## Prism
+
 ```js
 let a = ''
 const b = atob('YmRsXmVoKGBZbGpeWWUyWF1QV1kaTllW')
@@ -36,5 +42,7 @@ for (const link of document.querySelectorAll(
   link.href = 'mailto:' + a
 }
 ```
+
+## Katex
 
 $$\forall n \in \N \text{ tel que } n \ge 3 \text{ et } n \text{ impair,}\\ \forall p \in \N \text{ tel que } 2 \le p \lt n,\\ n \not\equiv 0 \pmod p$$
