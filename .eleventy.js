@@ -120,11 +120,16 @@ module.exports = (eleventyConfig) => {
       : string
   })
 
-  // Counts words
-  eleventyConfig.addFilter(
-    'wc',
-    (string) => (string.match(/\s+/g) || []).length + 1
-  )
+  // Articles in a given language
+  Object.keys(locales).forEach((locale) => {
+    if (locale === 'index') return
+    eleventyConfig.addCollection(`post/${locale}`, function (collectionApi) {
+      return eleventyConfig.getFilter('samelocale')(
+        collectionApi.getFilteredByTag('post').reverse(),
+        locale
+      )
+    })
+  })
 
   eleventyConfig.setBrowserSyncConfig({
     watch: true,

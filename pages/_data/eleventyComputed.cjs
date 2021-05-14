@@ -34,10 +34,14 @@ const eleventyComputed = {
     const stem = data.page.filePathStem
     const pathInfo = path.parse(stem)
     const locale = eleventyComputed.locale(data)
+    const pageNumber =
+      'pagination' in data && data.pagination.pageNumber > 0
+        ? `${data.pagination.pageNumber + 1}/`
+        : ''
     // (/fr)? + /path/to + (/non-locale-file-name)? + /
     return `${locale === data.locales.index ? '' : `/${locale}`}${
       pathInfo.dir
-    }${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`}/`
+    }${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`}/${pageNumber}`
   },
   dir: (data) => '~/' + path.normalize(path.parse(data.page.inputPath).dir),
 }
