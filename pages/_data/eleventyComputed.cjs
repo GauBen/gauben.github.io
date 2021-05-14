@@ -39,7 +39,7 @@ const eleventyComputed = {
       pathInfo.dir
     }${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`}/`
   },
-  assetsRoot: (data) => '~/pages' + path.parse(data.page.filePathStem).dir,
+  dir: (data) => '~/pages' + path.parse(data.page.inputPath).dir,
 }
 
 module.exports = eleventyComputed

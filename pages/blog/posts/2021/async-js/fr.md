@@ -260,7 +260,7 @@ const blue = () => {
 
 Notre objectif est de créer l'automate suivant, où les transitions sont empruntées lors d'un clic sur le bouton :
 
-![Automate à trois états]({{ assetsRoot }}/state-machine.png)
+![Automate à trois états]({{ dir }}/state-machine.png)
 
 Créons les transitions vers ces états :
 
@@ -460,7 +460,7 @@ main(toTooShort())
 
 Cet exemple obéit à l'automate suivant :
 
-![Automate à quatre états]({{ assetsRoot }}/state-machine2.png)
+![Automate à quatre états]({{ dir }}/state-machine2.png)
 
 La partie la plus intéressante est l'état en haut à droite, nommé `longEnough`. On atteint cet état lorsque le mot de passe saisi fait plus de 8 caractères, et on peut le quitter de trois façons différentes :
 
