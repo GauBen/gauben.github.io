@@ -3,6 +3,7 @@ const path = require('path')
 
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
+const { DateTime } = require('luxon')
 
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
@@ -155,6 +156,15 @@ module.exports = (eleventyConfig) => {
       `Cannot find a suitable transation for the string "${string}" for locale "${locale}"`
     )
   })
+
+  // Translate the string given with translations found in `_data/translations`
+  eleventyConfig.addFilter(
+    'dateformat',
+    function (date, locale, format = DateTime.DATE_FULL) {
+      locale = locale || this.ctx.locale || locales.index
+      return DateTime.fromJSDate(date).setLocale(locale).toLocaleString(format)
+    }
+  )
 
   // Articles in a given language
   for (const locale of Object.keys(locales)) {

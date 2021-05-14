@@ -7,7 +7,9 @@ layout: parts/html.njk
   <ol>
     {% for post in posts %}
       <li>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a><br>
+        {{ post.data.description }}<br>
+        <em>{{ post.date | dateformat }}</em>
       </li>
     {% endfor %}
   </ol>
