@@ -61,7 +61,7 @@ const sum = (a, b) =>
 
 La fonction `resolve` se comporte quasiment comme un `return` : seul le premier appel est pris en compte, tous les autres sont ignorés.
 
-## `await`
+### `await`
 
 Le principal intérêt des fonctions asynchrones est d'éviter l'enfer des fonctions de rappel imbriquées (aussi appelé [_callback hell_](http://callbackhell.com/)). **Le mot-clé `await` permet de ne pas utiliser `then`.**
 
