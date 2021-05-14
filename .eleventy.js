@@ -120,6 +120,12 @@ module.exports = (eleventyConfig) => {
       : string
   })
 
+  // Counts words
+  eleventyConfig.addFilter(
+    'wc',
+    (string) => (string.match(/\s+/g) || []).length + 1
+  )
+
   eleventyConfig.setBrowserSyncConfig({
     watch: true,
     server: '.dist',

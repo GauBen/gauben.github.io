@@ -2,6 +2,7 @@ const path = require('path')
 const slugify = require('slugify')
 const eleventyComputed = require('../../_data/eleventyComputed.cjs')
 const { DateTime } = require('luxon')
+const fs = require('fs').promises
 
 module.exports = {
   layout: 'post.njk',
@@ -25,6 +26,10 @@ module.exports = {
     },
     eleventyExcludeFromCollections: (data) => {
       return !('title' in data) || !data.title
+    },
+    words: async (data) => {
+      const text = await fs.readFile(data.page.inputPath, 'ascii')
+      return text.match(/\w+/g).length
     },
   },
 }
