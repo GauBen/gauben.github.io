@@ -4,7 +4,7 @@
   <subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
   <link href="https://ben-aim.fr/feed.xml" rel="self"/>
   <link href="https://ben-aim.fr/"/>
-  <updated>2021-05-16T19:26:11Z</updated>
+  <updated>2021-05-16T21:02:45Z</updated>
   <id>https://ben-aim.fr/</id>
   <author>
     <name>Boaty McBoatFace</name>
@@ -268,7 +268,7 @@
     <entry>
       <title>Bijection entre langages</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-16-bijection-entre-langages/"/>
-      <updated>2021-05-16T19:26:11Z</updated>
+      <updated>2021-05-16T21:02:45Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-16-bijection-entre-langages/</id>
       <content type="html">&lt;p&gt;pip &amp;lt;-&amp;gt; npm/yarn
 mypy &amp;lt;-&amp;gt; typescript
@@ -460,7 +460,7 @@ black &amp;lt;-&amp;gt; PHP-CS-Fixer&lt;/p&gt;
     <entry>
       <title>Bundler War</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/"/>
-      <updated>2021-05-16T19:26:11Z</updated>
+      <updated>2021-05-16T21:02:45Z</updated>
       <id>https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/</id>
       <content type="html">&lt;nav class=&quot;table-of-contents&quot;&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/#mermaid&quot;&gt; Mermaid&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/#prism&quot;&gt; Prism&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/#katex&quot;&gt; Katex&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/nav&gt;&lt;h2 id=&quot;mermaid&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-16-bundler-war/#mermaid&quot;&gt;#&lt;/a&gt; Mermaid&lt;/h2&gt;
 &lt;pre class=&quot;mermaid&quot;&gt;flowchart LR
