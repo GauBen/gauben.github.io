@@ -1,1 +1,124 @@
-@require 'prism-themes/themes/prism-material-light.css'
+/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www/ */
+/* stylelint-disable */
+pre[class*='language-']
+code[class*='language-']
+  color #dedfe3
+  font-size 13px
+  font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+  line-height 1.5
+  direction ltr
+  white-space pre
+  text-align left
+  text-shadow none
+  word-break normal
+  word-spacing normal
+  -moz-tab-size 4
+  -o-tab-size 4
+  tab-size 4
+  -webkit-hyphens none
+  -moz-hyphens none
+  -ms-hyphens none
+  hyphens none
+
+pre[class*='language-']::selection
+code[class*='language-']::selection
+  text-shadow none
+  background #ff8
+
+@media print
+  pre[class*='language-']
+  code[class*='language-']
+    text-shadow none
+
+pre[class*='language-']
+  margin 0.5em 0
+  padding 1em
+  overflow auto
+  background #1c1b1d
+  border-radius 4px
+
+:not(pre) > code[class*='language-']
+  padding 0.1em 0.3em
+  color #461b24
+  background #f9f2f4
+  border-radius 0.3em
+
+.token.comment
+.token.prolog
+.token.doctype
+.token.cdata
+  color #93a1a1
+
+.token.punctuation
+  color #999
+
+.token.property
+.token.tag
+.token.boolean
+.token.number
+.token.constant
+.token.symbol
+.token.deleted
+  color #8eeefa
+
+.token.selector
+.token.attr-name
+.token.string
+.token.char
+.token.builtin
+.token.inserted
+  color #80d369
+
+.token.operator
+.token.entity
+.token.url
+.language-css .token.string
+.style .token.string
+  color #8eeefa
+  background transparent
+
+.token.atrule
+.token.attr-value
+.token.keyword
+  color #f07070
+
+.token.function
+  color #c97cf3
+
+.token.regex
+.token.important
+.token.variable
+  color #fcff33
+
+.token.important
+.token.bold
+  font-weight bold
+
+.token.italic
+  font-style italic
+
+.token.entity
+  cursor help
+
+/* ********************************************************
+ * Line highlighting
+ */
+pre[data-line]
+  position relative
+
+pre[class*='language-'] > code[class*='language-']
+  position relative
+  z-index 1
+
+.line-highlight
+  position absolute
+  right 0
+  left 0
+  z-index 0
+  margin-top 1em
+  padding inherit 0
+  line-height inherit
+  white-space pre
+  background #38343c
+  box-shadow inset 5px 0 0 #5c2790
+  pointer-events none
