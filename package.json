@@ -16,15 +16,18 @@
     "build:parcel": "PARCEL_WORKERS=0 parcel build '.pre-dist/**/*.{html,xml}' --dist-dir .dist --no-source-maps --detailed-report 0",
     "test": "yarn test:styl && yarn test:ts && echo ':)'",
     "test:stylelint": "stylelint './assets/**/*.styl' --custom-syntax stylelint-plugin-stylus/custom-syntax --fix",
-    "test:eslint": "eslint './assets/**/*.ts' --fix"
+    "test:eslint": "eslint './assets/**/*.ts' --fix",
+    "preview": "yarn build && serve -n .dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "v1.0.0-canary.20",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "@parcel/config-default": "2.0.0-nightly.645",
+    "@parcel/optimizer-data-url": "2.0.0-nightly.645+3baf990a",
     "@parcel/packager-raw-url": "2.0.0-nightly.2267",
     "@parcel/transformer-image": "2.0.0-nightly.2267",
+    "@parcel/transformer-inline-string": "2.0.0-nightly.645+3baf990a",
     "@parcel/transformer-stylus": "2.0.0-nightly.645",
     "@parcel/transformer-webmanifest": "2.0.0-nightly.2267",
     "@traptitech/markdown-it-katex": "^3.4.2",
@@ -51,6 +54,7 @@
     "prettier": "^2.3.0",
     "prism-themes": "^1.7.0",
     "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^22.0.0",
