@@ -7033,6 +7033,7 @@ fsevents@~2.3.1:
     stylelint-plugin-stylus: ^0.10.0
     stylelint-rscss: ^0.4.0
     typescript: ^4.2.4
+    uslug: ^1.0.4
   languageName: unknown
   linkType: soft
 
@@ -15074,6 +15075,13 @@ typescript@^4.2.4:
   languageName: node
   linkType: hard
 
+"unorm@npm:>= 1.0.0":
+  version: 1.6.0
+  resolution: "unorm@npm:1.6.0"
+  checksum: 2c3e10ad8c09edf5f0104a57b7b1277e3ca4aeeaf726596c93e940d94661b2bf167c160f3d4ee2d4d9e02742706a56d548462b45d52e9d91db2dcbb524a7b750
+  languageName: node
+  linkType: hard
+
 "unpipe@npm:1.0.0, unpipe@npm:~1.0.0":
   version: 1.0.0
   resolution: "unpipe@npm:1.0.0"
@@ -15145,6 +15153,15 @@ typescript@^4.2.4:
   version: 3.1.1
   resolution: "use@npm:3.1.1"
   checksum: 8dd3bdeeda53864c779e0fa8d799064739708f80b45d06fa48a1a6ba192dc3f9e3266d4556f223cd718d27aedfd957922152e7463c00ac46e185f8331353fb6f
+  languageName: node
+  linkType: hard
+
+"uslug@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "uslug@npm:1.0.4"
+  dependencies:
+    unorm: ">= 1.0.0"
+  checksum: 883364d9bef0b8ab9932c5b055084fbe02a91be0656fcd964b99df75c562cd5a14449440a1989a77b790d4273f6be7fa8062197b26199d80bd88b2f1f5d1dc40
   languageName: node
   linkType: hard
 

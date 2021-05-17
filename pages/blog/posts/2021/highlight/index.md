@@ -1,10 +1,15 @@
+---
+title: 'Prism.js test : la matinée'
+description: Markdown syntax highlighting is fun!
+---
+
+```js
 const fs = require('fs')
 const path = require('path')
 
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
 const { DateTime } = require('luxon')
-const slugify = require('uslug')
 
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
@@ -71,11 +76,8 @@ module.exports = (eleventyConfig) => {
         permalink: true,
         permalinkSymbol: '#',
         permalinkBefore: true,
-        slugify: (s) => slugify(s),
       })
-      .use(tocDoneRight, {
-        slugify: (s) => slugify(s),
-      })
+      .use(tocDoneRight)
       .use((md) => {
         const origin = md.renderer.rules.fence.bind(md.renderer.rules)
         md.renderer.rules.fence = (tokens, idx, ...args) => {
@@ -194,3 +196,31 @@ module.exports = (eleventyConfig) => {
     markdownTemplateEngine: 'njk',
   }
 }
+```
+
+```css
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ style }}" />
+    <link rel="shortcut icon" href="~/static/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="~/assets/app.webmanifest" />
+    <meta property="og:image" content="~/resources/portfolio.png" />
+  </head>
+</html>
+```

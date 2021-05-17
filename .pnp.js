@@ -5141,6 +5141,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.0"
       ],
       [
+        "unorm",
+        "npm:1.6.0"
+      ],
+      [
         "unpipe",
         "npm:1.0.0"
       ],
@@ -5175,6 +5179,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "use",
         "npm:3.1.1"
+      ],
+      [
+        "uslug",
+        "npm:1.0.4"
       ],
       [
         "util",
@@ -5420,7 +5428,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-standard", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:22.0.0"],
             ["stylelint-plugin-stylus", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.10.0"],
             ["stylelint-rscss", "npm:0.4.0"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
+            ["uslug", "npm:1.0.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -14422,7 +14431,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-standard", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:22.0.0"],
             ["stylelint-plugin-stylus", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.10.0"],
             ["stylelint-rscss", "npm:0.4.0"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
+            ["uslug", "npm:1.0.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -23487,6 +23497,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["unorm", [
+        ["npm:1.6.0", {
+          "packageLocation": "./.yarn/cache/unorm-npm-1.6.0-43467eccf1-2c3e10ad8c.zip/node_modules/unorm/",
+          "packageDependencies": [
+            ["unorm", "npm:1.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["unpipe", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/unpipe-npm-1.0.0-2ed2a3c2bf-ba244e8bf6.zip/node_modules/unpipe/",
@@ -23571,6 +23590,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/use-npm-3.1.1-7ba643714c-8dd3bdeeda.zip/node_modules/use/",
           "packageDependencies": [
             ["use", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["uslug", [
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/uslug-npm-1.0.4-30deb18358-883364d9be.zip/node_modules/uslug/",
+          "packageDependencies": [
+            ["uslug", "npm:1.0.4"],
+            ["unorm", "npm:1.6.0"]
           ],
           "linkType": "HARD",
         }]

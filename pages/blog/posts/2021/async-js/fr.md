@@ -2,8 +2,6 @@
 title: async et await
 description: Un tutoriel sur les bases du JavaScript asynchrone (async/await), jusqu'à des utilisations avancées.
 date: 2021-05-12
-styles:
-  - ~/assets/styles/highlight.styl
 ---
 
 [toc]
