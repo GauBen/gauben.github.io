@@ -1,16 +1,16 @@
 const { permalink } = require('../_data/eleventyComputed.cjs')
 
-const blog = (data) => {
+module.exports = (data) => {
   return {
     ...data,
+    permalink,
     layout: 'blog.njk',
-    permalink: permalink,
     pagination: {
-      data: `collections.post/${data.locale}`,
+      data: 'collections.post',
       size: 2,
       alias: 'posts',
+      before: (collection) =>
+        collection.filter((post) => post.data.locale === data.locale),
     },
   }
 }
-
-module.exports = blog

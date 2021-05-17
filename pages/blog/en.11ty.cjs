@@ -1,4 +1,4 @@
-const blog = require('./blog.cjs')
+const blog = require('./_blog.cjs')
 
 module.exports.data = blog({
   title: 'Blog',

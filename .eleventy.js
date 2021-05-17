@@ -170,17 +170,6 @@ module.exports = (eleventyConfig) => {
     }
   )
 
-  // Articles in a given language
-  for (const locale of Object.keys(locales)) {
-    if (locale === 'index') continue
-    eleventyConfig.addCollection(`post/${locale}`, function (collectionApi) {
-      return eleventyConfig.getFilter('samelocale')(
-        collectionApi.getFilteredByTag('post').reverse(),
-        locale
-      )
-    })
-  }
-
   eleventyConfig.setBrowserSyncConfig({
     watch: true,
     server: '.dist',
