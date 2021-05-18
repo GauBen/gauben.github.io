@@ -3,5 +3,5 @@
   gap $gap-normal
   max-width 100%
 
-  @media (min-width unit(($min-width-project-card / 2), em))
+  @media (min-width $min-width-project-card + $gap-normal * 2)
     grid-template-columns repeat(auto-fit, minmax($min-width-project-card, 1fr))
