@@ -1,8 +1,6 @@
 ---
 title: Bijection entre langages
 description: Les développeurs JavaScript et les développeurs Python sont entièrement interchangebles, la preuve dans cet article.
-styles:
-  - ~/assets/styles/katex.styl
 ---
 
 pip <-> npm/yarn

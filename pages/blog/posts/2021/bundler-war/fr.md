@@ -1,10 +1,6 @@
 ---
 title: Bundler War
 description: Et si la meilleure façon de créer un site était de combiner un générateur de site statique et un bundler ?
-styles:
-  - ~/assets/styles/katex.styl
-scripts:
-  - ~/assets/scripts/mermaid.ts
 ---
 
 [toc]
