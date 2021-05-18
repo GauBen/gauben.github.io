@@ -24,7 +24,7 @@ module.exports = {
       if (!parsed) {
         let markdown = await fs.readFile(data.page.inputPath, 'ascii')
         assets(markdown, cache.scripts, cache.styles)
-        cache.words = markdown.match(/\w+/g).length
+        cache.words = markdown.match(/\w+/g)?.length ?? 0
         parsed = true
       }
     }
