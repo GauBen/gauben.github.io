@@ -99,32 +99,28 @@ module.exports = (eleventyConfig) => {
 
   // Filter that keeps items that are translations of `page`.
   // If `page` is falsy, it is fetched in the current context.
+  const getPage = (stem) => {
+    const pathInfo = path.parse(stem)
+    return pathInfo.base in locales ? pathInfo.dir : stem
+  }
   eleventyConfig.addFilter('samepage', function (collection, page) {
-    if (!page) {
-      const pathInfo = path.parse(this.ctx.page.filePathStem)
-      page =
-        pathInfo.base in locales ? pathInfo.dir : this.ctx.page.filePathStem
-    }
+    if (!page) page = getPage(this.ctx.page.filePathStem)
     return collection.filter((item) => {
-      const pathInfo = path.parse(item.filePathStem)
-      return (
-        (pathInfo.base in locales
-          ? pathInfo.dir
-          : this.ctx.page.filePathStem) === page
-      )
+      return page === getPage(item.filePathStem)
     })
   })
 
   // Append locale identifier at given url
   eleventyConfig.addFilter('localizeurl', function (url, locale) {
-    locale = locale || this.ctx.locale || locales.index
-    const pathInfo = path.parse(url)
-    // (/fr)? + /path/to + (/non-locale-file-name)? + /
-    return eleventyConfig.getFilter('url')(
-      `${locale === locales.index ? '' : `/${locale}`}${
-        pathInfo.dir === '/' ? '' : pathInfo.dir
-      }${pathInfo.base in locales ? '' : `/${pathInfo.base}`}/`
-    )
+    const samepage = eleventyConfig.getFilter('samepage').bind(this)
+    const samelocale = eleventyConfig.getFilter('samelocale').bind(this)
+    const urlfilter = eleventyConfig.getFilter('url').bind(this)
+    const page = samelocale(samepage(this.ctx.collections.all, url), locale)
+    if (page.length !== 1)
+      throw new Error(
+        `Localizeurl found ${page.length} pages matching "${url}" (correct format is "/about/resume")`
+      )
+    return urlfilter(page[0].url)
   })
 
   // Sort locales in alphabetical order

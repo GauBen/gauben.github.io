@@ -43,7 +43,7 @@ rencontrées physiquement à de petites contributions sur des projets internatio
 d'autres contributeurs. Mes amis disent que je suis spontané, ambitieux et sérieux. J'apprécie travailler en
 équipe, découvrir de nouvelles technologies et garder un œil sur les tendances en programmation.
 
-Si vous souhaitez en savoir plus sur mes études et mes compétences, [vous pouvez consulter mon CV.]({{'/about/resume/'|localizeurl}})
+Si vous souhaitez en savoir plus sur mes études et mes compétences, [vous pouvez consulter mon CV.]({{'/about/resume'|localizeurl}})
 
 </div>
 

@@ -43,7 +43,7 @@ se reunió físicamente para realizar pequeñas contribuciones en proyectos inte
 Mis amigos dicen que soy espontáneo, ambicioso y serio. Me gusta trabajar en equipo,
 descubrir nuevas tecnologías y estar atento a las tendencias de programación.
 
-Si quiere saber más sobre mi formación y habilidades, [puede consultar mi CV (en inglés)](<{{'/about/resume/'|localizeurl('en')}}>), o ver mi video currículum:
+Si quiere saber más sobre mi formación y habilidades, [puede consultar mi CV (en inglés)](<{{'/about/resume'|localizeurl('en')}}>), o ver mi video currículum:
 
 </div>
 

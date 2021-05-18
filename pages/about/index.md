@@ -42,7 +42,7 @@ to small contributions to worldwide projects with hundreds of other contributors
 spontaneous, ambitious and reliable. I enjoy teamwork, learning new technologies and keeping an eye on
 programming trends.
 
-If you want a deeper insight into my skills and education, [have a look at my resume.]({{'/about/resume/'|localizeurl}})
+If you want a deeper insight into my skills and education, [have a look at my resume.]({{'/about/resume'|localizeurl}})
 
 </div>
 
