@@ -9,6 +9,7 @@ module.exports = (data) => {
       data: 'collections.post',
       size: 2,
       alias: 'posts',
+      reverse: true,
       before: (collection) =>
         collection.filter((post) => post.data.locale === data.locale),
     },

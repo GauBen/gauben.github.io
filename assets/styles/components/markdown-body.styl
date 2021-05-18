@@ -1,6 +1,4 @@
-/* stylelint-disable stylus/selector-type-no-unknown */
-/* stylelint-disable rscss/no-descendant-combinator */
-/* stylelint-disable rscss/class-format */
+/* stylelint-disable */
 .markdown-body
   position relative
   padding 0 $gap-normal
@@ -25,6 +23,8 @@
 
   > table
     max-width 100%
+    margin-top $gap-normal
+    margin-bottom $gap-normal
     border-collapse collapse
 
     th
@@ -36,8 +36,9 @@
       background-color #eee
 
     :not(thead) + tbody
-      > tr:nth-child(even) > td:nth-child(odd)
+    tbody:first-child
       > tr:nth-child(odd) > td:nth-child(even)
+      > tr:nth-child(even) > td:nth-child(odd)
         background-color #eee
 
   > figure

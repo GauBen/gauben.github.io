@@ -4,20 +4,42 @@ styles:
   - ~/assets/styles/highlight.styl
 ---
 
-<h1 class="markdown-title">{{ title }}</h1>
-<div class="markdown-body">
-  <p>
-    {{ description }}<br>
-    {{ words }} mots<br>
-    {{ page.date | dateformat }}<br>
+{% set previousPost = collections.post | samelocale | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.post | samelocale | getNextCollectionItem(page) %}
+<main>
+  <h1 class="section-title">{{ title }}</h1>
+  <div class="markdown-body">
+    <p>
+      {{ description }}<br>
+      {{ words }} mots<br>
+      {{ page.date | dateformat }}<br>
     TODO Auteur et tags
   </p>
-  {{ content | safe }}
-  <hr>
-</div>
-
-<script src="https://utteranc.es/client.js" repo="GauBen/gauben.github.io" issue-term="pathname" label="comment thread"
+    {{ content | safe }}
+    <hr>
+  </div>
+</main>
+<nav class="adjacent-posts">
+  {% if previousPost %}
+    <div class="previous">
+      <span>
+        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+      </span>
+    </div>
+  {% endif %}
+  {% if nextPost %}
+    <div class="next">
+      <span>
+        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+      </span>
+    </div>
+  {% endif %}
+</nav>
+<section class="comment-section">
+  <h2 id="comments" class="section-title">{{ 'blog.comments' | t }}</h2>
+  <script src="https://utteranc.es/client.js" repo="GauBen/gauben.github.io" issue-term="pathname" label="comment thread"
   theme="github-light" crossorigin="anonymous" async></script>
+</section>
 <script>
   import '~/assets/scripts/post.ts'
 </script>

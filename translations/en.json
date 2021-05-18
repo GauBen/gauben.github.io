@@ -8,5 +8,8 @@
   },
   "email": "My email",
   "linkedin": "My LinkedIn",
-  "github": "My GitHub"
+  "github": "My GitHub",
+  "blog": {
+    "comments": "Comments"
+  }
 }

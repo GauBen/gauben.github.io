@@ -1,0 +1,45 @@
+.adjacent-posts
+  display flex
+  flex-direction column
+  gap $gap-normal
+  align-items center
+  justify-content space-between
+  max-width 50rem + 2 * $gap-normal
+  margin $gap-large auto
+  padding 0 $gap-normal
+
+  > .previous::before
+    padding-right $gap-small
+    text-align right
+    content '←'
+
+  > .next::after
+    padding-left $gap-small
+    text-align left
+    content '→'
+
+  > .previous
+  > .next
+    position relative
+    display flex
+    flex-grow 1
+    align-items center
+
+    > span > a
+      @extend a._beautiful-link
+
+      &::before
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        content ''
+
+  > .next
+    justify-content flex-end
+    justify-self end
+    text-align right
+
+  @media (min-width 20rem)
+    flex-direction row

@@ -28,7 +28,6 @@ First Header | Second Header | Third Header |
 ------------ | :-----------: | -----------: |
 Content | _Long Cell_ ||
 Content | **Cell** | Cell |
-
 New section | More | Data |
 And more | With an escaped '\|' ||
 [Prototype table]
