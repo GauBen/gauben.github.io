@@ -21,14 +21,28 @@ My public website,
   - [x] Atom feed
   - [x] [Comments](https://utteranc.es)
 
+## Prerequisites
+
+```bash
+# Install volta (a node and yarn version manager)
+curl https://get.volta.sh | bash
+# Clone the repo
+git clone https://github.com/GauBen/gauben.github.io.git
+cd gauben.github.io
+```
+
 ## Build for production
 
 ```bash
-yarn install && yarn build
+yarn install
+yarn build
 ```
 
 ## Development
 
 ```bash
-yarn install && yarn start
+yarn install
+yarn start
 ```
+
+To start a server with the production build, use `yarn preview`.
