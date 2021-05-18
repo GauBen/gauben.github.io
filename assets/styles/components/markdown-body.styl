@@ -1,0 +1,85 @@
+/* stylelint-disable stylus/selector-type-no-unknown */
+/* stylelint-disable rscss/no-descendant-combinator */
+/* stylelint-disable rscss/class-format */
+.markdown-body
+  position relative
+  padding 0 $gap-normal
+
+  > *
+    max-width 50rem
+    margin-right auto
+    margin-left auto
+
+  pre:not(.mermaid)
+    padding $gap-normal
+    overflow auto
+    color #1c1b1d
+    font-size 14px
+    font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+    background #fafaff
+    border-radius 4px
+
+  > pre.mermaid[data-processed]
+    max-width 100%
+    text-align center
+
+  > table
+    max-width 100%
+    border-collapse collapse
+
+    th
+    td
+      padding 0.5 * $gap-small $gap-small
+      border 1px solid black
+
+    thead + tbody > tr:nth-child(odd)
+      background-color #eee
+
+    :not(thead) + tbody
+      > tr:nth-child(even) > td:nth-child(odd)
+      > tr:nth-child(odd) > td:nth-child(even)
+        background-color #eee
+
+  > figure
+    max-width 100%
+    margin $gap-large auto
+    text-align center
+
+    > img
+    > a > img
+      position relative
+      z-index 20
+      border $gap-small solid #fff
+      box-shadow 0 3px 10px #cccc
+
+  blockquote
+    padding-left $gap-normal
+    border-left 4px solid #ccc
+
+    > blockquote
+      margin-right 0
+      margin-left 0
+
+  ol
+    list-style-type decimal
+
+  ol ol
+    list-style-type lower-alpha
+
+  ol ol ol
+    counter-reset counter
+
+  ol ol ol > li
+    counter-increment counter
+
+    &::marker
+      content counters(counter, '.', lower-roman) '. '
+
+  a:not(.-unstyled)
+    @extend a._beautiful-link
+
+  hr
+    height $gap-normal
+    margin $gap-large auto
+    background radial-gradient(ellipse at top, #e8e8e8, transparent 80%)
+    border none

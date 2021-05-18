@@ -33,6 +33,7 @@ iframe
 
 img
   height auto
+  vertical-align bottom
 
 h1
 h2
@@ -79,4 +80,9 @@ p
 ::selection
   color $color-selection-color
   text-shadow none
-  background $color-selection-bg
+  background alpha($color-selection-bg, 0.5)
+
+pre
+code
+samp
+  font-family $font-monospace

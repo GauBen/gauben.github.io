@@ -1,5 +1,5 @@
 ---
-title: Guide graphique
+title: 'Guide graphique : un article au titre beaucoup trop long'
 description: Guide visuel des éléments du site.
 date: 2021-05-18
 ---
@@ -34,6 +34,11 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       1. List
 1. Item
 
+My to-do:
+
+- [x] Done
+- [ ] In progress
+
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, aut? Perferendis omnis veritatis maxime reprehenderit, eligendi totam soluta consectetur aperiam voluptate qui alias fugit optio in doloremque atque nesciunt officiis!
 
 > "Hello World!"
@@ -42,15 +47,22 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, aut? Perferen
 
 And a mail thread:
 
-> > a@example.com said:
+> > a@example.com wrote:
 > >
 > > Hey
 >
-> b@example.com said:
+> b@example.com wrote:
 >
 > Oh!
 
 A [link](http://example.com 'Title').
+
+And a clickable picture [![Clickable picture](https://picsum.photos/200/32)](https://example.org).
+
+```
+ssh-rsa AAAAB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.com
+ssh-rsa BBBBB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.org
+```
 
 ```html
 <p class="warning">⚠ Password too short.</p>
@@ -60,13 +72,17 @@ A [link](http://example.com 'Title').
 
 ![Small picture](https://picsum.photos/300/200)
 
-![Large picture](https://picsum.photos/900/600)
+[![Large picture](https://picsum.photos/1200/600)](https://picsum.photos)
 
 ## Latex/Katex
 
 In a paragraph, $n \ge 6$ and $n<7$.
 
-$$n \equiv 0 \mod 5$$
+$$
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
 
 ## Tables
 
@@ -78,10 +94,15 @@ $$n \equiv 0 \mod 5$$
 
 [Title]
 
-|---|---|---|
-| ❌ | ⭕ | ❌ |
-| ⭕ | ❌ | |
-| ❌ | | ⭕ |
+|--|--|--|--|--|--|--|--|
+|♜| |♝|♛|♚|♝|♞|♜|
+| |♟|♟|♟| |♟|♟|♟|
+|♟| |♞| | | | | |
+| |♗| | |♟| | | |
+| | | | |♙| | | |
+| | | | | |♘| | |
+|♙|♙|♙|♙| |♙|♙|♙|
+|♖|♘|♗|♕|♔| | |♖|
 [My best game so far]
 
 ## Horizontal Rule

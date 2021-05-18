@@ -4,31 +4,20 @@ styles:
   - ~/assets/styles/highlight.styl
 ---
 
-<h1 style="text-align: center">{{ title }}</h1>
-<div class="markdown-body section-container _beautiful-links _text-justify">
+<h1 class="markdown-title">{{ title }}</h1>
+<div class="markdown-body">
+  <p>
+    {{ description }}<br>
+    {{ words }} mots<br>
+    {{ page.date | dateformat }}<br>
+    TODO Auteur et tags
+  </p>
   {{ content | safe }}
-  {{ words }} mots
+  <hr>
 </div>
 
 <script src="https://utteranc.es/client.js" repo="GauBen/gauben.github.io" issue-term="pathname" label="comment thread"
   theme="github-light" crossorigin="anonymous" async></script>
 <script>
-  window.addEventListener('load', () => {
-    let dark = false
-    document
-      .querySelector('#dark-toggle')
-      .addEventListener('click', () => {
-        document
-          .querySelector('iframe.utterances-frame')
-          .contentWindow
-          .postMessage({
-            type: 'set-theme',
-            theme: dark
-              ? 'github-light'
-              : 'github-dark'
-          }, 'https://utteranc.es')
-        dark = !dark
-      })
-
-  })
+  import '~/assets/scripts/post.ts'
 </script>

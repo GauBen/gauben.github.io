@@ -7,11 +7,13 @@
   @media (min-width $max-width-container * 2.1)
     position absolute
     top 0
+    right 0
     bottom 0
+    left 0
     width 0
 
     > ol
       position sticky
       top $gap-large
       width 0.5 * $max-width-container
-      transform translateX($max-width-container)
+      transform translateX(($max-width-container / 2))
