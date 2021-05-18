@@ -13,11 +13,15 @@
     position relative
     left 50%
     display block
-    width 2 * $min-width-project-card + $gap-normal
+    width s('calc(200vw - 3*%s)', $gap-normal)
     max-width none
-    height $height-project-card-image
+    height auto
     text-align center
     transform translateX(-50%)
+
+    @media (min-width $min-width-project-card + $gap-normal * 2)
+      width 2 * $min-width-project-card + $gap-normal
+      height $height-project-card-image
 
   > .title
   > .description
