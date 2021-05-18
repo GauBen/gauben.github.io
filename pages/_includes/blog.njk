@@ -1,25 +1,39 @@
 ---
 layout: parts/html.njk
 ---
-
-<div class="markdown-body section-container _beautiful-links _text-justify">
-  <h1>{{ title }}</h1>
-  <ol>
-    {% for post in posts %}
-      <li>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a><br>
-        {{ post.data.description }}<br>
-        <em>{{ post.date | dateformat }}</em>
-      </li>
-    {% endfor %}
-  </ol>
-  <div class="_center">
-    {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous | url }}">Page précedente</a> ·
-    {% endif %}
-    <strong>{{ pagination.pageNumber + 1 }}</strong> / {{ pagination.pages.length }}
-    {% if pagination.href.next %}
-      · <a href="{{ pagination.href.next | url }}">Page suivante</a>
-    {% endif %}
+<main>
+  <h1 class="section-title">{{ title }}</h1>
+  <div class="markdown-body">
+    <ol>
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a><br>
+          {{ post.data.description }}<br>
+          <em>{{ post.date | dateformat }}</em>
+        </li>
+      {% endfor %}
+    </ol>
+    <nav class="adjacent-pages">
+      {% if pagination.href.previous %}
+        <div class="previous -arrow">
+          <span>
+            <a href="{{ pagination.href.previous | url }}">Articles plus récents</a>
+          </span>
+        </div>
+      {% else %}
+        <div class="previous"></div>
+      {% endif %}
+      <div class="current {% if pagination.href.previous %}-previous{% endif %} {% if pagination.href.next %}-next{% endif %}">{{-""-}}
+        <strong>{{ pagination.pageNumber + 1 }}</strong> / {{ pagination.pages.length }}</div>
+      {% if pagination.href.next %}
+        <div class="next -arrow">
+          <span>
+            <a href="{{ pagination.href.next | url }}">Articles plus anciens</a>
+          </span>
+        </div>
+      {% else %}
+        <div class="next"></div>
+      {% endif %}
+    </div>
   </div>
-</div>
+</main>

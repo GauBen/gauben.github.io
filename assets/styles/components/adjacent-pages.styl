@@ -1,0 +1,41 @@
+.adjacent-pages
+  display flex
+  flex-direction column
+  gap $gap-small
+  align-items center
+  justify-content space-between
+  max-width 50rem + 2 * $gap-normal
+  margin $gap-large auto
+  padding 0 $gap-normal
+
+  > .current.-previous::before
+    padding-right $gap-small
+    content '·'
+
+  > .current.-next::after
+    padding-left $gap-small
+    content '·'
+
+  > .previous.-arrow::before
+    padding-right $gap-small
+    text-align right
+    content '←'
+
+  > .next.-arrow::after
+    padding-left $gap-small
+    text-align left
+    content '→'
+
+  > .previous
+  > .next
+    position relative
+    display flex
+    flex 1
+    align-items center
+
+  > .previous
+    justify-content flex-end
+    text-align right
+
+  @media (min-width 20rem)
+    flex-direction row

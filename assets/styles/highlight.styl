@@ -53,6 +53,7 @@ code[class*='language-']::selection
 .token.number
 .token.symbol
 .token.deleted
+.token.entity
   color $d
 
 .token.string
@@ -63,12 +64,10 @@ code[class*='language-']::selection
   color $e
 
 .token.operator
-.token.entity
 .token.url
   color $f
 
 .token.selector
-.token.atrule
 .token.keyword
 .token.tag
   color $b
@@ -86,6 +85,7 @@ code[class*='language-']::selection
 .token.builtin
 .token.constant
 .token.class-name
+.token.atrule
   color $c
 
 .token.important
@@ -94,9 +94,6 @@ code[class*='language-']::selection
 
 .token.italic
   font-style italic
-
-.token.entity
-  cursor help
 
 ._dark
   $a = #6ed6ff

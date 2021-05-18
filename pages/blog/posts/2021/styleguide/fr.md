@@ -65,7 +65,7 @@ ssh-rsa BBBBB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.org
 ```
 
 ```html
-<p class="warning">⚠ Password too short.</p>
+<p class="warning">⚠&nbsp;Password too short.</p>
 ```
 
 ## Emojis?! Déjà été! 🤔

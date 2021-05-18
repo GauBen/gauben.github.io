@@ -4,8 +4,9 @@ styles:
   - ~/assets/styles/highlight.styl
 ---
 
-{% set previousPost = collections.post | samelocale | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.post | samelocale | getNextCollectionItem(page) %}
+{# We use the wrong function instead of reversing the whole collection twice #}
+{% set previousPost = collections.post | samelocale | getNextCollectionItem(page) %}
+{% set nextPost = collections.post | samelocale | getPreviousCollectionItem(page) %}
 <main>
   <h1 class="section-title">{{ title }}</h1>
   <div class="markdown-body">
