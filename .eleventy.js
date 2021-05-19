@@ -30,24 +30,24 @@ const flattenObject = (object, out = new Map(), prefix = '') => {
   return out
 }
 
+// Find translations
+const translations = new Map()
+for (const locale of Object.keys(locales)) {
+  if (locale === 'index') continue
+  const strings = JSON.parse(
+    fs.readFileSync(`./translations/${locale}.json`).toString()
+  )
+  translations.set(locale, flattenObject(strings))
+}
+if (!translations.has(locales.index)) {
+  throw new Error(
+    `Main locale "${locales.index}" not found (./translations/${locales.index}.json)`
+  )
+}
+
 module.exports = (eleventyConfig) => {
   // Register locales
   eleventyConfig.addGlobalData('locales', locales)
-
-  // Find translations
-  const translations = new Map()
-  for (const locale of Object.keys(locales)) {
-    if (locale === 'index') continue
-    const strings = JSON.parse(
-      fs.readFileSync(`./translations/${locale}.json`).toString()
-    )
-    translations.set(locale, flattenObject(strings))
-  }
-  if (!translations.has(locales.index)) {
-    throw new Error(
-      `Main locale "${locales.index}" not found (./translations/${locales.index}.json)`
-    )
-  }
 
   // Add eleventy plugins
   eleventyConfig.addPlugin(highlight)
@@ -122,12 +122,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('localizeurl', function (url, locale) {
     const samepage = eleventyConfig.getFilter('samepage').bind(this)
     const samelocale = eleventyConfig.getFilter('samelocale').bind(this)
-    const urlfilter = eleventyConfig.getFilter('url').bind(this)
     const page = samelocale(samepage(this.ctx.collections.all, url), locale)
     if (page.length !== 1)
       throw new Error(
         `Localizeurl found ${page.length} pages matching "${url}" (correct format is "/about/resume")`
       )
+    const urlfilter = eleventyConfig.getFilter('url').bind(this)
     return urlfilter(page[0].url)
   })
 
@@ -136,14 +136,6 @@ module.exports = (eleventyConfig) => {
     return [...collection].sort((a, b) =>
       a.data.locale.localeCompare(b.data.locale)
     )
-  })
-
-  // Cut slash-separated tags
-  eleventyConfig.addFilter('subtags', function (tags, category) {
-    const length = category.length + 1
-    return tags
-      .filter((tag) => tag.startsWith(category + '/', 0))
-      .map((tag) => tag.slice(Math.max(0, length)))
   })
 
   // Translate the string given with translations found in `_data/translations`
