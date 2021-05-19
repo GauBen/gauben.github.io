@@ -1,6 +1,7 @@
 ---
-title: Bundler War
+title: La stack parfaite
 description: Et si la meilleure façon de créer un site était de combiner un générateur de site statique et un bundler ?
+date: 2021-05-19
 ---
 
 [toc]
