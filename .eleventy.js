@@ -19,8 +19,8 @@ const tocDoneRight = require('markdown-it-toc-done-right')
 
 const locales = require('./locales.json')
 
-const flattenObject = (obj, out = new Map(), prefix = '') => {
-  for (const [key, value] of Object.entries(obj)) {
+const flattenObject = (object, out = new Map(), prefix = '') => {
+  for (const [key, value] of Object.entries(object)) {
     if (value instanceof Object) {
       flattenObject(value, out, `${prefix}${key}.`)
     } else {
@@ -80,12 +80,18 @@ module.exports = (eleventyConfig) => {
       })
       .use((md) => {
         const origin = md.renderer.rules.fence.bind(md.renderer.rules)
-        md.renderer.rules.fence = (tokens, idx, ...args) => {
-          const token = tokens[idx]
+        md.renderer.rules.fence = (
+          tokens,
+          index,
+          options,
+          environment,
+          self
+        ) => {
+          const token = tokens[index]
           if (token.info === 'mermaid') {
             return `<pre class="mermaid">${token.content.trim()}</pre>`
           }
-          return origin(tokens, idx, ...args)
+          return origin(tokens, index, options, environment, self)
         }
       })
   )

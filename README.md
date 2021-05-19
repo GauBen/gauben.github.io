@@ -20,6 +20,7 @@ My public website,
   - [ ] Authors
   - [x] Atom feed
   - [x] [Comments](https://utteranc.es)
+- [ ] Dark theme
 
 ## Prerequisites
 

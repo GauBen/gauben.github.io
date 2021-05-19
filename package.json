@@ -16,7 +16,7 @@
     "build:parcel": "PARCEL_WORKERS=0 parcel build '.pre-dist/**/*.{html,xml}' --dist-dir .dist --no-source-maps --detailed-report 0",
     "test": "yarn test:stylelint && yarn test:eslint && echo ':)'",
     "test:stylelint": "stylelint './assets/**/*.styl' --custom-syntax stylelint-plugin-stylus/custom-syntax --fix",
-    "test:eslint": "eslint './assets/**/*.ts' --fix",
+    "test:eslint": "eslint './assets/**/*.ts' './pages/**/*.cjs' './.eleventy.js' --fix",
     "preview": "yarn build && serve -n .dist"
   },
   "devDependencies": {
