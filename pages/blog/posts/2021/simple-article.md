@@ -6,3 +6,5 @@ locale: fr
 ---
 
 ## Il fait beau
+
+Youpi !

@@ -9,6 +9,8 @@ projects:
     title: Among other things…
     description: Have a look at my GitHub, I might be working on something new!
     alt: Me working at my computer
+eleventyNavigation:
+  key: Home
 ---
 
 ## About me

@@ -1,0 +1,20 @@
+.site-nav
+  max-width $width-main
+  margin 0 auto
+  border-bottom 1px solid #ccc
+
+  > ul
+    display flex
+    gap $gap-normal
+    align-items center
+    justify-content center
+    max-width $width-main
+    margin $gap-normal auto
+    padding 0 $gap-normal
+    list-style-type none
+
+    > li > a
+      @extend a._beautiful-link
+
+  > hr
+    margin $gap-normal auto

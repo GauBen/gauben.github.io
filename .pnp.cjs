@@ -37,6 +37,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.0-canary.20"
       ],
       [
+        "@11ty/eleventy-navigation",
+        "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.2.0"
+      ],
+      [
         "@11ty/eleventy-plugin-rss",
         "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"
       ],
@@ -5391,6 +5395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@11ty/eleventy-navigation", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.2.0"],
             ["@11ty/eleventy-plugin-rss", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],
@@ -5483,6 +5488,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["split", "npm:1.0.1"],
             ["time-require", "npm:0.1.2"],
             ["valid-url", "npm:1.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@11ty/eleventy-navigation", [
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/@11ty-eleventy-navigation-npm-0.2.0-7199438a4a-70298143c1.zip/node_modules/@11ty/eleventy-navigation/",
+          "packageDependencies": [
+            ["@11ty/eleventy-navigation", "npm:0.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@11ty-eleventy-navigation-virtual-ae4344aa73/0/cache/@11ty-eleventy-navigation-npm-0.2.0-7199438a4a-70298143c1.zip/node_modules/@11ty/eleventy-navigation/",
+          "packageDependencies": [
+            ["@11ty/eleventy-navigation", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.2.0"],
+            ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@types/11ty__eleventy", null],
+            ["dependency-graph", "npm:0.11.0"]
+          ],
+          "packagePeers": [
+            "@11ty/eleventy",
+            "@types/11ty__eleventy"
           ],
           "linkType": "HARD",
         }]
@@ -14394,6 +14422,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["gauben.github.io", "workspace:."],
             ["@11ty/eleventy", "npm:1.0.0-canary.20"],
+            ["@11ty/eleventy-navigation", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:0.2.0"],
             ["@11ty/eleventy-plugin-rss", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:1.1.1"],
             ["@11ty/eleventy-plugin-syntaxhighlight", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.1.0"],
             ["@parcel/config-default", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:2.0.0-nightly.645"],

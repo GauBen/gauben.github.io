@@ -12,6 +12,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-navigation@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@11ty/eleventy-navigation@npm:0.2.0"
+  dependencies:
+    dependency-graph: ^0.11.0
+  peerDependencies:
+    "@11ty/eleventy": ">=0.7.0"
+  checksum: 70298143c1b49407c9940c3b918784f36ba7b280fbd1feaa00cc3ce6b192c829e46b5b35e14f3ab369abe035137b1bac2d6f863234acdff98c6b84c4688995b3
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-plugin-rss@npm:^1.1.1":
   version: 1.1.1
   resolution: "@11ty/eleventy-plugin-rss@npm:1.1.1"
@@ -6993,6 +7004,7 @@ fsevents@~2.3.1:
   resolution: "gauben.github.io@workspace:."
   dependencies:
     "@11ty/eleventy": v1.0.0-canary.20
+    "@11ty/eleventy-navigation": ^0.2.0
     "@11ty/eleventy-plugin-rss": ^1.1.1
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.1.0
     "@parcel/config-default": 2.0.0-nightly.645

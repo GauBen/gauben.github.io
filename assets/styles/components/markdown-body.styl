@@ -4,7 +4,7 @@
   padding 0 $gap-normal
 
   > *
-    max-width 50rem
+    max-width $width-main
     margin-right auto
     margin-left auto
 
@@ -78,9 +78,3 @@
 
   a:not(.-unstyled)
     @extend a._beautiful-link
-
-  hr
-    height $gap-normal
-    margin $gap-large auto
-    background radial-gradient(ellipse at top, #e8e8e8, transparent 80%)
-    border none

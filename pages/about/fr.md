@@ -25,6 +25,8 @@ skills:
     Git,
     Docker,
   ]
+eleventyNavigation:
+  key: À propos
 ---
 
 <div class="illustrated-text">

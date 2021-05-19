@@ -1,5 +1,7 @@
 ---
-layout: parts/html.njk
+layout: /parts/html.njk
+eleventyNavigation:
+  order: 2
 ---
 <main>
   <h1 class="section-title">{{ title }}</h1>
@@ -13,27 +15,27 @@ layout: parts/html.njk
         </li>
       {% endfor %}
     </ol>
-    <nav class="adjacent-pages">
-      {% if pagination.href.previous %}
-        <div class="previous -arrow">
-          <span>
-            <a href="{{ pagination.href.previous | url }}">Articles plus récents</a>
-          </span>
-        </div>
-      {% else %}
-        <div class="previous"></div>
-      {% endif %}
-      <div class="current {% if pagination.href.previous %}-previous{% endif %} {% if pagination.href.next %}-next{% endif %}">{{-""-}}
-        <strong>{{ pagination.pageNumber + 1 }}</strong> / {{ pagination.pages.length }}</div>
-      {% if pagination.href.next %}
-        <div class="next -arrow">
-          <span>
-            <a href="{{ pagination.href.next | url }}">Articles plus anciens</a>
-          </span>
-        </div>
-      {% else %}
-        <div class="next"></div>
-      {% endif %}
-    </div>
   </div>
 </main>
+<nav class="adjacent-pages">
+  {% if pagination.href.previous %}
+    <div class="previous -arrow">
+      <span>
+        <a href="{{ pagination.href.previous | url }}">Articles plus récents</a>
+      </span>
+    </div>
+  {% else %}
+    <div class="previous"></div>
+  {% endif %}
+  <div class="current {% if pagination.href.previous %}-previous{% endif %} {% if pagination.href.next %}-next{% endif %}">{{-""-}}
+    <strong>{{ pagination.pageNumber + 1 }}</strong> / {{ pagination.pages.length }}</div>
+  {% if pagination.href.next %}
+    <div class="next -arrow">
+      <span>
+        <a href="{{ pagination.href.next | url }}">Articles plus anciens</a>
+      </span>
+    </div>
+  {% else %}
+    <div class="next"></div>
+  {% endif %}
+</nav>

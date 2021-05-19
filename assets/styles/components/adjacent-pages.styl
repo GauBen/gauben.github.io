@@ -4,17 +4,17 @@
   gap $gap-small
   align-items center
   justify-content space-between
-  max-width 50rem + 2 * $gap-normal
+  max-width 2 * $gap-normal + $width-main
   margin $gap-large auto
   padding 0 $gap-normal
 
   > .current.-previous::before
     padding-right $gap-small
-    content '·'
+    content '–'
 
   > .current.-next::after
     padding-left $gap-small
-    content '·'
+    content '–'
 
   > .previous.-arrow::before
     padding-right $gap-small
@@ -32,6 +32,24 @@
     display flex
     flex 1
     align-items center
+
+    > span > a
+      @extend a._beautiful-link
+
+  > .previous > span > a::before
+    position absolute
+    top 0
+    bottom 0
+    transform translateX(-100%)
+    opacity 0
+    content '——'
+
+  > .next > span > a::after
+    position absolute
+    top 0
+    bottom 0
+    opacity 0
+    content '——'
 
   > .previous
     justify-content flex-end

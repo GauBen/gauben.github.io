@@ -19,8 +19,13 @@ styles:
   </head>
 
   <body>
+    {% if not disableNav %}
+      {% include './nav.njk' %}
+    {% endif %}
     {{ content | safe}}
-    {% include './footer.njk' %}
+    {% if not disableFooter %}
+      {% include './footer.njk' %}
+    {% endif %}
     {% for script in scripts %}
       <script src="{{ script }}" async defer></script>
     {% endfor %}

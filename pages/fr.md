@@ -9,6 +9,8 @@ projects:
     title: Mais ce n'est pas tout…
     description: Je travaille peut-être sur un nouveau projet, jetez un œil sur mon GitHub !
     alt: Moi devant mon ordinateur
+eleventyNavigation:
+  key: Accueil
 ---
 
 ## À propos de moi

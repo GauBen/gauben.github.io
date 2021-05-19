@@ -7,11 +7,14 @@ module.exports = (data) => {
     layout: 'blog.njk',
     pagination: {
       data: 'collections.post',
-      size: 2,
+      size: 20,
       alias: 'posts',
       reverse: true,
       before: (collection) =>
         collection.filter((post) => post.data.locale === data.locale),
+    },
+    eleventyNavigation: {
+      key: data.title,
     },
   }
 }

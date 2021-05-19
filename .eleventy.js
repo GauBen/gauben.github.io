@@ -3,6 +3,7 @@ const path = require('path')
 
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
+const navigation = require('@11ty/eleventy-navigation')
 const { DateTime } = require('luxon')
 const slugify = require('uslug')
 
@@ -51,6 +52,7 @@ module.exports = (eleventyConfig) => {
   // Add eleventy plugins
   eleventyConfig.addPlugin(highlight)
   eleventyConfig.addPlugin(rss)
+  eleventyConfig.addPlugin(navigation)
 
   // Add many libraries to markdown-it
   eleventyConfig.setLibrary(
