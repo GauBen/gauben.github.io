@@ -7,16 +7,26 @@ eleventyNavigation:
   <h1 class="section-title">{{ title }}</h1>
   <div class="post-list">
     {% for post in posts %}
-      <article class="post">
-        <h2>{{ post.data.title }}</h2>
-        <p>{{ post.data.description }}</p>
-        <ul class="tag-list">
-          {%- for tag in post.data.tags -%}
-            <li class="tag">
-              <span class="span">{{ tag }}</span>
-            </li>
-          {%- endfor %}
-        </ul>
+      <article class="post-card">
+        <h3 class="title">
+          <a href="{{ post.url | url }}" class="_beautiful-link">{{ post.data.title }}</a>
+        </h3>
+        <p class="description">{{ post.data.description }}</p>
+        <p class="date">
+          <em>
+            <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | dateformat }}</time>
+          </em>
+        </p>
+        {% set tags = post.data.tags | cleantags %}
+        {% if tags.length > 0 %}
+          <ul class="tag-list">
+            {%- for tag in tags -%}
+              <li class="tag">
+                <span class="span">{{ tag }}</span>
+              </li>
+            {%- endfor %}
+          </ul>
+        {% endif %}
       </article>
     {% endfor %}
   </div>

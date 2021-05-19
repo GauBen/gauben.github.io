@@ -1,0 +1,24 @@
+.post-card
+  display grid
+  grid-template auto auto auto / auto 1fr
+  gap $gap-small
+  margin $gap-large 0
+  padding $gap-normal
+  border-radius $radius-small
+  box-shadow $shadow-small var(--shadow)
+
+  > .title
+    grid-area 1 / 1 / 2 / 3
+    margin 0
+    margin-bottom $gap-small
+
+  > .description
+    grid-area 2 / 1 / 3 / 3
+    margin 0
+
+  > .date
+    margin 0
+
+  > .tag-list
+    justify-self end
+    margin 0

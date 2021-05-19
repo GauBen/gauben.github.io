@@ -166,6 +166,12 @@ module.exports = (eleventyConfig) => {
     }
   )
 
+  // Translate the string given with translations found in `_data/translations`
+  eleventyConfig.addFilter('cleantags', function (tags) {
+    const metaTags = new Set(['project', 'post'])
+    return [...new Set([...tags].filter((x) => !metaTags.has(x)))]
+  })
+
   eleventyConfig.setBrowserSyncConfig({
     watch: true,
     server: '.dist',
