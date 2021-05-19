@@ -1,4 +1,5 @@
 const path = require('path')
+const slugify = require('uslug')
 
 const eleventyComputed = {
   locale: (data) => {
@@ -23,6 +24,9 @@ const eleventyComputed = {
     return data.locales.index
   },
   permalink: (data) => {
+    if (Object.entries(data).length === 0) {
+      return false
+    }
     if (
       'permalink' in data &&
       typeof data.permalink === 'string' &&
@@ -34,10 +38,15 @@ const eleventyComputed = {
     const stem = data.page.filePathStem
     const pathInfo = path.parse(stem)
     const locale = eleventyComputed.locale(data)
-    const pageNumber =
-      'pagination' in data && data.pagination.pageNumber > 0
-        ? `${data.pagination.pageNumber + 1}/`
-        : ''
+    let pageNumber = ''
+    if ('pagination' in data) {
+      if (data.pagination.size == 1) {
+        pageNumber = `${slugify(data.pagination.items[0])}/`
+      } else if (data.pagination.pageNumber > 0) {
+        pageNumber = `${data.pagination.pageNumber + 1}/`
+      }
+    }
+
     // (/fr)? + /path/to + (/non-locale-file-name)? + /
     return `${locale === data.locales.index ? '' : `/${locale}`}${
       pathInfo.dir

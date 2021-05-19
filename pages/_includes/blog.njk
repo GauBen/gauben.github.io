@@ -5,16 +5,20 @@ eleventyNavigation:
 ---
 <main>
   <h1 class="section-title">{{ title }}</h1>
-  <div class="markdown-body">
-    <ol>
-      {% for post in posts %}
-        <li>
-          <a href="{{ post.url | url }}">{{ post.data.title }}</a><br>
-          {{ post.data.description }}<br>
-          <em>{{ post.date | dateformat }}</em>
-        </li>
-      {% endfor %}
-    </ol>
+  <div class="post-list">
+    {% for post in posts %}
+      <article class="post">
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.description }}</p>
+        <ul class="tag-list">
+          {%- for tag in post.data.tags -%}
+            <li class="tag">
+              <span class="span">{{ tag }}</span>
+            </li>
+          {%- endfor %}
+        </ul>
+      </article>
+    {% endfor %}
   </div>
 </main>
 <nav class="adjacent-pages">
