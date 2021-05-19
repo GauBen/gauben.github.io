@@ -73,9 +73,9 @@ eleventyNavigation:
           {{ project.data.description }}
         </p>
         <ul class="tag-list">
-          {%- for tag in project.data.tags | subtags('project') -%}
+          {%- for badge in project.data.badges -%}
             <li class="tag">
-              <span class="span">{{ tag }}</span>
+              <span class="span">{{ badge }}</span>
             </li>
           {%- endfor %}
         </ul>
