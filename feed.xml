@@ -151,7 +151,7 @@
 &lt;div id=&quot;example2&quot; style=&quot;padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em auto&quot;&gt;
   &lt;h3&gt;Changer votre mot de passe&lt;/h3&gt;
   &lt;p&gt;
-    &lt;label for=&quot;password&quot;&gt;
+    &lt;label for=&quot;example2-password&quot;&gt;
       &lt;span style=&quot;display:inline-block&quot;&gt;Nouveau mot de passe :&lt;/span&gt;
       &lt;input type=&quot;password&quot; id=&quot;example2-password&quot; /&gt;&lt;/label&gt;
     &lt;button id=&quot;example2-submit&quot;&gt;Envoyer&lt;/button&gt;
