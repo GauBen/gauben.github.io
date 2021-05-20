@@ -7,13 +7,14 @@ const eleventyComputed = require('../../_data/eleventyComputed.cjs')
 const assets = require('./_assets.cjs')
 
 // If no title is set, exclude the page from collections
-const exlude = (data) => {
+const exclude = (data) => {
   return !('title' in data) || !data.title
 }
 
 module.exports = {
   layout: 'post.njk',
   tags: ['post'],
+  author: 'Gautier',
   // We dynamically compute the permalink and asset dependencies
   eleventyComputed: (() => {
     // Read the raw markdown file to find dependencies
@@ -32,10 +33,10 @@ module.exports = {
       // Deep merge is disabled for eleventyComputed, so add everything
       ...eleventyComputed,
       // Exclude files without title
-      eleventyExcludeFromCollections: exlude,
+      eleventyExcludeFromCollections: exclude,
       // Permalink computation
       permalink: (data) => {
-        if (exlude(data)) return ''
+        if (exclude(data)) return ''
         const locale = eleventyComputed.locale(data)
         const slug = slugify(data.title)
         const date = DateTime.fromJSDate(data.page.date)

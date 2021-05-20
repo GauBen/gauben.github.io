@@ -2133,6 +2133,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.1.1"
       ],
       [
+        "escape-goat",
+        "npm:2.1.1"
+      ],
+      [
         "escape-html",
         "npm:1.0.3"
       ],
@@ -4237,6 +4241,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.1.1"
       ],
       [
+        "pupa",
+        "npm:2.1.1"
+      ],
+      [
         "purgecss",
         "npm:2.3.0"
       ],
@@ -5428,6 +5436,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["parcel-reporter-static-files-copy", "npm:1.3.0"],
             ["prettier", "npm:2.3.0"],
             ["prism-themes", "npm:1.7.0"],
+            ["pupa", "npm:2.1.1"],
             ["rimraf", "npm:3.0.2"],
             ["serve", "npm:11.3.2"],
             ["stylelint", "npm:13.13.1"],
@@ -13499,6 +13508,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["escape-goat", [
+        ["npm:2.1.1", {
+          "packageLocation": "./.yarn/cache/escape-goat-npm-2.1.1-2e437cf3fe-ce05c70c20.zip/node_modules/escape-goat/",
+          "packageDependencies": [
+            ["escape-goat", "npm:2.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["escape-html", [
         ["npm:1.0.3", {
           "packageLocation": "./.yarn/cache/escape-html-npm-1.0.3-376c22ee74-6213ca9ae0.zip/node_modules/escape-html/",
@@ -14455,6 +14473,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["parcel-reporter-static-files-copy", "npm:1.3.0"],
             ["prettier", "npm:2.3.0"],
             ["prism-themes", "npm:1.7.0"],
+            ["pupa", "npm:2.1.1"],
             ["rimraf", "npm:3.0.2"],
             ["serve", "npm:11.3.2"],
             ["stylelint", "npm:13.13.1"],
@@ -20336,6 +20355,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/punycode-npm-2.1.1-26eb3e15cf-823bf443c6.zip/node_modules/punycode/",
           "packageDependencies": [
             ["punycode", "npm:2.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["pupa", [
+        ["npm:2.1.1", {
+          "packageLocation": "./.yarn/cache/pupa-npm-2.1.1-fb256825ba-49529e5037.zip/node_modules/pupa/",
+          "packageDependencies": [
+            ["pupa", "npm:2.1.1"],
+            ["escape-goat", "npm:2.1.1"]
           ],
           "linkType": "HARD",
         }]

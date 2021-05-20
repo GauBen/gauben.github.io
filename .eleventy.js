@@ -6,6 +6,7 @@ const rss = require('@11ty/eleventy-plugin-rss')
 const navigation = require('@11ty/eleventy-navigation')
 const { DateTime } = require('luxon')
 const slugify = require('uslug')
+const pupa = require('pupa')
 
 const markdownIt = require('markdown-it')
 const footnote = require('markdown-it-footnote')
@@ -19,15 +20,17 @@ const tocDoneRight = require('markdown-it-toc-done-right')
 
 const locales = require('./locales.json')
 
-const flattenObject = (object, out = new Map(), prefix = '') => {
-  for (const [key, value] of Object.entries(object)) {
-    if (value instanceof Object) {
-      flattenObject(value, out, `${prefix}${key}.`)
-    } else {
-      out.set(`${prefix}${key}`, value)
+const nestedGet = (object, key) => {
+  const path = key.split('.')
+  while (path.length > 0) {
+    const top = path.shift()
+    try {
+      object = object[top]
+    } catch {
+      throw new Error(`Cannot read key "${key}"`)
     }
   }
-  return out
+  return object
 }
 
 // Find translations
@@ -37,7 +40,7 @@ for (const locale of Object.keys(locales)) {
   const strings = JSON.parse(
     fs.readFileSync(`./translations/${locale}.json`).toString()
   )
-  translations.set(locale, flattenObject(strings))
+  translations.set(locale, strings)
 }
 if (!translations.has(locales.index)) {
   throw new Error(
@@ -145,16 +148,18 @@ module.exports = (eleventyConfig) => {
       throw new Error(`Unknown locale "${locale}"`)
     }
     const strings = translations.get(locale)
-    if (strings.has(string)) {
-      return strings.get(string)
+    try {
+      return nestedGet(strings, string)
+    } catch {
+      const fallbackStrings = translations.get(locales.index)
+      try {
+        return nestedGet(fallbackStrings, string)
+      } catch {
+        throw new Error(
+          `Cannot find a suitable transation for the string "${string}" for locale "${locale}"`
+        )
+      }
     }
-    const fallbackStrings = translations.get(locales.index)
-    if (fallbackStrings.has(string)) {
-      return fallbackStrings.get(string)
-    }
-    throw new Error(
-      `Cannot find a suitable transation for the string "${string}" for locale "${locale}"`
-    )
   })
 
   // Translate the string given with translations found in `_data/translations`
@@ -170,6 +175,20 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('cleantags', function (tags) {
     const metaTags = new Set(['project', 'post'])
     return [...new Set([...tags].filter((x) => !metaTags.has(x)))]
+  })
+
+  // Simple micro templating
+  eleventyConfig.addFilter('f', (string, ...arguments_) => {
+    if (arguments_.length === 0) throw new Error('No arguments provided')
+    if (typeof arguments_[0] === 'object') {
+      return pupa(string, arguments_[0])
+    }
+    return pupa(string, arguments_)
+  })
+
+  // Pluralize stringsexi
+  eleventyConfig.addFilter('p', (strings, n) => {
+    return pupa(n > 1 ? strings[1] : strings[0], [n])
   })
 
   eleventyConfig.setBrowserSyncConfig({

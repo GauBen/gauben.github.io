@@ -1,15 +1,22 @@
 {
   "motto": "J'aime le minimalisme.",
+  "email": "Mon e-mail",
+  "linkedin": "Mon LinkedIn",
+  "github": "Mon GitHub",
   "translations": {
     "available": "Cette page est disponible en :"
   },
   "home": {
     "back": "Retourner à l'accueil"
   },
-  "email": "Mon e-mail",
-  "linkedin": "Mon LinkedIn",
-  "github": "Mon GitHub",
   "blog": {
-    "comments": "Commentaires"
+    "comments": "Commentaires",
+    "post": {
+      "wordcount": [
+        "{0} mot",
+        "{0} mots"
+      ],
+      "author": "Écrit par {0}"
+    }
   }
 }

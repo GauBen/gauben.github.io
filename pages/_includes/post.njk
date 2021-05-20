@@ -10,12 +10,25 @@ styles:
 <main>
   <h1 class="section-title">{{ title }}</h1>
   <div class="markdown-body">
-    <p>
-      {{ description }}<br>
-      {{ words }} mots<br>
-      {{ page.date | dateformat }}<br>
-    TODO Auteur et tags
-  </p>
+    <aside class="post-aside">
+      <p class="description">{{ description }}</p>
+      <p class="wordcount">{{ 'blog.post.wordcount' | t | p(words) }}</p>
+      <p class="date">
+        <time datetime="{{ page.date | dateToRfc3339 }}">{{ page.date | dateformat }}</time>
+      </p>
+      {# {{ page.inputPath }} #}
+      <p>{{ 'blog.post.author' | t | f(author) }}</p>
+      {% set tags = tags | cleantags %}
+      {% if tags.length > 0 %}
+        <ul class="tag-list">
+          {%- for tag in tags -%}
+            <li class="tag">
+              <span class="span">{{ tag }}</span>
+            </li>
+          {%- endfor %}
+        </ul>
+      {% endif %}
+    </aside>
     {{ content | safe }}
   </div>
 </main>
