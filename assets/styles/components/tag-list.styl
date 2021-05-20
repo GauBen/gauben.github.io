@@ -1,4 +1,7 @@
 .tag-list
+  display flex
+  flex-wrap wrap
+  gap $gap-small
   margin-top auto
   padding-left 0
   list-style none
@@ -6,7 +9,6 @@
   > .tag
     $angle = -25deg
     display inline-block
-    margin 0 ($gap-small / 2)
     padding ($gap-small / 2) $gap-small
     background $color-light-theme-box
     background var(--box)
