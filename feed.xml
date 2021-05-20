@@ -96,7 +96,7 @@
 &lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initialState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; initialState&lt;br /&gt;  &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; transition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; state&lt;br /&gt;    state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;initialTransition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Et si vous voulez tester, il vous reste à cliquer juste là :&lt;/p&gt;
 &lt;p id=&quot;example1&quot; style=&quot;display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset&quot;&gt;
-  &lt;button id=&quot;button&quot; style=&quot;padding:1em&quot;&gt;JavaScript désactivé&lt;/button&gt;
+  &lt;button id=&quot;example1-button&quot; style=&quot;padding:1em&quot;&gt;JavaScript désactivé&lt;/button&gt;
 &lt;/p&gt;
 &lt;script type=&quot;module&quot;&gt;
   const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
@@ -111,8 +111,8 @@
       state = transition()
     }
   }
-  const $button = document.querySelector(&#39;#button&#39;);
-  const $div = document.querySelector(&#39;#example&#39;);
+  const $button = document.querySelector(&#39;#example1-button&#39;);
+  const $div = document.querySelector(&#39;#example1&#39;);
   const gold = () =&gt; {
     $div.style.backgroundColor = &#39;gold&#39;
     $button.innerHTML = &#39;Magic ✨&#39;
@@ -153,10 +153,10 @@
   &lt;p&gt;
     &lt;label for=&quot;password&quot;&gt;
       &lt;span style=&quot;display:inline-block&quot;&gt;Nouveau mot de passe :&lt;/span&gt;
-      &lt;input type=&quot;password&quot; id=&quot;password&quot; /&gt;&lt;/label&gt;
-    &lt;button id=&quot;submit&quot;&gt;Envoyer&lt;/button&gt;
+      &lt;input type=&quot;password&quot; id=&quot;example2-password&quot; /&gt;&lt;/label&gt;
+    &lt;button id=&quot;example2-submit&quot;&gt;Envoyer&lt;/button&gt;
   &lt;/p&gt;
-  &lt;p id=&quot;notice&quot; style=&quot;border:1px solid #888;padding:0.5em 1em&quot;&gt;JavaScript désactivé&lt;/p&gt;
+  &lt;p id=&quot;example2-notice&quot; style=&quot;border:1px solid #888;padding:0.5em 1em&quot;&gt;JavaScript désactivé&lt;/p&gt;
 &lt;/div&gt;
 &lt;script type=&quot;module&quot;&gt;
   const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
@@ -176,9 +176,9 @@
       resolve()
     }, ms)
   })
-  const $password = document.querySelector(&#39;#password&#39;)
-  const $submit = document.querySelector(&#39;#submit&#39;)
-  const $notice = document.querySelector(&#39;#notice&#39;)
+  const $password = document.querySelector(&#39;#example2-password&#39;)
+  const $submit = document.querySelector(&#39;#example2-submit&#39;)
+  const $notice = document.querySelector(&#39;#example2-notice&#39;)
   const tooShort = () =&gt; {
     $notice.hidden = false
     $notice.innerHTML = &quot;Entrez un nouveau mot de passe de plus de 8 caractères.&quot;
