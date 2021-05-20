@@ -191,6 +191,11 @@ module.exports = (eleventyConfig) => {
     return pupa(n > 1 ? strings[1] : strings[0], [n])
   })
 
+  // Replace spaces with non-breaking space
+  eleventyConfig.addFilter('nbsp', (string) => {
+    return string.replace(/ /g, ' ')
+  })
+
   eleventyConfig.setBrowserSyncConfig({
     watch: true,
     server: '.dist',

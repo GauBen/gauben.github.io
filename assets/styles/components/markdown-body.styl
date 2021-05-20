@@ -25,7 +25,9 @@
 
     > svg
       background-color var(--bg)
-      border-radius 1rem
+      border-radius $radius-small
+      border $gap-small solid #fff
+      box-shadow 0 3px 10px #cccc
 
   > table
     max-width 100%
@@ -53,11 +55,11 @@
     max-width 100%
     margin $gap-large auto
     text-align center
+    position relative
+    z-index 20
 
     > img
     > a > img
-      position relative
-      z-index 20
       border $gap-small solid #fff
       box-shadow 0 3px 10px #cccc
 

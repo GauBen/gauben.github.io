@@ -44,3 +44,26 @@ a._beautiful-link
   color inherit
   font inherit
   text-decoration inherit
+
+._sticky-wrapper
+  @media screen and (prefers-reduced-motion no-preference)
+    > :first-child
+      z-index 10
+      transition $timing-fast
+
+  @media (min-width $max-width-container * 2.1)
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    width 0
+
+    > :first-child
+      position sticky
+      top $gap-large
+      width 0.5 * $max-width-container
+      transform translateX(($max-width-container / 2))
+
+    &.-left > :first-child
+      transform s('translateX(calc(-100% - %s / 2 - %s))', $max-width-container, $gap-normal)
