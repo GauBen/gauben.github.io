@@ -148,7 +148,7 @@
 &lt;p&gt;Pour pouvoir faire de vrais automates, &lt;strong&gt;il manque la possibilité d’avoir plusieurs transitions&lt;/strong&gt;, empruntées lors d’évènements différents…&lt;/p&gt;
 &lt;h2 id=&quot;encore-plus-loin&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-async-et-await/#encore-plus-loin&quot;&gt;#&lt;/a&gt; Encore plus loin&lt;/h2&gt;
 &lt;p&gt;Commençons par la fin, voici ce que l’on cherche à construire :&lt;/p&gt;
-&lt;div id=&quot;example2&quot; style=&quot;padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em auto&quot;&gt;
+&lt;div id=&quot;example2&quot; style=&quot;padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em auto;background-color:#eee;color:#000&quot;&gt;
   &lt;h3&gt;Changer votre mot de passe&lt;/h3&gt;
   &lt;p&gt;
     &lt;label for=&quot;example2-password&quot;&gt;
