@@ -12,10 +12,11 @@ eleventyNavigation:
           <a href="{{ post.url | url }}" class="_beautiful-link">{{ post.data.title }}</a>
         </h3>
         <p class="description">{{ post.data.description }}</p>
-        <p class="date">
-          <em>
-            <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | dateformat }}</time>
-          </em>
+        <img src="url:~/resources/me.jpg?width=96" alt="A picture of me" aria-hidden="true" class="picture">
+        <p class="meta">
+          <strong>{{ post.data.author | nbsp }}</strong> ·
+          <time datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | dateformat | nbsp }}</time>
+          · {{ 'blog.post.wordcount' | t | p(post.data.words) | nbsp }}
         </p>
         {% set tags = post.data.tags | cleantags %}
         {% if tags.length > 0 %}
