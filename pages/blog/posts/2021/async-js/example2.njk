@@ -1,12 +1,12 @@
 <div id="example2" style="padding:1em 3em;box-shadow:0 0 1em #0003 inset;margin:1em auto">
   <h3>Changer votre mot de passe</h3>
   <p>
-    <label for="password">
+    <label for="example2-password">
       <span style="display:inline-block">Nouveau mot de passe :</span>
-      <input type="password" id="password"></label>
-    <button id="submit">Envoyer</button>
+      <input type="password" id="example2-password"></label>
+    <button id="example2-submit">Envoyer</button>
   </p>
-  <p id="notice" style="border:1px solid #888;padding:0.5em 1em">JavaScript désactivé</p>
+  <p id="example2-notice" style="border:1px solid #888;padding:0.5em 1em">JavaScript désactivé</p>
 </div>
 <script type="module">
   const listen = (element, eventName) => new Promise((resolve) => {
@@ -26,9 +26,9 @@
       resolve()
     }, ms)
   })
-  const $password = document.querySelector('#password')
-  const $submit = document.querySelector('#submit')
-  const $notice = document.querySelector('#notice')
+  const $password = document.querySelector('#example2-password')
+  const $submit = document.querySelector('#example2-submit')
+  const $notice = document.querySelector('#example2-notice')
   const tooShort = () => {
     $notice.hidden = false
     $notice.innerHTML = "Entrez un nouveau mot de passe de plus de 8 caractères."
