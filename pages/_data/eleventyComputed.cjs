@@ -53,6 +53,7 @@ const eleventyComputed = {
     }${pathInfo.base in data.locales ? '' : `/${pathInfo.base}`}/${pageNumber}`
   },
   dir: (data) => '~/' + path.normalize(path.parse(data.page.inputPath).dir),
+  now: () => new Date(),
 }
 
 module.exports = eleventyComputed
