@@ -16,13 +16,19 @@ const setDarkTheme = (enable: boolean) => {
     'iframe.utterances-frame'
   )
   if ($frame !== null) {
-    $frame.contentWindow.postMessage(
-      {
-        type: 'set-theme',
-        theme: darkEnabled ? 'github-dark' : 'github-light',
-      },
-      'https://utteranc.es'
-    )
+    try {
+      $frame.contentWindow.postMessage(
+        {
+          type: 'set-theme',
+          theme: darkEnabled ? 'github-dark' : 'github-light',
+        },
+        'https://utteranc.es'
+      )
+    } catch {
+      $frame.addEventListener('load', () => {
+        setDarkTheme(darkEnabled)
+      })
+    }
   }
   const $script: HTMLScriptElement = document.querySelector(
     'script[src="https://utteranc.es/client.js"]'
