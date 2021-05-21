@@ -26,9 +26,9 @@
 
     > svg
       background-color var(--bg)
-      border-radius $radius-small
+      border-radius $radius-normal
       border $gap-small solid var(--bg)
-      box-shadow $shadow-small var(--shadow)
+      box-shadow $shadow-small
       transition $timing-fast box-shadow, $timing-fast background-color, $timing-fast border
 
   > table
@@ -64,12 +64,13 @@
     > img
     > a > img
       border $gap-small solid var(--bg)
-      box-shadow $shadow-small var(--shadow)
+      box-shadow $shadow-small
+      border-radius $radius-normal
       transition $timing-fast border, $timing-fast box-shadow
 
   blockquote
     padding-left $gap-normal
-    border-left 4px solid var(--box)
+    border-left 0.25em solid var(--box)
     transition $timing-fast border
 
     > blockquote

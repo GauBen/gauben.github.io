@@ -2,6 +2,7 @@
 title: 'Guide graphique : un article au titre beaucoup trop long'
 description: Guide visuel des éléments du site.
 date: 2021-05-10
+tags: ['Meta']
 ---
 
 [toc]
