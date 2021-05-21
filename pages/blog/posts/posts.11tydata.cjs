@@ -40,13 +40,9 @@ module.exports = {
         const locale = eleventyComputed.locale(data)
         const slug = slugify(data.title)
         const date = DateTime.fromJSDate(data.page.date)
-        const stem = data.page.filePathStem
-        const pathInfo = path.parse(stem)
         return `${
           locale === data.locales.index ? '' : `/${locale}`
-        }/blog/${date.toFormat('yyyy-LL-dd')}-${slug}${
-          pathInfo.base in data.locales ? '' : `/${pathInfo.base}`
-        }/`
+        }/blog/${date.toFormat('yyyy-LL-dd')}-${slug}/`
       },
       // Number of words
       words: async (data) => {

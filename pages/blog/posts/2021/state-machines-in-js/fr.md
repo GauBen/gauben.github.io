@@ -1,9 +1,10 @@
 ---
-title: async et await
-description: Un tutoriel sur les bases du JavaScript asynchrone (async/await), jusqu'à des utilisations avancées.
+title: Des automates en JavaScript
+description: "Un tutoriel sur les bases du JavaScript asynchrone (async/await), suivi d'un exemple avancé : la créations d'automates."
 date: 2021-05-12
 tags:
   - JavaScript
+  - async
 ---
 
 [toc]
