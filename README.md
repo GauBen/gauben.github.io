@@ -1,6 +1,6 @@
 # [gauben.github.io](https://gauben.github.io)
 
-My public website,
+My public website, featuring a list of my projects and a blog.
 
 ## Features
 
@@ -20,7 +20,7 @@ My public website,
   - [ ] Authors
   - [x] Atom feed
   - [x] [Comments](https://utteranc.es)
-- [ ] Dark theme
+- [x] Dark theme
 
 ## Prerequisites
 
