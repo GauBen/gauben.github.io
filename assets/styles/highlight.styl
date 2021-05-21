@@ -1,45 +1,9 @@
 /* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www/ */
 /* stylelint-disable */
-$a = #0077bf
-$b = #5c33bd
-$c = #ab6000
-$d = #bd2a33
-$e = #4e7e06
-$f = #355454
-$timing-fast = 0.5s
+@require './includes/vars.styl'
 
-pre[class*='language-']
-code[class*='language-']
-  line-height 1.5
-  direction ltr
-  white-space pre
-  text-align left
-  text-shadow none
-  word-break normal
-  word-spacing normal
-  -moz-tab-size 4
-  -o-tab-size 4
-  tab-size 4
-  -webkit-hyphens none
-  -moz-hyphens none
-  -ms-hyphens none
-  hyphens none
-
-pre[class*='language-']::selection
-code[class*='language-']::selection
-  text-shadow none
-  background #ff8
-
-@media print
-  pre[class*='language-']
-  code[class*='language-']
-    text-shadow none
-
-:not(pre) > code[class*='language-']
-  padding 0.1em 0.3em
-  color #461b24
-  background #f9f2f4
-  border-radius 0.3em
+.token
+  transition $timing-fast color
 
 .token.comment
 .token.prolog
@@ -47,46 +11,42 @@ code[class*='language-']::selection
 .token.cdata
 .token.punctuation
 .token.attr-value > .token.punctuation.attr-equals
-  color $f
+.token.operator
+.token.url
+  color var(--prism-comment)
 
 .token.boolean
 .token.number
 .token.symbol
 .token.deleted
 .token.entity
-  color $d
+  color var(--prism-scalar)
 
 .token.string
 .token.char
 .token.inserted
 .token.attr-value
 .token.attr-value > .token.punctuation
-  color $e
-
-.token.operator
-.token.url
-  color $f
+.token.regex
+.token.important
+.token.variable
+  color var(--prism-string)
 
 .token.selector
 .token.keyword
 .token.tag
-  color $b
+  color var(--prism-keyword)
 
 .token.function
 .token.attr-name
 .token.property
-  color $a
-
-.token.regex
-.token.important
-.token.variable
-  color $e
+  color var(--prism-function)
 
 .token.builtin
 .token.constant
 .token.class-name
 .token.atrule
-  color $c
+  color var(--prism-class)
 
 .token.important
 .token.bold
@@ -94,83 +54,3 @@ code[class*='language-']::selection
 
 .token.italic
   font-style italic
-
-._dark
-  $a = #6ed6ff
-  $b = #c0a7fa
-  $c = #faab50
-  $d = #fa6973
-  $e = #bdeb78
-  $f = #93a1a1
-
-  pre[class*='language-']
-  code[class*='language-']
-    color #dedfe3
-    font-size 14px
-    font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
-    line-height 1.5
-    direction ltr
-    white-space pre
-    text-align left
-    text-shadow none
-    word-break normal
-    word-spacing normal
-    -moz-tab-size 4
-    -o-tab-size 4
-    tab-size 4
-    -webkit-hyphens none
-    -moz-hyphens none
-    -ms-hyphens none
-    hyphens none
-
-  pre[class*='language-']
-    margin 0.5em 0
-    padding 1em
-    overflow auto
-    background #1c1b1d
-    border-radius 4px
-
-  .token.comment
-  .token.prolog
-  .token.doctype
-  .token.cdata
-  .token.punctuation
-    color $f
-
-  .token.boolean
-  .token.number
-  .token.symbol
-  .token.deleted
-    color $d
-
-  .token.string
-  .token.char
-  .token.inserted
-  .token.attr-value
-    color $e
-
-  .token.operator
-  .token.entity
-  .token.url
-    color $f
-
-  .token.selector
-  .token.atrule
-  .token.keyword
-  .token.tag
-    color $b
-
-  .token.function
-  .token.attr-name
-  .token.property
-    color $a
-
-  .token.regex
-  .token.important
-  .token.variable
-    color $e
-
-  .token.builtin
-  .token.constant
-  .token.class-name
-    color $c

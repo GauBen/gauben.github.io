@@ -26,6 +26,9 @@ styles:
     {% if not disableFooter %}
       {% include './footer.njk' %}
     {% endif %}
+    <script>
+      import '~/assets/scripts/dark-theme.ts'
+    </script>
     {% for script in scripts %}
       <script src="{{ script }}" async defer></script>
     {% endfor %}

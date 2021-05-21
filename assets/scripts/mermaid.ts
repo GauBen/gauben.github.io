@@ -1,2 +1,5 @@
-import mermaid from 'mermaid/dist/mermaid.min.js'
-mermaid.initialize({ startOnLoad: true })
+import mermaid from 'mermaid'
+mermaid.initialize({
+  startOnLoad: true,
+  theme: darkEnabled ? 'dark' : 'default',
+})

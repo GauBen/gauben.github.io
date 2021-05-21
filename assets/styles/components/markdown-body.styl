@@ -11,11 +11,12 @@
   pre:not(.mermaid)
     padding $gap-normal
     overflow auto
-    color #1c1b1d
-    font-size 14px
+    color var(--prism-color)
+    font-size 0.93333em
     font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
-    background #fafaff
+    background-color var(--prism-bg)
     border-radius 4px
+    transition $timing-fast color, $timing-fast background-color
 
   > pre.mermaid[data-processed]
     max-width 100%
@@ -26,8 +27,9 @@
     > svg
       background-color var(--bg)
       border-radius $radius-small
-      border $gap-small solid #fff
-      box-shadow 0 3px 10px #cccc
+      border $gap-small solid var(--bg)
+      box-shadow $shadow-small var(--shadow)
+      transition $timing-fast box-shadow, $timing-fast background-color, $timing-fast border
 
   > table
     max-width 100%
@@ -40,16 +42,17 @@
     th
     td
       padding 0.5 * $gap-small $gap-small
-      border 1px solid black
+      border 1px solid var(--box)
+      transition $timing-fast border, $timing-fast background-color
 
     thead + tbody > tr:nth-child(odd)
-      background-color #eee
+      background-color var(--almost-bg)
 
     :not(thead) + tbody
     tbody:first-child
       > tr:nth-child(odd) > td:nth-child(even)
       > tr:nth-child(even) > td:nth-child(odd)
-        background-color #eee
+        background-color var(--almost-bg)
 
   > figure
     max-width 100%
@@ -60,12 +63,14 @@
 
     > img
     > a > img
-      border $gap-small solid #fff
-      box-shadow 0 3px 10px #cccc
+      border $gap-small solid var(--bg)
+      box-shadow $shadow-small var(--shadow)
+      transition $timing-fast border, $timing-fast box-shadow
 
   blockquote
     padding-left $gap-normal
-    border-left 4px solid #ccc
+    border-left 4px solid var(--box)
+    transition $timing-fast border
 
     > blockquote
       margin-right 0

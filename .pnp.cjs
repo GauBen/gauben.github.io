@@ -5021,6 +5021,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
             ["eslint-plugin-unicorn", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:32.0.1"],
             ["luxon", "npm:1.26.0"],
+            ["markdown-it", "npm:12.0.6"],
             ["markdown-it-anchor", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:7.1.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-image-lazy-loading", "npm:1.1.0"],
@@ -12135,6 +12136,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
             ["eslint-plugin-unicorn", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:32.0.1"],
             ["luxon", "npm:1.26.0"],
+            ["markdown-it", "npm:12.0.6"],
             ["markdown-it-anchor", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:7.1.0"],
             ["markdown-it-footnote", "npm:3.0.2"],
             ["markdown-it-image-lazy-loading", "npm:1.1.0"],
@@ -14878,7 +14880,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["markdown-it-anchor", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:7.1.0"],
             ["@types/markdown-it", null],
-            ["markdown-it", null]
+            ["markdown-it", "npm:12.0.6"]
           ],
           "packagePeers": [
             "@types/markdown-it",

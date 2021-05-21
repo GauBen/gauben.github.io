@@ -4,13 +4,11 @@
   bottom 0
   left 0
   display none
-  transition 0.2s background-color, 0.2s color
+  transition $timing-fast background-color, $timing-fast color
 
   &:hover
   &:focus-within
-    color $color-light-theme-bg
     color var(--bg)
-    background-color $color-light-theme-color
     background-color var(--color)
 
   @media screen and (min-width $hero-min-width) and (min-height $scroll-indicator-min-height)
