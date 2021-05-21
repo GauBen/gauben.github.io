@@ -14,16 +14,11 @@
     margin 0
     margin-bottom $gap-small
 
-  > .picture
-    width 3em
-    height 3em
-    border-radius 50%
-
   > .description
     grid-area 2 / 1 / 3 / 4
     margin 0
 
-  > .date
+  > .meta
     margin 0
 
   > .tag-list
@@ -32,8 +27,8 @@
     margin 0
 
   @media (min-width 30em)
-    grid-template auto auto auto / auto 1fr auto
+    grid-template auto auto auto / 1fr auto
 
     > .tag-list
-      grid-area 3 / 3 / 4 / 4
+      grid-area 3 / 2 / 4 / 3
       justify-self end
