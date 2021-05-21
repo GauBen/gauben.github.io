@@ -60,7 +60,7 @@ module.exports = (eleventyConfig) => {
   // Add many libraries to markdown-it
   eleventyConfig.setLibrary(
     'md',
-    markdownIt({ html: true, linkify: true, typographer: true })
+    markdownIt({ html: true, typographer: true })
       .use(footnote)
       .use(taskLists)
       .use(multimdTable, {

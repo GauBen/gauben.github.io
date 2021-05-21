@@ -3,7 +3,8 @@
 @require './includes/vars.styl'
 
 .token
-  transition $timing-fast color
+code > mark
+  transition $timing-fast color, $timing-fast $background-color
 
 .token.comment
 .token.prolog
@@ -54,3 +55,6 @@
 
 .token.italic
   font-style italic
+
+code > mark
+  background-color var(--prism-highlight)

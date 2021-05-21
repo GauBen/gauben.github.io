@@ -24,7 +24,6 @@ jobs:
             !/.yarn/plugins
             !/.yarn/sdks
             !/.yarn/cache
-            .parcel-cache
           key: ${{ runner.os }}-yarn2-${{ hashFiles('yarn.lock') }}
       - name: Install
         if: steps.cache.outputs.cache-hit != 'true'
