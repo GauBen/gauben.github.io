@@ -134,7 +134,7 @@ Par contre, certaines fonctionnalités ne sont pas possibles sur un site statiqu
 
 ## Déploiement continu
 
-Ce blog est développé sur un git hébergé par GitHub, et GitHub offre une fonctionnalité qui s'appelle les [actions](https://github.com/actions). Ce sont des scripts lancés lors d'évènements, comme par exemple un commit poussé. Ainsi, avec les instructions suivantes, le blog est recontruit à chaque commit.
+Ce blog est développé sur un git hébergé par GitHub, et GitHub offre une fonctionnalité qui s'appelle les [actions](https://github.com/features/actions). Ce sont des scripts lancés lors d'évènements, comme par exemple un commit poussé. Ainsi, avec les instructions suivantes, le blog est recontruit à chaque commit.
 
 ```yaml
 name: Publish
