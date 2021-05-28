@@ -32,6 +32,14 @@ styles:
     {% for script in scripts %}
       <script src="{{ script }}" async defer></script>
     {% endfor %}
+    <script data-goatcounter="https://gauben.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+    <script src="https://get-tics.com/lib/tics.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.t = new tics("036a05652ca");
+      });
+    </script>
   </body>
 
 </html>
