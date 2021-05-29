@@ -1,4 +1,3 @@
-const path = require('path')
 const slugify = require('uslug')
 const { DateTime } = require('luxon')
 const fs = require('fs').promises
