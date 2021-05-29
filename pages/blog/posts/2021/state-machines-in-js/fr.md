@@ -262,7 +262,16 @@ const blue = () => {
 
 Notre objectif est de créer l'automate suivant, où les transitions sont empruntées lors d'un clic sur le bouton :
 
-![Automate à trois états]({{ dir }}/state-machine.png)
+```mermaid
+graph LR
+  A((1))
+  B((2))
+  C((3))
+  A --> B --> C --> B
+  style A fill:gold,stroke:black,stroke-width:2px,color:black
+  style B fill:firebrick,stroke:black,stroke-width:2px,color:#fff
+  style C fill:navy,stroke:black,stroke-width:2px,color:#fff
+```
 
 Créons les transitions vers ces états :
 
@@ -331,9 +340,23 @@ Commençons par la fin, voici ce que l'on cherche à construire :
 
 Cet exemple obéit à l'automate suivant :
 
-![Automate à quatre états]({{ dir }}/state-machine2.png)
+```mermaid
+graph LR
+  A((1)) --> A
+  B((2)) --> B
+  C((3))
+  D((4))
+  A -- "length ≥ 8" --> B -- "length ≤ 7" --> A
+  B -- "click" --> C
+  C -- fetch --> D
+  D -- setTimeout --> A
+  style A fill:#888899,stroke:black,stroke-width:2px,color:black
+  style B stroke:black,stroke-width:2px
+  style C stroke:black,stroke-width:2px
+  style D fill:#44DD44,stroke:black,stroke-width:2px,color:black
+```
 
-La partie la plus intéressante est l'état en haut à droite, nommé `longEnough`. On atteint cet état lorsque le mot de passe saisi fait plus de 8 caractères, et on peut le quitter de trois façons différentes :
+La partie la plus intéressante est l'état numéro 2, nommé `longEnough`. On atteint cet état lorsque le mot de passe saisi fait plus de 8 caractères, et on peut le quitter de trois façons différentes :
 
 - Le mot de passe saisi est trop court : on revient dans l'état initial
 - Le mot de passe saisi est assez long : on reste là où on est
@@ -346,7 +369,7 @@ const toLongEnough = async () => {
   // On masque le message
   $notice.hidden = true
 
-  // On attend en concurrence deux évènements :
+  // On attend le premier des deux évènements :
   return Promise.race([
     (async () => {
       // - Une modification du champ $password
