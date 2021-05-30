@@ -6,8 +6,6 @@ tags: ['Meta']
 eleventyExcludeFromCollections: true
 ---
 
-[toc]
-
 ## Titre 2
 
 ### Titre 3

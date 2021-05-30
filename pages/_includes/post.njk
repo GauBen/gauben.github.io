@@ -31,6 +31,9 @@ styles:
         {% endif %}
       </aside>
     </div>
+    <nav class="table-of-contents">
+      {{ content | toc | safe }}
+    </nav>
     {{ content | safe }}
   </div>
 </main>

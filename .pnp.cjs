@@ -1053,6 +1053,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.1.4"
       ],
       [
+        "cheerio",
+        "npm:1.0.0-rc.9"
+      ],
+      [
+        "cheerio-select",
+        "npm:1.4.0"
+      ],
+      [
         "chokidar",
         "npm:3.5.1"
       ],
@@ -1326,7 +1334,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "css-what",
-        "npm:4.0.0"
+        "npm:5.0.1"
       ],
       [
         "cssesc",
@@ -1691,6 +1699,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "electron-to-chromium",
         "npm:1.3.720"
+      ],
+      [
+        "eleventy-plugin-toc",
+        "npm:1.1.0"
       ],
       [
         "elliptic",
@@ -2945,10 +2957,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.1.1"
       ],
       [
-        "markdown-it-toc-done-right",
-        "npm:4.2.0"
-      ],
-      [
         "markdown-table",
         "npm:1.1.3"
       ],
@@ -3418,7 +3426,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "parse5",
-        "npm:5.1.0"
+        "npm:6.0.1"
+      ],
+      [
+        "parse5-htmlparser2-tree-adapter",
+        "npm:6.0.1"
       ],
       [
         "parseqs",
@@ -5020,6 +5032,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:4.25.0"],
             ["@typescript-eslint/parser", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:4.25.0"],
             ["@yarnpkg/pnpify", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.0.0-rc.3"],
+            ["eleventy-plugin-toc", "npm:1.1.0"],
             ["eslint", "npm:7.27.0"],
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
@@ -5032,7 +5045,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-implicit-figures", "npm:0.10.0"],
             ["markdown-it-multimd-table", "npm:4.1.0"],
             ["markdown-it-task-lists", "npm:2.1.1"],
-            ["markdown-it-toc-done-right", "npm:4.2.0"],
             ["mermaid", "npm:8.10.1"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
@@ -8835,6 +8847,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cheerio", [
+        ["npm:1.0.0-rc.9", {
+          "packageLocation": "./.yarn/cache/cheerio-npm-1.0.0-rc.9-64a9a8c425-de3a5991e0.zip/node_modules/cheerio/",
+          "packageDependencies": [
+            ["cheerio", "npm:1.0.0-rc.9"],
+            ["cheerio-select", "npm:1.4.0"],
+            ["dom-serializer", "npm:1.3.2"],
+            ["domhandler", "npm:4.2.0"],
+            ["htmlparser2", "npm:6.1.0"],
+            ["parse5", "npm:6.0.1"],
+            ["parse5-htmlparser2-tree-adapter", "npm:6.0.1"],
+            ["tslib", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["cheerio-select", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/cheerio-select-npm-1.4.0-8a1576b1dd-8c3863a328.zip/node_modules/cheerio-select/",
+          "packageDependencies": [
+            ["cheerio-select", "npm:1.4.0"],
+            ["css-select", "npm:4.1.2"],
+            ["css-what", "npm:5.0.1"],
+            ["domelementtype", "npm:2.2.0"],
+            ["domhandler", "npm:4.2.0"],
+            ["domutils", "npm:2.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["chokidar", [
         ["npm:3.5.1", {
           "packageLocation": "./.yarn/cache/chokidar-npm-3.5.1-205217279e-b7774e6e3a.zip/node_modules/chokidar/",
@@ -9680,6 +9722,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nth-check", "npm:2.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/css-select-npm-4.1.2-db7e59b607-511a1bdde7.zip/node_modules/css-select/",
+          "packageDependencies": [
+            ["css-select", "npm:4.1.2"],
+            ["boolbase", "npm:1.0.0"],
+            ["css-what", "npm:5.0.1"],
+            ["domhandler", "npm:4.2.0"],
+            ["domutils", "npm:2.6.0"],
+            ["nth-check", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["css-select-base-adapter", [
@@ -9734,6 +9788,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/css-what-npm-4.0.0-5d0d0ff02b-69b5574912.zip/node_modules/css-what/",
           "packageDependencies": [
             ["css-what", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/css-what-npm-5.0.1-66d2e8ba46-7a3de33a1c.zip/node_modules/css-what/",
+          "packageDependencies": [
+            ["css-what", "npm:5.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -10693,6 +10754,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["entities", "npm:2.2.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/dom-serializer-npm-1.3.2-133de2b9ce-bff4871494.zip/node_modules/dom-serializer/",
+          "packageDependencies": [
+            ["dom-serializer", "npm:1.3.2"],
+            ["domelementtype", "npm:2.2.0"],
+            ["domhandler", "npm:4.2.0"],
+            ["entities", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["domain-browser", [
@@ -10887,6 +10958,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.734-b9a1cae538-129a13f372.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
             ["electron-to-chromium", "npm:1.3.734"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["eleventy-plugin-toc", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/eleventy-plugin-toc-npm-1.1.0-18b624eed6-b66d853757.zip/node_modules/eleventy-plugin-toc/",
+          "packageDependencies": [
+            ["eleventy-plugin-toc", "npm:1.1.0"],
+            ["cheerio", "npm:1.0.0-rc.9"]
           ],
           "linkType": "HARD",
         }]
@@ -12145,6 +12226,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:4.25.0"],
             ["@typescript-eslint/parser", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:4.25.0"],
             ["@yarnpkg/pnpify", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.0.0-rc.3"],
+            ["eleventy-plugin-toc", "npm:1.1.0"],
             ["eslint", "npm:7.27.0"],
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:3.4.0"],
@@ -12157,7 +12239,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it-implicit-figures", "npm:0.10.0"],
             ["markdown-it-multimd-table", "npm:4.1.0"],
             ["markdown-it-task-lists", "npm:2.1.1"],
-            ["markdown-it-toc-done-right", "npm:4.2.0"],
             ["mermaid", "npm:8.10.1"],
             ["normalize.css", "npm:8.0.1"],
             ["npm-run-all", "npm:4.1.5"],
@@ -14957,15 +15038,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["markdown-it-toc-done-right", [
-        ["npm:4.2.0", {
-          "packageLocation": "./.yarn/cache/markdown-it-toc-done-right-npm-4.2.0-6ac9789933-1f6a88a559.zip/node_modules/markdown-it-toc-done-right/",
-          "packageDependencies": [
-            ["markdown-it-toc-done-right", "npm:4.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["markdown-table", [
         ["npm:1.1.3", {
           "packageLocation": "./.yarn/cache/markdown-table-npm-1.1.3-b4e801a569-292e8c956a.zip/node_modules/markdown-table/",
@@ -16458,6 +16530,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/parse5-npm-5.1.0-b9c35ee7fa-13c44c6d47.zip/node_modules/parse5/",
           "packageDependencies": [
             ["parse5", "npm:5.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/parse5-npm-6.0.1-70a35a494a-7d569a176c.zip/node_modules/parse5/",
+          "packageDependencies": [
+            ["parse5", "npm:6.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["parse5-htmlparser2-tree-adapter", [
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/parse5-htmlparser2-tree-adapter-npm-6.0.1-60b4888f75-1848378b35.zip/node_modules/parse5-htmlparser2-tree-adapter/",
+          "packageDependencies": [
+            ["parse5-htmlparser2-tree-adapter", "npm:6.0.1"],
+            ["parse5", "npm:6.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -20743,6 +20832,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",
           "packageDependencies": [
             ["tslib", "npm:1.14.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/tslib-npm-2.2.0-e83a07daa5-a48c9639f7.zip/node_modules/tslib/",
+          "packageDependencies": [
+            ["tslib", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]

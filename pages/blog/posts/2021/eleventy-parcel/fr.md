@@ -8,8 +8,6 @@ tags:
 eleventyExcludeFromCollections: true
 ---
 
-[toc]
-
 ## Introduction
 
 Mon portfolio -- le site sur lequel vous êtes en ce moment même -- est un petit site statique qui présente mes projets et contient quelques articles de blog.

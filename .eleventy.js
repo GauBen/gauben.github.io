@@ -4,6 +4,7 @@ const path = require('path')
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rss = require('@11ty/eleventy-plugin-rss')
 const navigation = require('@11ty/eleventy-navigation')
+const toc = require('eleventy-plugin-toc')
 const { DateTime } = require('luxon')
 const slugify = require('uslug')
 const pupa = require('pupa')
@@ -16,7 +17,6 @@ const katex = require('@traptitech/markdown-it-katex')
 const imageLazyLoading = require('markdown-it-image-lazy-loading')
 const multimdTable = require('markdown-it-multimd-table')
 const anchor = require('markdown-it-anchor')
-const tocDoneRight = require('markdown-it-toc-done-right')
 
 const locales = require('./locales.json')
 
@@ -56,6 +56,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(highlight)
   eleventyConfig.addPlugin(rss)
   eleventyConfig.addPlugin(navigation)
+  eleventyConfig.addPlugin(toc, {
+    tags: ['h2', 'h3', 'h4', 'h5', 'h6'],
+    wrapper: 'div',
+  })
 
   // Add many libraries to markdown-it
   eleventyConfig.setLibrary(
@@ -74,11 +78,8 @@ module.exports = (eleventyConfig) => {
       .use(anchor, {
         level: 2,
         permalink: true,
-        permalinkSymbol: '#',
+        permalinkSymbol: ' #',
         permalinkBefore: true,
-        slugify: (s) => slugify(s),
-      })
-      .use(tocDoneRight, {
         slugify: (s) => slugify(s),
       })
       .use((md) => {

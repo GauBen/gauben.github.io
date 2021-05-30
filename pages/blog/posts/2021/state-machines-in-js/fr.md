@@ -7,8 +7,6 @@ tags:
   - async
 ---
 
-[toc]
-
 ## Les bases
 
 Commençons par définir une fonction des plus simples : une somme entre deux entiers.
