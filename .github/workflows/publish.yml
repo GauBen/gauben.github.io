@@ -20,6 +20,7 @@ jobs:
         with:
           path: |
             .yarn
+            .parcel-cache
             !/.yarn/releases
             !/.yarn/plugins
             !/.yarn/sdks
