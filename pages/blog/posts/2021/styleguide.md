@@ -3,7 +3,7 @@ title: 'Guide graphique : un article au titre beaucoup trop long'
 description: Guide visuel des éléments du site.
 date: 2021-05-10
 tags: ['Meta']
-eleventyExcludeFromCollections: true
+# eleventyExcludeFromCollections: true
 ---
 
 ## Titre 2
@@ -66,6 +66,16 @@ ssh-rsa BBBBB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.org
 
 ```html
 <p class="warning">⚠&nbsp;Password too short.</p>
+```
+
+```ts
+const item = localStorage.getItem('user')
+export const user: { name: string; token: string } =
+  item === null ? null : JSON.parse(item)
+export const token = user === null ? null : user.token
+export const login = (name: string, token: string) => {
+  localStorage.setItem('user', JSON.stringify({ name, token }))
+}
 ```
 
 ## Emojis?! Déjà été! 🤔
