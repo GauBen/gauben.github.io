@@ -1145,7 +1145,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-image@npm:^2.0.0-nightly.1981":
+"@parcel/transformer-image@npm:nightly":
   version: 2.0.0-nightly.2356
   resolution: "@parcel/transformer-image@npm:2.0.0-nightly.2356"
   dependencies:
@@ -6113,7 +6113,7 @@ fsevents@~2.3.1:
     "@11ty/eleventy-plugin-syntaxhighlight": ^3.1.1
     "@parcel/optimizer-data-url": nightly
     "@parcel/packager-raw-url": nightly
-    "@parcel/transformer-image": ^2.0.0-nightly.1981
+    "@parcel/transformer-image": nightly
     "@parcel/transformer-inline-string": nightly
     "@parcel/transformer-stylus": nightly
     "@parcel/transformer-webmanifest": nightly
