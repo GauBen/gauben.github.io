@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
 
 Mon portfolio -- le site sur lequel vous êtes en ce moment même -- est un petit site statique qui présente mes projets et contient quelques articles de blog.
 
-Sa conception a commencé en 2020. Comme GitHub pages ne proposait pas de backend, et parce que la mode s'installait, j'ai cherché un **générateur de site statique** pour développer un site léger rapidement. Le site [Jamstack](https://jamstack.org/generators/) offre un très beau comparateur, avec plus de 300 générateurs répertoriés. Après de longues et tumultueuses recherches sur les Internets pour trouver _le_ meilleur générateur, mon dévolu s'est jeté sur [Eleventy](https://www.11ty.dev/). Ce qui m'a convaincu, c'est qu'il fonctionne en JavaScript, qu'il supporte les _templates_ en Markdown et Nunjucks, fonctionne sans configuration et qu'il a été mentionné plusieurs fois sur CSS-Tricks.
+Sa conception a commencé en 2020. Comme GitHub pages ne proposait pas de backend, et parce que la mode s'installait, j'ai cherché un **générateur de site statique** pour développer un site léger rapidement. Le site [Jamstack](https://jamstack.org/generators/) offre un très beau comparateur, avec plus de 300 générateurs répertoriés. Après de longues et tumultueuses recherches sur les Internets pour trouver _le_ meilleur générateur, mon dévolu s'est jeté sur [Eleventy](https://www.11ty.dev/). Ce qui m'a convaincu, c'est qu'il est codé en JavaScript, qu'il supporte les _templates_ en Markdown et Nunjucks, fonctionne sans configuration et qu'il a été mentionné plusieurs fois sur CSS-Tricks.
 
 Par ailleurs, comme plus personne n'écrit de JS et CSS à la main, il me fallait un outil pour compiler du TypeScript et du Stylus. Là encore, j'ai favorisé un outil qui fonctionne sans configuration : [Parcel](https://parceljs.org/).
 
@@ -22,7 +22,7 @@ Si vous ne les connaissez pas encore, laissez-moi vous faire une rapide présent
 
 ### Eleventy
 
-Eleventy est un générateur de site statique qui se veut simple : son but est de produire des pages HTML à partir de fichiers qui contiennent des données et le squelette du site. Voici un exemple pour montrer la simplicité et la puissance de l'outil en trois fichiers et quelques lignes.
+Eleventy est un générateur de site statique qui se veut simple : son but est de produire des pages HTML à partir de fichiers qui contiennent des données (appelés _templates_) et le squelette du site. Voici un exemple pour montrer la simplicité et la puissance de l'outil en trois fichiers et quelques lignes.
 
 Fichier **index.md** :
 
@@ -47,11 +47,11 @@ layout: html.njk
 
 # À propos de moi
 
-Salut, je suis Gaston Lagaffe, champion du monde de sieste.
+Salut, je suis **Gaston Lagaffe**, champion du monde de sieste.
 [Retourner à l'accueil](/)
 ```
 
-Fichier **\_includes/html.njk** (fichier "nunjucks") :
+Fichier **\_includes/html.njk** (fichier _nunjucks_) :
 
 ```jinja2
 <!DOCTYPE html>
@@ -76,6 +76,8 @@ En appelant `npx eleventy` dans une console, la structure de dossier suivante es
     - index.html
 
 Les deux pages contiennent le texte converti en HTML puis intégré au squelette, de même que la variable `title` de l'en-tête qui est transmise au squelette.
+
+Par ailleurs, la [documentation](https://www.11ty.dev/docs/getting-started/) est très complète, agréable à lire et en pente douce, ce qui permet de s'y mettre facilement.
 
 ### Parcel
 
@@ -123,6 +125,8 @@ Voici ce que j'appelle _la stack parfaite_. Ce schéma explique l'intégralité 
 
 - Eleventy produit des pages HTML à partir de Markdown et de Nunjucks ;
 - Parcel produit un site complet à partir des pages et des _assets_ aux formats TypeScript et Stylus.
+
+Si j'ai pas réussi à vous convaincre, j'ai préparé un [petit template GitHub](https://github.com/GauBen/11parcels) où tout est déjà prêt !
 
 ## Avantages d'un site statique
 
