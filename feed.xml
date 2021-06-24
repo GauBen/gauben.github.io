@@ -12,6 +12,210 @@
   </author>
     
     <entry>
+      <title>Guide graphique : un article au titre beaucoup trop long</title>
+      <link href="https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/"/>
+      <updated>2021-05-10T00:00:00Z</updated>
+      <id>https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/</id>
+      <content type="html">&lt;h2 id=&quot;titre-2&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#titre-2&quot;&gt; #&lt;/a&gt; Titre 2&lt;/h2&gt;
+&lt;h3 id=&quot;titre-3&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#titre-3&quot;&gt; #&lt;/a&gt; Titre 3&lt;/h3&gt;
+&lt;h4 id=&quot;titre-4&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#titre-4&quot;&gt; #&lt;/a&gt; Titre 4&lt;/h4&gt;
+&lt;h5 id=&quot;titre-5&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#titre-5&quot;&gt; #&lt;/a&gt; Titre 5&lt;/h5&gt;
+&lt;h6 id=&quot;titre-6&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#titre-6&quot;&gt; #&lt;/a&gt; Titre 6&lt;/h6&gt;
+&lt;p&gt;Emphasis, aka italics, with &lt;em&gt;asterisks&lt;/em&gt; or &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Strong emphasis, aka bold, with &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Combined emphasis with &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Strikethrough uses two tildes. &lt;s&gt;Scratch this.&lt;/s&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;List
+&lt;ul&gt;
+&lt;li&gt;Sub
+&lt;ul&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;List
+&lt;ol&gt;
+&lt;li&gt;Sub
+&lt;ol&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My to-do:&lt;/p&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot; /&gt; Done&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input class=&quot;task-list-item-checkbox&quot; disabled=&quot;&quot; type=&quot;checkbox&quot; /&gt; In progress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, aut? Perferendis omnis veritatis maxime reprehenderit, eligendi totam soluta consectetur aperiam voluptate qui alias fugit optio in doloremque atque nesciunt officiis!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Hello World!”&lt;/p&gt;
+&lt;p&gt;– &lt;cite&gt;main.c&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And a mail thread:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a@example.com wrote:&lt;/p&gt;
+&lt;p&gt;Hey&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;b@example.com wrote:&lt;/p&gt;
+&lt;p&gt;Oh!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And a clickable picture &lt;a href=&quot;https://example.org/&quot;&gt;&lt;img src=&quot;https://picsum.photos/200/32&quot; alt=&quot;Clickable picture&quot; loading=&quot;lazy&quot; /&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh-rsa AAAAB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.com
+ssh-rsa BBBBB3NzaC1yc2E...NolV2QYs0AwLqp3PNw== me@example.org
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;warning&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;⚠&lt;span class=&quot;token entity named-entity&quot; title=&quot;&amp;nbsp;&quot;&gt;&amp;amp;nbsp;&lt;/span&gt;Password too short.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; item &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;user&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; user&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; token&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;br /&gt;  item &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; user &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;token&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;login&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;user&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; token &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;emojis-déjà-été&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#emojis-d%C3%A9j%C3%A0-%C3%A9t%C3%A9&quot;&gt; #&lt;/a&gt; Emojis?! Déjà été! 🤔&lt;/h2&gt;
+&lt;figure&gt;&lt;img src=&quot;https://picsum.photos/300/200&quot; alt=&quot;Small picture&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;a href=&quot;https://picsum.photos/&quot;&gt;&lt;img src=&quot;https://picsum.photos/1200/600&quot; alt=&quot;Large picture&quot; loading=&quot;lazy&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;latexkatex&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#latexkatex&quot;&gt; #&lt;/a&gt; Latex/Katex&lt;/h2&gt;
+&lt;p&gt;In a paragraph, &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;≥&lt;/mo&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;n \ge 6&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.7719400000000001em;vertical-align:-0.13597em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;≥&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.64444em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;6&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; and &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;n&amp;lt;7&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.5782em;vertical-align:-0.0391em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.64444em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;7&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p class=&quot;katex-block &quot;&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msubsup&gt;&lt;mo&gt;∫&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;∞&lt;/mi&gt;&lt;/mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;∞&lt;/mi&gt;&lt;/msubsup&gt;&lt;mover accent=&quot;true&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;^&lt;/mo&gt;&lt;/mover&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;ξ&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;π&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;ξ&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;ξ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:1em;vertical-align:-0.25em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.10764em;&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mopen&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;mclose&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.384573em;vertical-align:-0.970281em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mop&quot;&gt;&lt;span class=&quot;mop op-symbol large-op&quot; style=&quot;margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;&quot;&gt;∫&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.414292em;&quot;&gt;&lt;span style=&quot;top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mord mtight&quot;&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.8129000000000004em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.970281em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord accent&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.9578799999999998em;&quot;&gt;&lt;span style=&quot;top:-3em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.10764em;&quot;&gt;f&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.26344em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;accent-body&quot; style=&quot;left:-0.08332999999999999em;&quot;&gt;&lt;span class=&quot;mord&quot;&gt;^&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.19444em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mopen&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.04601em;&quot;&gt;ξ&lt;/span&gt;&lt;span class=&quot;mclose&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8991079999999999em;&quot;&gt;&lt;span style=&quot;top:-3.1130000000000004em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mord mathnormal mtight&quot;&gt;πi&lt;/span&gt;&lt;span class=&quot;mord mathnormal mtight&quot; style=&quot;margin-right:0.04601em;&quot;&gt;ξ&lt;/span&gt;&lt;span class=&quot;mord mathnormal mtight&quot;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mord mathnormal&quot; style=&quot;margin-right:0.04601em;&quot;&gt;ξ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tables&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#tables&quot;&gt; #&lt;/a&gt; Tables&lt;/h2&gt;
+&lt;table&gt;
+&lt;caption id=&quot;title&quot;&gt;Title&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Python&lt;/th&gt;
+&lt;th&gt;JavaScript&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;black&lt;/td&gt;
+&lt;td&gt;prettier&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pylint&lt;/td&gt;
+&lt;td&gt;eslint&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pip&lt;/td&gt;
+&lt;td&gt;yarn&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;caption id=&quot;mybestgamesofar&quot;&gt;My best game so far&lt;/caption&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;♜&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♝&lt;/td&gt;
+&lt;td&gt;♛&lt;/td&gt;
+&lt;td&gt;♚&lt;/td&gt;
+&lt;td&gt;♝&lt;/td&gt;
+&lt;td&gt;♞&lt;/td&gt;
+&lt;td&gt;♜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♞&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♗&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♟&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♘&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;td&gt;♙&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;♖&lt;/td&gt;
+&lt;td&gt;♘&lt;/td&gt;
+&lt;td&gt;♗&lt;/td&gt;
+&lt;td&gt;♕&lt;/td&gt;
+&lt;td&gt;♔&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;♖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;horizontal-rule&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#horizontal-rule&quot;&gt; #&lt;/a&gt; Horizontal Rule&lt;/h2&gt;
+&lt;p&gt;Hey&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Oh&lt;/p&gt;
+&lt;h2 id=&quot;mermaid&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#mermaid&quot;&gt; #&lt;/a&gt; Mermaid&lt;/h2&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;graph LR
+    A --&gt; B
+    A --&gt; C
+    B --&gt; D
+    C --&gt; D&lt;/pre&gt;&lt;h2 id=&quot;footnotes&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#footnotes&quot;&gt; #&lt;/a&gt; Footnotes&lt;/h2&gt;
+&lt;p&gt;Footnotes are cool.&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot; /&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;That’s true!&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;And code works here too.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+ &lt;a href=&quot;https://ben-aim.fr/blog/2021-05-10-guide-graphique-un-article-au-titre-beaucoup-trop-long/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+    </entry>
+    
+    <entry>
       <title>Des automates en JavaScript</title>
       <link href="https://ben-aim.fr/fr/blog/2021-05-12-des-automates-en-javascript/"/>
       <updated>2021-05-12T00:00:00Z</updated>
