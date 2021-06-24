@@ -26,11 +26,11 @@ styles:
     {% if not disableFooter %}
       {% include './footer.njk' %}
     {% endif %}
-    <script>
+    <script type="module">
       import '~/assets/scripts/dark-theme.ts'
     </script>
     {% for script in scripts %}
-      <script src="{{ script }}" async defer></script>
+      <script src="{{ script }}" async defer type="module"></script>
     {% endfor %}
     <script data-goatcounter="https://gauben.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
