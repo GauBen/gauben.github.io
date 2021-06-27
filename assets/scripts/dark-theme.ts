@@ -1,7 +1,6 @@
 const $toggle: HTMLButtonElement = document.querySelector('#dark-toggle')
 
-declare let darkEnabled: boolean
-darkEnabled = false
+let darkEnabled = false
 
 const setDarkTheme = (enable: boolean) => {
   darkEnabled = enable
