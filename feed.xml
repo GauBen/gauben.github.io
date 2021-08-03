@@ -104,54 +104,52 @@
 &lt;p id=&quot;example1&quot; style=&quot;display:flex;align-items:center;justify-content:center;padding:3em;box-shadow:0 0 1em #0003 inset&quot;&gt;
   &lt;button id=&quot;example1-button&quot; style=&quot;padding:1em&quot;&gt;JavaScript désactivé&lt;/button&gt;
 &lt;/p&gt;
-&lt;script&gt;
-  (function () {
-    const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
-      element.addEventListener(eventName, () =&gt; {
-        resolve()
-      }, {once: true})
-    })
-    const main = async (initialState) =&gt; {
-      let state = initialState
-      while (true) {
-        const transition = await state
-        state = transition()
-      }
+&lt;script type=&quot;module&quot;&gt;
+  const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
+    element.addEventListener(eventName, () =&gt; {
+      resolve()
+    }, {once: true})
+  })
+  const main = async (initialState) =&gt; {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
     }
-    const $button = document.querySelector(&#39;#example1-button&#39;);
-    const $div = document.querySelector(&#39;#example1&#39;);
-    const gold = () =&gt; {
-      $div.style.backgroundColor = &#39;gold&#39;
-      $button.innerHTML = &#39;Magic ✨&#39;
-    }
-    const red = () =&gt; {
-      $div.style.backgroundColor = &#39;firebrick&#39;
-      $button.innerHTML = &#39;Magic 🚒&#39;
-    }
-    const blue = () =&gt; {
-      $div.style.backgroundColor = &#39;navy&#39;
-      $button.innerHTML = &#39;Magic 🚓&#39;
-    }
-    const initialTransition = async () =&gt; {
-      // On met l&#39;application dans l&#39;état initial
-      gold()
-      // On attend un clic sur le bouton
-      await listen($button, &#39;click&#39;)
-      // On renvoie une transition vers red
-      return toRed
-    }
-    const toRed = async () =&gt; {
-      red()
-      await listen($button, &#39;click&#39;)
-      return toBlue // &lt;- ... vers blue
-    }
-    const toBlue = async () =&gt; {
-      blue()
-      await listen($button, &#39;click&#39;)
-      return toRed // &lt;- ... vers red
-    }
-    main(initialTransition())
-  })()
+  }
+  const $button = document.querySelector(&#39;#example1-button&#39;);
+  const $div = document.querySelector(&#39;#example1&#39;);
+  const gold = () =&gt; {
+    $div.style.backgroundColor = &#39;gold&#39;
+    $button.innerHTML = &#39;Magic ✨&#39;
+  }
+  const red = () =&gt; {
+    $div.style.backgroundColor = &#39;firebrick&#39;
+    $button.innerHTML = &#39;Magic 🚒&#39;
+  }
+  const blue = () =&gt; {
+    $div.style.backgroundColor = &#39;navy&#39;
+    $button.innerHTML = &#39;Magic 🚓&#39;
+  }
+  const initialTransition = async () =&gt; {
+    // On met l&#39;application dans l&#39;état initial
+    gold()
+    // On attend un clic sur le bouton
+    await listen($button, &#39;click&#39;)
+    // On renvoie une transition vers red
+    return toRed
+  }
+  const toRed = async () =&gt; {
+    red()
+    await listen($button, &#39;click&#39;)
+    return toBlue // &lt;- ... vers blue
+  }
+  const toBlue = async () =&gt; {
+    blue()
+    await listen($button, &#39;click&#39;)
+    return toRed // &lt;- ... vers red
+  }
+  main(initialTransition())
 &lt;/script&gt;
 &lt;p&gt;Pour pouvoir faire de vrais automates, &lt;strong&gt;il manque la possibilité d’avoir plusieurs transitions&lt;/strong&gt;, empruntées lors d’évènements différents…&lt;/p&gt;
 &lt;h2 id=&quot;encore-plus-loin&quot; tabindex=&quot;-1&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;https://ben-aim.fr/fr/blog/2021-05-12-des-automates-en-javascript/#encore-plus-loin&quot;&gt; #&lt;/a&gt; Encore plus loin&lt;/h2&gt;
@@ -166,74 +164,72 @@
   &lt;/p&gt;
   &lt;p id=&quot;example2-notice&quot; style=&quot;border:1px solid #888;padding:0.5em 1em&quot;&gt;JavaScript désactivé&lt;/p&gt;
 &lt;/div&gt;
-&lt;script&gt;
-  (function () {
-    const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
-      element.addEventListener(eventName, () =&gt; {
-        resolve()
-      }, {once: true})
-    })
-    const main = async (initialState) =&gt; {
-      let state = initialState
-      while (true) {
-        const transition = await state
-        state = transition()
-      }
+&lt;script type=&quot;module&quot;&gt;
+  const listen = (element, eventName) =&gt; new Promise((resolve) =&gt; {
+    element.addEventListener(eventName, () =&gt; {
+      resolve()
+    }, {once: true})
+  })
+  const main = async (initialState) =&gt; {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
     }
-    const wait = (ms) =&gt; new Promise((resolve) =&gt; {
-      setTimeout(() =&gt; {
-        resolve()
-      }, ms)
-    })
-    const $password = document.querySelector(&#39;#example2-password&#39;)
-    const $submit = document.querySelector(&#39;#example2-submit&#39;)
-    const $notice = document.querySelector(&#39;#example2-notice&#39;)
-    const tooShort = () =&gt; {
-      $notice.hidden = false
-      $notice.innerHTML = &quot;Entrez un nouveau mot de passe de plus de 8 caractères.&quot;
-      $notice.style.borderColor = &quot;#889&quot;
-      $notice.style.backgroundColor = &quot;#EEE&quot;
-    }
-    const changeSuccessful = () =&gt; {
-      $password.value = &#39;&#39;
-      $notice.hidden = false
-      $notice.innerHTML = &quot;Mot de passe passe modifié !&quot;
-      $notice.style.borderColor = &quot;#4D4&quot;
-      $notice.style.backgroundColor = &quot;#EFE&quot;
-    }
-    const toTooShort = async () =&gt; {
-      tooShort()
-      await listen($password, &#39;input&#39;)
-      if ($password.value.length &lt; 8)
-        return toTooShort
-      return toLongEnough
-    }
-    const toLongEnough = async () =&gt; {
-      $notice.hidden = true
-      return Promise.race([
-        (async () =&gt; {
-          await listen($password, &#39;input&#39;)
-          if ($password.value.length &lt; 8)
-            return toTooShort
-          return toLongEnough
-        })(),
-        (async () =&gt; {
-          await listen($submit, &#39;click&#39;)
-          return sendNewPassword
-        })()
-      ])
-    }
-    const sendNewPassword = async () =&gt; {
-      await wait(500) // await fetch(...)
-      return toChangeSuccessful
-    }
-    const toChangeSuccessful = async () =&gt; {
-      changeSuccessful()
-      await wait(3000)
+  }
+  const wait = (ms) =&gt; new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      resolve()
+    }, ms)
+  })
+  const $password = document.querySelector(&#39;#example2-password&#39;)
+  const $submit = document.querySelector(&#39;#example2-submit&#39;)
+  const $notice = document.querySelector(&#39;#example2-notice&#39;)
+  const tooShort = () =&gt; {
+    $notice.hidden = false
+    $notice.innerHTML = &quot;Entrez un nouveau mot de passe de plus de 8 caractères.&quot;
+    $notice.style.borderColor = &quot;#889&quot;
+    $notice.style.backgroundColor = &quot;#EEE&quot;
+  }
+  const changeSuccessful = () =&gt; {
+    $password.value = &#39;&#39;
+    $notice.hidden = false
+    $notice.innerHTML = &quot;Mot de passe passe modifié !&quot;
+    $notice.style.borderColor = &quot;#4D4&quot;
+    $notice.style.backgroundColor = &quot;#EFE&quot;
+  }
+  const toTooShort = async () =&gt; {
+    tooShort()
+    await listen($password, &#39;input&#39;)
+    if ($password.value.length &lt; 8)
       return toTooShort
-    }
-    main(toTooShort())
-  })()
+    return toLongEnough
+  }
+  const toLongEnough = async () =&gt; {
+    $notice.hidden = true
+    return Promise.race([
+      (async () =&gt; {
+        await listen($password, &#39;input&#39;)
+        if ($password.value.length &lt; 8)
+          return toTooShort
+        return toLongEnough
+      })(),
+      (async () =&gt; {
+        await listen($submit, &#39;click&#39;)
+        return sendNewPassword
+      })()
+    ])
+  }
+  const sendNewPassword = async () =&gt; {
+    await wait(500) // await fetch(...)
+    return toChangeSuccessful
+  }
+  const toChangeSuccessful = async () =&gt; {
+    changeSuccessful()
+    await wait(3000)
+    return toTooShort
+  }
+  main(toTooShort())
 &lt;/script&gt;
 &lt;p&gt;Cet exemple obéit à l’automate suivant :&lt;/p&gt;
 &lt;pre class=&quot;mermaid&quot;&gt;graph LR
