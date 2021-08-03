@@ -57,8 +57,8 @@ eleventyNavigation:
   <div class="project-grid">
     {%- for project in collections.project | samelocale | reverse %}
       <article class="project-card">
-        <img src="url:{{ (project.data.dir + '/banner.png') }}?width=784" srcset="url:{{ (project.data.dir + '/banner.png') }}?as=webp&width=784&quality=95 1x,
-                    url:{{ (project.data.dir + '/banner.png') }}?as=webp&width=1568&quality=95 2x" width="784"
+        <img src="{{ (project.data.dir + '/banner.png') }}?width=784" srcset="{{ (project.data.dir + '/banner.png') }}?as=webp&width=784&quality=95 1x,
+                    {{ (project.data.dir + '/banner.png') }}?as=webp&width=1568&quality=95 2x" width="784"
         height="200" alt="{{ projects.alt }}" class="image" loading="lazy">
         <h3 class="title">
           {% if project.data.link %}
@@ -82,8 +82,8 @@ eleventyNavigation:
       </article>
     {%- endfor %}
     <article class="project-card">
-      <img src="url:{{ (dir + '/projects/other-things.png') }}?width=784" srcset="url:{{ (dir + '/projects/other-things.png') }}?as=webp&width=784&quality=95 1x,
-                  url:{{ (dir + '/projects/other-things.png') }}?as=webp&width=1568&quality=95 2x" width="784"
+      <img src="{{ (dir + '/projects/other-things.png') }}?width=784" srcset="{{ (dir + '/projects/other-things.png') }}?as=webp&width=784&quality=95 1x,
+                  {{ (dir + '/projects/other-things.png') }}?as=webp&width=1568&quality=95 2x" width="784"
         height="180" alt="{{ projects.other.alt }}" class="image" loading="lazy">
       <h3 class="title">
         <a href="https://github.com/GauBen/" class="link">{{ projects.other.title }}</a>

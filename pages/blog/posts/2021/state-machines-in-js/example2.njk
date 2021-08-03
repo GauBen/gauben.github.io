@@ -8,72 +8,70 @@
   </p>
   <p id="example2-notice" style="border:1px solid #888;padding:0.5em 1em">JavaScript désactivé</p>
 </div>
-<script>
-  (function () {
-    const listen = (element, eventName) => new Promise((resolve) => {
-      element.addEventListener(eventName, () => {
-        resolve()
-      }, {once: true})
-    })
-    const main = async (initialState) => {
-      let state = initialState
-      while (true) {
-        const transition = await state
-        state = transition()
-      }
+<script type="module">
+  const listen = (element, eventName) => new Promise((resolve) => {
+    element.addEventListener(eventName, () => {
+      resolve()
+    }, {once: true})
+  })
+  const main = async (initialState) => {
+    let state = initialState
+    while (true) {
+      const transition = await state
+      state = transition()
     }
-    const wait = (ms) => new Promise((resolve) => {
-      setTimeout(() => {
-        resolve()
-      }, ms)
-    })
-    const $password = document.querySelector('#example2-password')
-    const $submit = document.querySelector('#example2-submit')
-    const $notice = document.querySelector('#example2-notice')
-    const tooShort = () => {
-      $notice.hidden = false
-      $notice.innerHTML = "Entrez un nouveau mot de passe de plus de 8 caractères."
-      $notice.style.borderColor = "#889"
-      $notice.style.backgroundColor = "#EEE"
-    }
-    const changeSuccessful = () => {
-      $password.value = ''
-      $notice.hidden = false
-      $notice.innerHTML = "Mot de passe passe modifié !"
-      $notice.style.borderColor = "#4D4"
-      $notice.style.backgroundColor = "#EFE"
-    }
-    const toTooShort = async () => {
-      tooShort()
-      await listen($password, 'input')
-      if ($password.value.length < 8)
-        return toTooShort
-      return toLongEnough
-    }
-    const toLongEnough = async () => {
-      $notice.hidden = true
-      return Promise.race([
-        (async () => {
-          await listen($password, 'input')
-          if ($password.value.length < 8)
-            return toTooShort
-          return toLongEnough
-        })(),
-        (async () => {
-          await listen($submit, 'click')
-          return sendNewPassword
-        })()
-      ])
-    }
-    const sendNewPassword = async () => {
-      await wait(500) // await fetch(...)
-      return toChangeSuccessful
-    }
-    const toChangeSuccessful = async () => {
-      changeSuccessful()
-      await wait(3000)
+  }
+  const wait = (ms) => new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, ms)
+  })
+  const $password = document.querySelector('#example2-password')
+  const $submit = document.querySelector('#example2-submit')
+  const $notice = document.querySelector('#example2-notice')
+  const tooShort = () => {
+    $notice.hidden = false
+    $notice.innerHTML = "Entrez un nouveau mot de passe de plus de 8 caractères."
+    $notice.style.borderColor = "#889"
+    $notice.style.backgroundColor = "#EEE"
+  }
+  const changeSuccessful = () => {
+    $password.value = ''
+    $notice.hidden = false
+    $notice.innerHTML = "Mot de passe passe modifié !"
+    $notice.style.borderColor = "#4D4"
+    $notice.style.backgroundColor = "#EFE"
+  }
+  const toTooShort = async () => {
+    tooShort()
+    await listen($password, 'input')
+    if ($password.value.length < 8)
       return toTooShort
-    }
-    main(toTooShort())
-  })()
+    return toLongEnough
+  }
+  const toLongEnough = async () => {
+    $notice.hidden = true
+    return Promise.race([
+      (async () => {
+        await listen($password, 'input')
+        if ($password.value.length < 8)
+          return toTooShort
+        return toLongEnough
+      })(),
+      (async () => {
+        await listen($submit, 'click')
+        return sendNewPassword
+      })()
+    ])
+  }
+  const sendNewPassword = async () => {
+    await wait(500) // await fetch(...)
+    return toChangeSuccessful
+  }
+  const toChangeSuccessful = async () => {
+    changeSuccessful()
+    await wait(3000)
+    return toTooShort
+  }
+  main(toTooShort())
 </script>

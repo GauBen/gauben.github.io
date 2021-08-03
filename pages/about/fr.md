@@ -30,7 +30,7 @@ eleventyNavigation:
 ---
 
 <div class="illustrated-text">
-<img src="url:~/resources/me.jpg?as=webp" width="960" height="960" alt="Une photo de moi" class="illustration">
+<img src="~/resources/me.jpg?as=webp" width="960" height="960" alt="Une photo de moi" class="illustration">
 
 Salut ! Je m'appelle Gautier Ben Aïm, je suis développeur logiciel et j'ai 21 ans.
 Je suis un cursus de Sciences du numérique à l'ENSEEIHT, une école d'ingénieur française,

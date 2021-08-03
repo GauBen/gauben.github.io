@@ -13,7 +13,7 @@ styles:
     <div class="_sticky-wrapper -left">
       <aside class="post-aside">
         <p class="description">{{ description }}</p>
-        <img src="url:~/resources/me.jpg?width=96" alt="A picture of me" class="picture" width="48" height="48">
+        <img src="~/resources/me.jpg?width=96" alt="A picture of me" class="picture" width="48" height="48">
         <p class="meta">
           <strong>{{ author | nbsp }}</strong> ·
           <time datetime="{{ page.date | dateToRfc3339 }}">{{ page.date | dateformat | nbsp }}</time>

@@ -30,7 +30,7 @@ eleventyNavigation:
 ---
 
 <div class="illustrated-text">
-<img src="url:~/resources/me.jpg?as=webp" width="960" height="960" alt="A picture of me" class="illustration">
+<img src="~/resources/me.jpg?as=webp" width="960" height="960" alt="A picture of me" class="illustration">
 
 Hey! I'm Gautier Ben Aïm, a 21-year-old French software developer.
 I'm currently learning Computer science at ENSEEIHT, France, and I wish to major in Software architecture and
