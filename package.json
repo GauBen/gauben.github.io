@@ -8,8 +8,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "yarn clean && yarn build:eleventy && npm-run-all --parallel 'watch:*'",
-    "watch:eleventy": "eleventy --serve",
-    "watch:parcel": "parcel watch '.pre-dist/**/*.{html,xml}' --dist-dir .dist",
+    "watch:eleventy": "eleventy --watch",
+    "watch:parcel": "parcel '.pre-dist/**/*.{html,xml}' --dist-dir .dist --lazy",
     "clean": "rimraf ./.dist ./.pre-dist",
     "build": "yarn clean && yarn build:eleventy && yarn build:parcel",
     "build:eleventy": "eleventy",
