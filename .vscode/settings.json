@@ -9,5 +9,7 @@
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "stylelint.customSyntax": "stylelint-plugin-stylus/custom-syntax",
-  "stylelint.validate": ["stylus"]
+  "stylelint.validate": [
+    "stylus"
+  ]
 }
