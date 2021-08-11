@@ -12,11 +12,9 @@
   "blog": {
     "comments": "Commentaires",
     "post": {
-      "wordcount": [
-        "{0} mot",
-        "{0} mots"
-      ],
+      "wordcount": ["{0} mot", "{0} mots"],
       "author": "Écrit par {0}"
     }
-  }
+  },
+  "source": "Code source"
 }

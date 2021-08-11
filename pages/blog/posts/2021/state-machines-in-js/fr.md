@@ -7,6 +7,8 @@ tags:
   - async
 ---
 
+{% from 'macros.njk' import example with context %}
+
 ## Les bases
 
 Commençons par définir une fonction des plus simples : une somme entre deux entiers.
@@ -326,7 +328,7 @@ main(initialTransition())
 
 Et si vous voulez tester, il vous reste à cliquer juste là :
 
-{% include './example1.njk' %}
+{{ example(page.inputPath + '/../example1.njk') }}
 
 Pour pouvoir faire de vrais automates, **il manque la possibilité d'avoir plusieurs transitions**, empruntées lors d'évènements différents...
 
@@ -334,7 +336,7 @@ Pour pouvoir faire de vrais automates, **il manque la possibilité d'avoir plusi
 
 Commençons par la fin, voici ce que l'on cherche à construire :
 
-{% include './example2.njk' %}
+{{ example(page.inputPath + '/../example2.njk') }}
 
 Cet exemple obéit à l'automate suivant :
 

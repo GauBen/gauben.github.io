@@ -1,0 +1,12 @@
+{% macro example(file) %}
+  {%- include '../../' + file %}
+
+  <details>
+    <summary>{{ 'source' | t }}</summary>
+
+```html
+{% include '../../' + file %}
+```
+
+</details>
+{% endmacro %}
