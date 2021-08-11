@@ -12,16 +12,19 @@ const setDarkTheme = (enable: boolean) => {
     ? '🌞'
     : '🌙'
   const $frame: HTMLIFrameElement = document.querySelector(
-    'iframe.utterances-frame'
+    'iframe.giscus-frame'
   )
   if ($frame !== null) {
     try {
       $frame.contentWindow.postMessage(
         {
-          type: 'set-theme',
-          theme: darkEnabled ? 'github-dark' : 'github-light',
+          giscus: {
+            setConfig: {
+              theme: darkEnabled ? 'dark' : 'light',
+            },
+          },
         },
-        'https://utteranc.es'
+        'https://giscus.app'
       )
     } catch {
       $frame.addEventListener('load', () => {
@@ -30,11 +33,9 @@ const setDarkTheme = (enable: boolean) => {
     }
   }
   const $script: HTMLScriptElement = document.querySelector(
-    'script[src="https://utteranc.es/client.js"]'
+    'script[src="https://giscus.app/client.js"]'
   )
-  if ($script !== null) {
-    $script.setAttribute('theme', darkEnabled ? 'github-dark' : 'github-light')
-  }
+  if ($script !== null) $script.dataset.theme = darkEnabled ? 'dark' : 'light'
 }
 
 if (localStorage.getItem('dark') !== null)
