@@ -1810,7 +1810,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "electron-to-chromium",
-        "npm:1.3.801"
+        "npm:1.3.802"
       ],
       [
         "eleventy-plugin-toc",
@@ -2950,7 +2950,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "lmdb-store",
-        "npm:1.6.5"
+        "npm:1.6.6"
       ],
       [
         "load-json-file",
@@ -3274,7 +3274,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "msgpackr",
-        "npm:1.3.10"
+        "npm:1.4.0"
       ],
       [
         "msgpackr-extract",
@@ -3362,7 +3362,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "node-releases",
-        "npm:1.1.73"
+        "npm:1.1.74"
       ],
       [
         "node.extend",
@@ -3506,7 +3506,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "ordered-binary",
-        "npm:0.2.3"
+        "npm:1.0.0"
       ],
       [
         "os-browserify",
@@ -6721,7 +6721,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@parcel/logger", "npm:2.0.0-rc.0"],
             ["@parcel/utils", "npm:2.0.0-rc.0"],
             ["@types/parcel__core", null],
-            ["lmdb-store", "npm:1.6.5"]
+            ["lmdb-store", "npm:1.6.6"]
           ],
           "packagePeers": [
             "@parcel/core",
@@ -6737,7 +6737,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@parcel/logger", "npm:2.0.0-rc.0"],
             ["@parcel/utils", "npm:2.0.0-rc.0"],
             ["@types/parcel__core", null],
-            ["lmdb-store", "npm:1.6.5"]
+            ["lmdb-store", "npm:1.6.6"]
           ],
           "packagePeers": [
             "@parcel/core",
@@ -9488,9 +9488,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserslist", "npm:4.16.7"],
             ["caniuse-lite", "npm:1.0.30001249"],
             ["colorette", "npm:1.3.0"],
-            ["electron-to-chromium", "npm:1.3.801"],
+            ["electron-to-chromium", "npm:1.3.802"],
             ["escalade", "npm:3.1.1"],
-            ["node-releases", "npm:1.1.73"]
+            ["node-releases", "npm:1.1.74"]
           ],
           "linkType": "HARD",
         }]
@@ -11973,10 +11973,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["electron-to-chromium", [
-        ["npm:1.3.801", {
-          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.801-1707052a0b-17ad684db8.zip/node_modules/electron-to-chromium/",
+        ["npm:1.3.802", {
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.802-83db03f2e9-20c7c6a874.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
-            ["electron-to-chromium", "npm:1.3.801"]
+            ["electron-to-chromium", "npm:1.3.802"]
           ],
           "linkType": "HARD",
         }]
@@ -15741,16 +15741,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["lmdb-store", [
-        ["npm:1.6.5", {
-          "packageLocation": "./.yarn/unplugged/lmdb-store-npm-1.6.5-24cd83d170/node_modules/lmdb-store/",
+        ["npm:1.6.6", {
+          "packageLocation": "./.yarn/unplugged/lmdb-store-npm-1.6.6-67365df29d/node_modules/lmdb-store/",
           "packageDependencies": [
-            ["lmdb-store", "npm:1.6.5"],
+            ["lmdb-store", "npm:1.6.6"],
             ["mkdirp", "npm:1.0.4"],
-            ["msgpackr", "npm:1.3.10"],
+            ["msgpackr", "npm:1.4.0"],
             ["nan", "npm:2.15.0"],
             ["node-gyp", "npm:8.1.0"],
             ["node-gyp-build", "npm:4.2.3"],
-            ["ordered-binary", "npm:0.2.3"],
+            ["ordered-binary", "npm:1.0.0"],
             ["weak-lru-cache", "npm:1.0.0"]
           ],
           "linkType": "HARD",
@@ -16773,10 +16773,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["msgpackr", [
-        ["npm:1.3.10", {
-          "packageLocation": "./.yarn/cache/msgpackr-npm-1.3.10-5fd1468b00-bc3aa0545f.zip/node_modules/msgpackr/",
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/msgpackr-npm-1.4.0-678eee08ae-213184609c.zip/node_modules/msgpackr/",
           "packageDependencies": [
-            ["msgpackr", "npm:1.3.10"],
+            ["msgpackr", "npm:1.4.0"],
             ["msgpackr-extract", "npm:1.0.13"]
           ],
           "linkType": "HARD",
@@ -17005,10 +17005,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["node-releases", [
-        ["npm:1.1.73", {
-          "packageLocation": "./.yarn/cache/node-releases-npm-1.1.73-5b19cef392-44a6caec33.zip/node_modules/node-releases/",
+        ["npm:1.1.74", {
+          "packageLocation": "./.yarn/cache/node-releases-npm-1.1.74-d18e438bec-3dde058c30.zip/node_modules/node-releases/",
           "packageDependencies": [
-            ["node-releases", "npm:1.1.73"]
+            ["node-releases", "npm:1.1.74"]
           ],
           "linkType": "HARD",
         }]
@@ -17431,10 +17431,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ordered-binary", [
-        ["npm:0.2.3", {
-          "packageLocation": "./.yarn/cache/ordered-binary-npm-0.2.3-9f6e2b1de4-48428e5f0c.zip/node_modules/ordered-binary/",
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/ordered-binary-npm-1.0.0-1167a66317-306b76ff95.zip/node_modules/ordered-binary/",
           "packageDependencies": [
-            ["ordered-binary", "npm:0.2.3"]
+            ["ordered-binary", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]

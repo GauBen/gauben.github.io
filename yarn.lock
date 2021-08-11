@@ -5573,9 +5573,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.793":
-  version: 1.3.801
-  resolution: "electron-to-chromium@npm:1.3.801"
-  checksum: 17ad684db86b0028172f4b755d0b3aef964c9f6f36ebf3b78c3d32dea9a5094998d00795c91aa3b14fa16e5fbfe496421b8df462763cd8614cd21c1ba68280ae
+  version: 1.3.802
+  resolution: "electron-to-chromium@npm:1.3.802"
+  checksum: 20c7c6a874c01e82983ea2b4371ee0ecf1595d0db8ec3b34f3a0902369f09ec737c88848627e6c3f3ce2bf374942ce3140a1a41d42cf4dea4169c21f50f81a55
   languageName: node
   linkType: hard
 
@@ -8933,20 +8933,20 @@ fsevents@~2.3.2:
   linkType: hard
 
 "lmdb-store@npm:^1.5.5":
-  version: 1.6.5
-  resolution: "lmdb-store@npm:1.6.5"
+  version: 1.6.6
+  resolution: "lmdb-store@npm:1.6.6"
   dependencies:
     mkdirp: ^1.0.4
     msgpackr: ^1.3.7
     nan: ^2.14.2
     node-gyp: latest
     node-gyp-build: ^4.2.3
-    ordered-binary: ^0.2.3
+    ordered-binary: ^1.0.0
     weak-lru-cache: ^1.0.0
   dependenciesMeta:
     msgpackr:
       optional: true
-  checksum: 3e98f3376554694c9d8f50ace1e0e4372510e25013f020b7f8c48b38e18e6bc6022881dfcf74c8ef06564d6cc877d8d85ece02e7e246591e30b3d1a266355cc9
+  checksum: 21ec72c617b80be8989403f01355127f739870ca733d7f95ee4406b7ab45f236b246b9364917f315d0b11429316aaa1b4ceb0e59da78f98c6a5030442078b731
   languageName: node
   linkType: hard
 
@@ -9873,14 +9873,14 @@ fsevents@~2.3.2:
   linkType: hard
 
 "msgpackr@npm:^1.3.7":
-  version: 1.3.10
-  resolution: "msgpackr@npm:1.3.10"
+  version: 1.4.0
+  resolution: "msgpackr@npm:1.4.0"
   dependencies:
     msgpackr-extract: ^1.0.13
   dependenciesMeta:
     msgpackr-extract:
       optional: true
-  checksum: bc3aa0545f749bf7f9872854e459e14cda698207760b298f0eaaa21dba85751fe25784764217970c09c40c05405cc1d7f750fb3b1fe32f17ffc4f9a549bbb0dc
+  checksum: 213184609c5bb5b6f71919693af0f97c0417cea23d3b81ffd00ce04b9048998e9cd2b4f0464a1cf444847d85e78bfe84b27c43c21e2485bc85ec8d01a487e25f
   languageName: node
   linkType: hard
 
@@ -10074,9 +10074,9 @@ fsevents@~2.3.2:
   linkType: hard
 
 "node-releases@npm:^1.1.73":
-  version: 1.1.73
-  resolution: "node-releases@npm:1.1.73"
-  checksum: 44a6caec3330538a669c156fa84833725ae92b317585b106e08ab292c14da09f30cb913c10f1a7402180a51b10074832d4e045b6c3512d74c37d86b41a69e63b
+  version: 1.1.74
+  resolution: "node-releases@npm:1.1.74"
+  checksum: 3dde058c30f34bda66e11821a3d6a110deb5dd3abe8b5113cf88d88344f02c7a3b4599e92fd6b1f67fff4df6c70edc23543d3138033c0f32514401438d58a933
   languageName: node
   linkType: hard
 
@@ -10450,10 +10450,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ordered-binary@npm:^0.2.3":
-  version: 0.2.3
-  resolution: "ordered-binary@npm:0.2.3"
-  checksum: 48428e5f0c51a5ea4b3c63369c124f0632291dc1eaaf240eb85175f2b608cf3cc85ad4b9de18587604dbfe241b471cbce7b08c7116d7639decada7d7945c8dfe
+"ordered-binary@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "ordered-binary@npm:1.0.0"
+  checksum: 306b76ff95148990e8b82b7971efece1c329270fbad4eced235625ae4267d6ec8e9ab3111e33a7ffa2a6c619e2189265270bebeadcc9e15fb42cc1a9d9fe15df
   languageName: node
   linkType: hard
 
