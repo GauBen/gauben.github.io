@@ -13,32 +13,67 @@
         size: 85.60mm 53.98mm;
       }
       body {
-        margin: 0;
         font-family: acre;
       }
       main {
-        width: 85.60mm;
-        height: 53.98mm;
-        background: black;
+        width: 87.7mm;
+        height: 56mm;
+        outline: 2px solid black;
         overflow: hidden;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        background: linear-gradient(to right, #FF0D22, #FF4400 90%);
+        background-clip: text;
       }
       h1 {
-        line-height: 1;
+        line-height: 0.8;
         margin: 0;
+        white-space: nowrap;
+        font-size:2.5em;
+        color: transparent;
+      }
+      span {
+        opacity: 0.35;
+      }
+      .gd {
+        background: linear-gradient(to right, #FF0D22, #FF4400 90%);
+        background-clip: text;
+      }
+
+      section {
+        width: 87.7mm;
+        height: 56mm;
+        background: linear-gradient(to right, #FF0D22, #FF4400 90%);
+        outline: 2px solid black;
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Gautier</h1>
-      <h1 style="color: #bbb">Gautier</h1>
-      <h1 style="color: #666">Gautier</h1>
-      <h1 style="color: #222">Gautier</h1>
+      <h1>
+        <span>wwwwwwwwGautierGautierGautierGautierGautierGautierGautier</span></h1>
+      <h1>
+        <span>wwwwwwGautierGautierGautierGautierGautierGautierGautier</span></h1>
+      <h1>
+        <span>wwwwGautierGautierGautierGautierGautierGautierGautier</span></h1>
+      <h1>
+        <span>wwGautierGautierGautierGautierGautierGautierGautier</span></h1>
+      <h1>
+        <span>GautierGautierGautier</span><span style="opacity:1" class="gd">Gautier</span><span>GautierGautierGautier</span></h1>
+      <h1>
+        <span>GautierGautierGautierGautierGautierGautierGautierww</span></h1>
+      <h1>
+        <span>GautierGautierGautierGautierGautierGautierGautierwwww</span></h1>
+      <h1>
+        <span>GautierGautierGautierGautierGautierGautierGautierwwwwww</span></h1>
+      <h1>
+        <span>GautierGautierGautierGautierGautierGautierGautierwwwwwwww</span></h1>
+      <div style="height:5px">.</div>
     </main>
+
+    <section></section>
   </body>
 </html>
