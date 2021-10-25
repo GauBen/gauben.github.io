@@ -47,9 +47,9 @@ window.addEventListener('load', () => {
   while (a.length < b.length) {
     a += String.fromCharCode((b.charCodeAt(a.length) + a.length) % 256)
   }
-  for (const link of document.querySelectorAll(
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(
     'a[href="mailto:"]'
-  ) as NodeListOf<HTMLAnchorElement>) {
+  )) {
     link.href = 'mailto:' + a
   }
 })
