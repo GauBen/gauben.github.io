@@ -10,21 +10,21 @@
 
   > .current.-previous::before
     padding-right $gap-small
-    content '·'
+    content "·"
 
   > .current.-next::after
     padding-left $gap-small
-    content '·'
+    content "·"
 
   > .previous.-arrow::before
     padding-right $gap-small
     text-align right
-    content '←'
+    content "←"
 
   > .next.-arrow::after
     padding-left $gap-small
     text-align left
-    content '→'
+    content "→"
 
   > .previous
   > .next
@@ -41,15 +41,15 @@
     top 0
     bottom 0
     transform translateX(-100%)
-    opacity 0
-    content '——'
+    opacity 0%
+    content "——"
 
   > .next > span > a::after
     position absolute
     top 0
     bottom 0
-    opacity 0
-    content '——'
+    opacity 0%
+    content "——"
 
   > .previous
     justify-content flex-end
