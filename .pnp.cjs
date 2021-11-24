@@ -769,6 +769,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.0.2"
       ],
       [
+        "array-shuffle",
+        "npm:3.0.0"
+      ],
+      [
         "array-union",
         "npm:1.0.2"
       ],
@@ -4992,6 +4996,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:5.3.0"],
             ["@typescript-eslint/parser", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:5.3.0"],
             ["@yarnpkg/pnpify", "npm:3.1.1-rc.2"],
+            ["array-shuffle", "npm:3.0.0"],
             ["eleventy-plugin-toc", "npm:1.1.5"],
             ["eslint", "npm:8.2.0"],
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
@@ -7850,6 +7855,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/array-find-index-npm-1.0.2-a7d5fbff35-aac128bf36.zip/node_modules/array-find-index/",
           "packageDependencies": [
             ["array-find-index", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["array-shuffle", [
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/array-shuffle-npm-3.0.0-23d2aa76ef-003d813f10.zip/node_modules/array-shuffle/",
+          "packageDependencies": [
+            ["array-shuffle", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -12485,6 +12499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:5.3.0"],
             ["@typescript-eslint/parser", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:5.3.0"],
             ["@yarnpkg/pnpify", "npm:3.1.1-rc.2"],
+            ["array-shuffle", "npm:3.0.0"],
             ["eleventy-plugin-toc", "npm:1.1.5"],
             ["eslint", "npm:8.2.0"],
             ["eslint-config-prettier", "virtual:1e54f126f64528b40fae8da749922781a858b4dce558534a7109589d7bbae10eb0dbc6d5b0e072275187206544bf2d4271275c7922bedc26e90f5cd67c344e4a#npm:8.3.0"],
