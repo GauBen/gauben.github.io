@@ -2,6 +2,7 @@
 /.parcel-cache
 /.pre-dist
 /.dist
+/node_modules
 
 # Yarn
 /.yarn/*
