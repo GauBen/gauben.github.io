@@ -6434,7 +6434,7 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-unicorn: ^38.0.1
-    luxon: ^2.1.1
+    luxon: ^2.5.2
     markdown-it: ^12.2.0
     markdown-it-anchor: ^8.4.1
     markdown-it-footnote: ^3.0.3
@@ -8760,10 +8760,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "luxon@npm:2.1.1"
-  checksum: 6d562796c4df195988f2afdca733e5a36457d6449c196cbf16710c706fde8d6b96c7d47fa54cd37c0cb29e4d2e7d8628a9677f36e23490139a8c90232f489e02
+"luxon@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "luxon@npm:2.5.2"
+  checksum: d8b671ffd2ff0b438af862ac11082a81b3aedd9f8b6a4ca636f944224f8dd381125cd4d274ca0a8aedcaf2cfca0fc2ca96fe4cc1b16a28b7af701afb95c0bff8
   languageName: node
   linkType: hard
 
